@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GUI_BUTTONS",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GUI_BUTTONS",
+  "parent":{
+    "name":"DnDGH",
+    "path":"DnDGH.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
