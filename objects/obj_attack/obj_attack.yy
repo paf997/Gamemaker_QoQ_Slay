@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_character_stats_pop_up",
+  "%Name":"obj_attack",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_character_stats_pop_up",
+  "name":"obj_attack",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,7 +31,13 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
-  "spriteMaskId":null,
+  "spriteId":{
+    "name":"spr_slash",
+    "path":"sprites/spr_slash/spr_slash.yy",
+  },
+  "spriteMaskId":{
+    "name":"spr_slash",
+    "path":"sprites/spr_slash/spr_slash.yy",
+  },
   "visible":true,
 }

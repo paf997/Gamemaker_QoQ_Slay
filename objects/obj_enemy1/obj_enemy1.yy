@@ -6,8 +6,8 @@
   "name":"obj_enemy1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_parent",
@@ -35,7 +35,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_enemy1",
+    "path":"sprites/spr_enemy1/spr_enemy1.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

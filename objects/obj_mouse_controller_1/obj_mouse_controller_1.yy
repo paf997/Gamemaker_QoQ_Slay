@@ -8,8 +8,8 @@
   "name":"obj_mouse_controller_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"DnDGH",
-    "path":"DnDGH.yyp",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

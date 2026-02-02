@@ -4,6 +4,13 @@ _has_drawn_token_this_round = false;
 vertical_move = 1;
 horizontal_move = 1;
 
+hp = 10;
+hp_total = hp;
+damage = 1;
+
+facing = 0;
+
+
 
 //player stat gui unit
 _player_gui_adjustment_unit = 32;

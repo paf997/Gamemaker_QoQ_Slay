@@ -10,8 +10,8 @@
   "name":"o_gui_btn",
   "overriddenProperties":[],
   "parent":{
-    "name":"DnDGH",
-    "path":"DnDGH.yyp",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

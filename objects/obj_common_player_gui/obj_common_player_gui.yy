@@ -8,8 +8,8 @@
   "name":"obj_common_player_gui",
   "overriddenProperties":[],
   "parent":{
-    "name":"DnDGH",
-    "path":"DnDGH.yyp",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
