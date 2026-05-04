@@ -1,0 +1,5 @@
+draw_self()
+draw_set_colour(highligh_color)
+draw_text(x+x_offset,y + y_offset,"( X )")
+draw_set_color(c_black)
+draw_text(x+x_offset * 20,y + y_offset,player_target_text)
