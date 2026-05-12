@@ -1,0 +1,1 @@
+//create_buttons(0,window_get_width(),308,356,c_white,c_white, c_white, c_white, #dbdbdb, c_red, "Test", 0);
