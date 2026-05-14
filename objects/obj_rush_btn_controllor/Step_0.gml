@@ -36,13 +36,18 @@ function button_pressed(button_pressed){
 			//show_debug_message("end turn  " + string(player_1.atb_speed))
 			//initiative_track.update_initiatives()
 			inititaive_track.atb_phase_complete()
+			end_turn_phase--
+			fighter.end_turn_phase--
+			player_1.reset_battle_stats()
 		}else{
+			/*
 			player_1.reset_battle_stats()
 			//inititaive_track.atb_phase_complete()
 			//("Next Round " + string(inititaive_track.round_count))
 			player_1.atb_speed = base_speed
 			end_turn_phase--
 			fighter.end_turn_phase--
+			*/
 		}
 	}
 }

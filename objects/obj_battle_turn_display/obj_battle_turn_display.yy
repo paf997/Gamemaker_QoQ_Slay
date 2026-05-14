@@ -1,7 +1,11 @@
 {
   "$GMObject":"",
   "%Name":"obj_battle_turn_display",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":13,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_battle_turn_display",
   "overriddenProperties":[],
@@ -32,5 +36,5 @@
     "path":"sprites/spr_enemy_init/spr_enemy_init.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

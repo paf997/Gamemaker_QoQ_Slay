@@ -10,6 +10,7 @@ start_round_count = 2
 player = instance_find(obj_fighter_class, 0)
 check_for_fighter = 0
 previous_initiative = 0
+player_btn_controller = instance_find(obj_rush_btn_controllor,0)
 
 
 function add_and_sort_initiative(_particapant){
@@ -111,18 +112,28 @@ function add_to_initiative(){
 }
 
 function atb_phase_complete(){
+	_display = instance_find(obj_battle_turn_display,0)
+	//show_debug_message("atb function complete")
 	active_turn_index = array_length(participants)-1
 	participant = remove_particiapant_from_initiative_track()
 	//participant_as_string =  string(participant)
-	if(active_turn_index > -1 /*&& participant.rounds_completed < round_count*/){
+	if(active_turn_index > -1 && _display.is_action_complete == true/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
 		participant.reset_block();
 		if(participant.name != "fighter"){
 			array_push(next_round_particants,participant)
-			show_debug_message("Adding " + string(next_round_particants))
+			//show_debug_message("Adding " + string(next_round_particants))
 			is_finished = participant.do_actions()
 			if(is_finished){
-				atb_phase_complete()
+				//show_debug_message("finished ATB !!! *** !!!!")
+				_display.is_action_complete = false
+				_fighter = instance_find(obj_fighter_class,0)
+				_player_bag = instance_find(obj_token_bag_P1,0)
+				player_btn_controller.end_turn_phase--
+				_player_bag.reset_battle_stats()
+				_player_bag.atb_speed = player_btn_controller.base_speed
+				_fighter.end_turn_phase--
+				//atb_phase_complete()
 			}else{}
 		}else{}
 	}else{
