@@ -128,10 +128,7 @@ function atb_phase_complete(){
 				//show_debug_message("finished ATB !!! *** !!!!")
 				_display.is_action_complete = false
 				_fighter = instance_find(obj_fighter_class,0)
-				_player_bag = instance_find(obj_token_bag_P1,0)
 				player_btn_controller.end_turn_phase--
-				_player_bag.reset_battle_stats()
-				_player_bag.atb_speed = player_btn_controller.base_speed
 				_fighter.end_turn_phase--
 				//atb_phase_complete()
 			}else{}
@@ -139,6 +136,9 @@ function atb_phase_complete(){
 	}else{
 		show_message("Next Round")
 		set_initiatial_initiatve()
+		_player_bag = instance_find(obj_token_bag_P1,0)
+		_player_bag.reset_battle_stats()
+		_player_bag.atb_speed = player_btn_controller.base_speed
 	}
 }
 

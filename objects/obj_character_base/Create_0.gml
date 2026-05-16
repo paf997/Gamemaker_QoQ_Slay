@@ -26,7 +26,10 @@ function adjust_hp(amount){
 	if(hp <= 0){
 		visible = false;
 		is_dead = true;
+		show_debug_message($"Adjust hp {hp}")
 	}
+	show_debug_message($"Adjust hp {hp}")
+	return hp
 }
 
 function adjust_block(amount){

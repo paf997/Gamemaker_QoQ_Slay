@@ -9,6 +9,7 @@ armour = 3;
 initiative = 0
 equipment = []
 defense_sum = 0
+block = 3
 
 current_player_token_sum = 0;
 current_player_red_sum = 0;
@@ -18,24 +19,30 @@ current_player_yellow_sum = 0;
 current_player_wild_sum = 0;
 
 function deal_damage(dmg){
-	if(dmg > block){
-		adjust_hp(dmg-block)
-		block = 0
+	_hp = hp
+	if(dmg >= block){
+		show_debug_message("True")
+		_hp = adjust_hp(dmg-block)
 	}else{
-		adjust_block(dmg)
+		
 	}
+	show_debug_message($"Block 1: {block} dmg {dmg}")
+	adjust_block(dmg)
+	return _hp
 }
 
 function adjust_block(amount){
 	fighter = instance_find(obj_token_bag_P1,0)
 	if(amount == 0){
-		block = 0
+		//block = 0
 	}else{
 		block -= amount
+		show_debug_message($"adjust block: {block}")
 		if(block < 0){
 			block = 0
 		}
 	}
+	show_debug_message($"Ajust Block 2: {block}")
 	fighter.defense_sum = block
 }
 

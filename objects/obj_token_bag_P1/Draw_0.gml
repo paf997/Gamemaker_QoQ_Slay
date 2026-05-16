@@ -10,6 +10,7 @@ draw_text(x+2, y-3, "Power:" + string(atb_index+1)
 + " Phase:" + string(atb_phase)
 + " Attack:" + string(dmg_output)
 + " Block:" + string(atb_phase)
++ " HP: " + string(_player.hp)
 );
 
 /*if(isChosen){
