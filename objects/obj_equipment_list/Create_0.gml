@@ -6,12 +6,17 @@ enum equipment_type  {
 	item
 }
 
+player_equipment_abilities = [];
 current_player_token_sum = 0;
 current_player_red_sum = 0;
 current_player_green_sum = 0;
 current_player_black_sum = 0;
 current_player_yellow_sum = 0;
 current_player_wild_sum = 0;
+
+player_1 = instance_find(obj_fighter_class,0)
+player_2 = instance_find(obj_rogue_class,0)
+player_3 = instance_find(obj_rogue_class,0)
 
 y_offset = 48
 offset_count = 0
@@ -48,14 +53,20 @@ c_bottom_left = make_colour_rgb(250,250,160)
 shield = instance_create_layer(x,y, "Instances_1", obj_shield)
 long_sword = instance_create_layer(x,y, "Instances_1", obj_long_sword)
 heavy_armour = instance_create_layer(x,y, "Instances_1", obj_heavy_armour)
-array_push(equipment,shield,long_sword,heavy_armour)
-equipment_length = array_length(equipment)
+dagger = instance_create_layer(x,y,"Instances_1",obj_dagger)
 
-set_up_player_starting_equipment()
 
-function set_up_player_starting_equipment(){
+set_up_player_starting_equipment("fighter")
 
+function set_up_player_starting_equipment(player_class, column_x, column_y){
+
+	if(player_class == "fighter"){
+		array_push(equipment,shield,long_sword,heavy_armour)
+	}else{
+		array_push(equipment,shield,long_sword,heavy_armour)
+	}
 	
+	equipment_length = array_length(equipment)
 	for (item = equipment_length; item > 0; item --){
 		show_debug_message($"equipment length {item}")
 		get_equipment_abilities(equipment[item-1])
@@ -67,8 +78,10 @@ function get_equipment_abilities(equipment){
 	ability_length = array_length(equipment.abilities)
 	for (_item = ability_length; _item > 1; _item --){
 		show_debug_message($"abillity length {_item}")
-		create_equipemnt_abilities_ui(equipment,_item-1)
+		_new_ability_ui =  create_equipemnt_abilities_ui(equipment,_item-1)
+		array_push(player_equipment_abilities,_new_ability_ui)
 	}
+	player_equipment_abilities = []
 }
 
 function set_ui_color(color){
@@ -116,4 +129,5 @@ function create_equipemnt_abilities_ui(equipment,index = 0){
 	new_ability_ui.set_ui_text(ability_text)
 	new_ability_ui.name = equipment.name[0]
 	offset_count++
+	return new_ability_ui
 }

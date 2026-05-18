@@ -2,7 +2,8 @@ hp = 6;
 att = 1;
 dmg = 1;
 target =  -1
-initiative = 0;
+initiative = 0
+initiative_bonus = 2
 image_index = c_red
 is_dead = false;
 rounds_completed = 0
@@ -49,4 +50,8 @@ function get_block(){
 
 function reset_block(){
 	block = armour
+}
+
+function get_initiative(){
+	return initiative
 }

@@ -14,14 +14,6 @@ c_rect_y1 = c_white
 c_rect_x2 = c_white
 c_rect_y2 = c_white
 
-//test_equip = instance_create(x,y,"Instances_1", obj_equipment_list)
-//test_ab = test_equip.equipment[2]
-//create_equipemnt_abilities_ui(test_ab)
-
-
-/*get_equipped_abilities(){
-	
-}*/
 
 function get_equipment_abilities(equipment){
 	equipment_length = array_length(equipped.abilites)
