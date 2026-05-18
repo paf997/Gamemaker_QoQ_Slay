@@ -3,14 +3,16 @@ height = display_get_gui_height()
 margin = width *.15 
 n_columns = 3
 column_width = (width - (2*margin))/3
-columns = []
+columns = [16,366,646]
 player_equipment_list = instance_find(obj_equipment_list,0)
 players = [];
 
 create_columns()
 function create_columns(){
 	for(column = 1; column <= n_columns; column++){
-		array_push(columns,column_width*column)
+		//array_push(columns,column_width*column)
+		player_equipment_list.player_columns[column-1] = columns[column-1]
 		show_debug_message(string(columns))
 	}
 }
+

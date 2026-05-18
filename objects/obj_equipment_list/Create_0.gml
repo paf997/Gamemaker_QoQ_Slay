@@ -39,7 +39,8 @@ c_bottom_right = c_bottom_right_red
 c_top_right = c_top_right_red
 c_bottom_left = c_bottom_left_red
 
-
+player_columns = [100,400,700]
+column_index = 0
 equipment = []
 
 ///ability colors 
@@ -54,16 +55,26 @@ shield = instance_create_layer(x,y, "Instances_1", obj_shield)
 long_sword = instance_create_layer(x,y, "Instances_1", obj_long_sword)
 heavy_armour = instance_create_layer(x,y, "Instances_1", obj_heavy_armour)
 dagger = instance_create_layer(x,y,"Instances_1",obj_dagger)
+medium_armour = instance_create_layer(x,y, "Instances_1", obj_medium_armour)
 
 
 set_up_player_starting_equipment("fighter")
+column_index++
+offset_count = 0
+set_up_player_starting_equipment("rogue")
+column_index++
+offset_count = 0
+set_up_player_starting_equipment("fighter")
 
-function set_up_player_starting_equipment(player_class, column_x, column_y){
+
+
+
+function set_up_player_starting_equipment(player_class){
 
 	if(player_class == "fighter"){
 		array_push(equipment,shield,long_sword,heavy_armour)
 	}else{
-		array_push(equipment,shield,long_sword,heavy_armour)
+		array_push(equipment,dagger,medium_armour)
 	}
 	
 	equipment_length = array_length(equipment)
@@ -124,7 +135,7 @@ function create_equipemnt_abilities_ui(equipment,index = 0){
 				
 	
 	ability_text = equipment.get_ability_description(index)
-	new_ability_ui = instance_create_layer(x,y + y_offset * offset_count,"Instances_1", obj_defense_abilities)
+	new_ability_ui = instance_create_layer(player_columns[column_index],300+ y_offset * offset_count,"Instances_1", obj_defense_abilities)
 	new_ability_ui.set_ui_color(ui_colors)
 	new_ability_ui.set_ui_text(ability_text)
 	new_ability_ui.name = equipment.name[0]

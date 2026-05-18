@@ -70,6 +70,7 @@
     {"id":{"name":"obj_heavy_armour","path":"objects/obj_heavy_armour/obj_heavy_armour.yy",},},
     {"id":{"name":"obj_initiative_track","path":"objects/obj_initiative_track/obj_initiative_track.yy",},},
     {"id":{"name":"obj_long_sword","path":"objects/obj_long_sword/obj_long_sword.yy",},},
+    {"id":{"name":"obj_medium_armour","path":"objects/obj_medium_armour/obj_medium_armour.yy",},},
     {"id":{"name":"obj_parent_token","path":"objects/obj_parent_token/obj_parent_token.yy",},},
     {"id":{"name":"obj_player_button","path":"objects/obj_player_button/obj_player_button.yy",},},
     {"id":{"name":"obj_player_controller","path":"objects/obj_player_controller/obj_player_controller.yy",},},
