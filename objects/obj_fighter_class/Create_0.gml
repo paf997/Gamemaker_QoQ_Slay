@@ -11,6 +11,8 @@ equipment = []
 defense_sum = 0
 block = 3
 
+bonus_tokens = [obj_green_token2]
+
 current_player_token_sum = 0;
 current_player_red_sum = 0;
 current_player_green_sum = 0;

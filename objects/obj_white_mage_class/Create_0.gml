@@ -3,15 +3,15 @@ hp = 8;
 image_index = c_red
 is_dead = false;
 rounds_completed  = 0;
-name = "fighter"
+name = "wh_mage"
 end_turn_phase = 1
-armour = 2;
-initiative = 1
+armour = 1;
+initiative = 0
 equipment = []
 defense_sum = 0
-block = 2
+block = 1
 
-bonus_tokens = [obj_red_token1,obj_red_token1]
+bonus_tokens = [obj_yellow_token2]
 
 current_player_token_sum = 0;
 current_player_red_sum = 0;

@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player_list",
+  "%Name":"obj_rod",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_player_list",
+  "name":"obj_rod",
   "overriddenProperties":[],
   "parent":{
-    "name":"Classes",
-    "path":"folders/Objects/Classes.yy",
+    "name":"Equipment",
+    "path":"folders/Objects/Equipment.yy",
   },
   "parentObjectId":null,
   "persistent":false,

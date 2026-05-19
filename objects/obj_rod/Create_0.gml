@@ -1,10 +1,10 @@
 type = equipment_type.weapon
-name = ["Dagger","attack_auto"]
+name = ["Rod","attack_auto"]
 abilities = [TokenType.Attack,TokenType.Attack]
 dmg = 1;
 bonus_dmg = 0
 auto_type = [TokenType.Attack];
-auto_trigger = 1
+auto_trigger = 2
 block = 0
 power_lv = 1
 ability_description = [""]
@@ -56,11 +56,11 @@ function block_passive(power, power_lv, power_type){
 	return 0
 }
 
-function get_damage(r_power, g_power, _level = 1){
+function get_damage(r_power, y_power, _level = 1){
 	
 	limit = r_power > _level ? r_power : _level
-	dmg_sum = limit * r_power
-	limit = r_power > _level ? g_power : _level
+	dmg_sum = limit * (r_power/2)
+	limit = y_power > _level ? (y_power/2) : _level
 	dmg_sum += g_power * limit
 	
 	return dmg_sum
