@@ -44,6 +44,8 @@
   "resources":[
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
+    {"id":{"name":"obj_ability_heal","path":"objects/obj_ability_heal/obj_ability_heal.yy",},},
+    {"id":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},},
     {"id":{"name":"obj_atb_spot","path":"objects/obj_atb_spot/obj_atb_spot.yy",},},
     {"id":{"name":"obj_attack_abillities","path":"objects/obj_attack_abillities/obj_attack_abillities.yy",},},
     {"id":{"name":"obj_battle_turn_display","path":"objects/obj_battle_turn_display/obj_battle_turn_display.yy",},},
