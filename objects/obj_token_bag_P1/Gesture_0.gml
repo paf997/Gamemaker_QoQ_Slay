@@ -52,13 +52,27 @@ function draw_token_and_add_to_initiative_track(){
 				}else if(current_token.token_type = TokenType.Wild){
 					wild_sum += current_token.token_value;
 					player_list.player_list[0].current_player_red_sum = wild_sum
+				}else if(current_token.token_type = TokenType.Fighter){
+					player1_class_tokens += current_token.token_value;
+					//player_list.player_list[0].current_player_red_sum = wild_sum
+				}else if(current_token.token_type = TokenType.Rogue){
+					player2_class_tokens += current_token.token_value;
+					//player_list.player_list[0].current_player_red_sum = wild_sum
+				}else if(current_token.token_type = TokenType.WMage){
+					player3_class_tokens += current_token.token_value;
+					//player_list.player_list[0].current_player_red_sum = wild_sum
+				}else if(current_token.token_type = TokenType.Aux){
+					player1_class_tokens += current_token.token_value;
+					player2_class_tokens += current_token.token_value;
+					player3_class_tokens += current_token.token_value;
+					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Bust){
 					bust_sum += current_token.token_value;
 					player_list.player_list[0].adjust_energy(current_token.token_value)
 					energy = player_list.player_list[0].energy
 				}else{}	
 		//show_message("Wild" + string(wild_sum));
-			aux_sum = bust_sum;
+			//aux_sum = bust_sum;//?
 			initiative_icon.initiative = atb_index + init_bonus + 1;
 			player_list.player_list[0].initiative = initiative_icon.initiative
 			initiative_icon.phase = atb_phase;

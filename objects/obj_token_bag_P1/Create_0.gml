@@ -2,6 +2,10 @@ isChosen = false;
 
 randomize();
 
+player1_class_tokens = 0;
+player2_class_tokens = 0;
+player3_class_tokens = 0;
+
 initiative_icon = instance_find(obj_fighter_icon,0);
 initiative_track = instance_find(obj_initiative_track, 0)
 _player_controller = instance_find(obj_rush_btn_controllor,0)
@@ -52,7 +56,7 @@ array_push(player_bag_token_arr, new_instance);
 new_instance = instance_create_layer(0,0,"Instances_1", obj_white_token3);
 array_push(player_bag_token_arr, new_instance);
 
-new_instance = instance_create_layer(0,0,"Instances_1", obj_red_token1);
+/*new_instance = instance_create_layer(0,0,"Instances_1", obj_red_token1);
 array_push(player_bag_token_arr, new_instance);
 
 new_instance = instance_create_layer(0,0,"Instances_1", obj_red_token2);
@@ -65,6 +69,19 @@ new_instance = instance_create_layer(0,0,"Instances_1", obj_green_token1);
 array_push(player_bag_token_arr, new_instance);
 
 new_instance = instance_create_layer(0,0,"Instances_1", obj_wild_token1);
+array_push(player_bag_token_arr, new_instance);*/
+
+new_instance = instance_create_layer(0,0,"Instances_1", obj_fighter_token1);
+array_push(player_bag_token_arr, new_instance);
+new_instance = instance_create_layer(0,0,"Instances_1", obj_fighter_token1);
+array_push(player_bag_token_arr, new_instance);
+new_instance = instance_create_layer(0,0,"Instances_1", obj_rogue_token1);
+array_push(player_bag_token_arr, new_instance);
+new_instance = instance_create_layer(0,0,"Instances_1", obj_rogue_token1);
+array_push(player_bag_token_arr, new_instance);
+new_instance = instance_create_layer(0,0,"Instances_1", obj_wmage_token1);
+array_push(player_bag_token_arr, new_instance);
+new_instance = instance_create_layer(0,0,"Instances_1", obj_wmage_token1);
 array_push(player_bag_token_arr, new_instance);
 
 new_instance = instance_create_layer(0,0,"Instances_1", obj_black_token);
@@ -90,7 +107,10 @@ enum TokenType {
 	Magic,
 	Wild,
 	Aux,
-	Bust
+	Bust,
+	Fighter,
+	WMage,
+	Rogue
 }
 
 wild_sum = 0;
