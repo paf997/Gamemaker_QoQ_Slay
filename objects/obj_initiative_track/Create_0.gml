@@ -7,7 +7,10 @@ is_turn_end = false;
 round_count = 1;
 finished_player_count = 0;
 start_round_count = 2
-player = instance_find(obj_fighter_class, 0)
+_player = instance_find(obj_fighter_class,0)
+
+players = instance_find(obj_player_list,0)
+
 check_for_fighter = 0
 previous_initiative = 0
 player_btn_controller = instance_find(obj_rush_btn_controllor,0)
@@ -26,6 +29,7 @@ initiatives_as_string = ""
 enemy_controller = instance_find(obj_enemy_controller,0)
 
 function set_initiatial_initiatve(){
+
 	if(array_length(next_round_particants) == 0){
 		for(n = 0;n < array_length(enemy_controller.enemies);n++){
 			show_debug_message(enemy_controller.enemies[n])
@@ -52,29 +56,32 @@ function find_initiative(initiative){
 	
 }
 
-function update_player_index(initiative){
-	check_for_fighter = array_contains(participants, player)
-	show_debug_message($"Update_player:  {initiative} :  {check_for_fighter}")
+function update_player_index(_part){
+	check_for_fighter = array_contains(participants, _part)
+	show_debug_message($"Update_player:  {_part} :  {check_for_fighter}")
 	if(!check_for_fighter){
-		array_push(participants,player)
-		array_push(initiatives,initiative)
+		array_push(participants,_part )
 	}else{
-		previous_init_index = array_get_index(initiatives, previous_initiative)
-		show_debug_message($"removing previous init {previous_initiative} : index = {previous_init_index} array: {initiatives} ")
-		array_delete(initiatives, previous_init_index,1)
-		fighter_index = array_get_index(participants,player)
-		participants[fighter_index].initiative  = initiative
-		array_push(initiatives,initiative)
+
 	}
-	previous_initiative = initiative
+	
+	
 	//show_debug_message(string(participants[0].initiative))
 	array_sort(participants,function(a,b){
 		return a.initiative - b.initiative;
 		});
+	combine_initiatives()
 	array_sort(initiatives,true)
 	initiatives_as_string = initiatives
-	active_turn_index = array_length(initiatives)-1
 	//atb_phase_complete()
+}
+
+function combine_initiatives(){
+	initiatives = []
+	for (cnt = 0; cnt < array_length(participants); cnt++){
+		array_push(initiatives, participants[cnt].initiative)
+	}
+	active_turn_index = array_length(initiatives)-1
 }
 
 function update_turn_index(){

@@ -3,7 +3,7 @@ hp = 8;
 image_index = c_red
 is_dead = false;
 rounds_completed  = 0;
-name = "wh_mage"
+name = "White Mage"
 end_turn_phase = 1
 armour = 1;
 initiative = 0
@@ -11,7 +11,7 @@ equipment = []
 defense_sum = 0
 block = 1
 
-bonus_tokens = [obj_yellow_token2]
+bonus_tokens = [obj_green_token1,obj_green_token1,obj_red_token1,obj_yellow_token2,obj_yellow_token2,obj_yellow_token1]
 
 current_player_token_sum = 0;
 current_player_red_sum = 0;

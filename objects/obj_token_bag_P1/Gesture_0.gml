@@ -54,17 +54,24 @@ function draw_token_and_add_to_initiative_track(){
 					player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Fighter){
 					player1_class_tokens += current_token.token_value;
+					_player.get_random_bonus_token(2)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Rogue){
 					player2_class_tokens += current_token.token_value;
+					_player2.get_random_bonus_token(3)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.WMage){
 					player3_class_tokens += current_token.token_value;
+					_player3.get_random_bonus_token(2)
+					
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Aux){
 					player1_class_tokens += current_token.token_value;
+					_player.get_random_bonus_token(2)
 					player2_class_tokens += current_token.token_value;
+					_player2.get_random_bonus_token(3)
 					player3_class_tokens += current_token.token_value;
+					_player3.get_random_bonus_token(2)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Bust){
 					bust_sum += current_token.token_value;
@@ -73,8 +80,8 @@ function draw_token_and_add_to_initiative_track(){
 				}else{}	
 		//show_message("Wild" + string(wild_sum));
 			//aux_sum = bust_sum;//?
-			initiative_icon.initiative = atb_index + init_bonus + 1;
-			player_list.player_list[0].initiative = initiative_icon.initiative
+			initiative_icon.initiative = atb_index + /*init_bonus +1 */ 1;
+			adjustment_individual_initiative()
 			initiative_icon.phase = atb_phase;
 	
 		//atb_phase++;
@@ -103,13 +110,24 @@ function draw_token_and_add_to_initiative_track(){
 			energy_gain++
 			}*/
 			//reset_battle_stats()
-			update_initiatives()
+			//update_initiatives()
+			adjustment_individual_initiative()
 }
 
-function update_initiatives(){
+function update_initiatives(_player){
 	//show_debug_message("update initiatives")
 	//_player_controller.initiative_track.update_player_index(initiative_icon.initiative)
-	initiative_track.update_player_index(initiative_icon.initiative)
+	initiative_track.update_player_index(_player)
+}
+
+function adjustment_individual_initiative(){
+	show_debug_message($"plyaer list length ===== {array_length(player_list.player_list)}")
+	for (cnt = 0; cnt <array_length(player_list.player_list); cnt ++){
+		 _temp = player_list.player_list[cnt]
+		 _temp.initiative = initiative_icon.initiative + _temp.red_sum + _temp.green_sum + _temp.yellow_sum
+		 show_debug_message($"cnt {_temp.name}{cnt} == {initiative_icon.initiative} + {_temp.green_sum} +  {_temp.red_sum} +  {_temp.yellow_sum} = atb {_temp.initiative}")
+		 update_initiatives(_temp)
+	}
 }
 
 /*if keyboard_check_pressed(ord("Z") && (atb_end_actions != atb_phase) && (!is_finished_actions)){

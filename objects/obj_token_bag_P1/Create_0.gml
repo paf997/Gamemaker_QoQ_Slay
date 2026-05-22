@@ -5,11 +5,16 @@ randomize();
 player1_class_tokens = 0;
 player2_class_tokens = 0;
 player3_class_tokens = 0;
+p1_atb = 0;
+p2_atb = 0
+p3_atb = 0
 
 initiative_icon = instance_find(obj_fighter_icon,0);
 initiative_track = instance_find(obj_initiative_track, 0)
 _player_controller = instance_find(obj_rush_btn_controllor,0)
 _player = instance_find(obj_fighter_class,0)
+_player2 = instance_find(obj_rogue_class,0)
+_player3 = instance_find(obj_white_mage_class,0)
 initiative_icon.initiative = 0;
 stop_draw_max = 5
 init_bonus = -2;
