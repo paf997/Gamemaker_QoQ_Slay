@@ -127,10 +127,10 @@ function atb_phase_complete(){
 	if(active_turn_index > -1 && _display.is_action_complete == true/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
 		participant.reset_block();
-		if(participant.name != "fighter"){
+		if(participant.name != "fighter" || participant.name != "Rogue" || participant.name != "White Mage"){
 			array_push(next_round_particants,participant)
 			//show_debug_message("Adding " + string(next_round_particants))
-			is_finished = participant.do_actions()
+			is_finished = true//participant.do_actions()
 			if(is_finished){
 				//show_debug_message("finished ATB !!! *** !!!!")
 				_display.is_action_complete = false
