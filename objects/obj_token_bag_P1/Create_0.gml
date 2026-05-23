@@ -162,6 +162,9 @@ function reset_battle_stats(){
 		stop_draw_max = 5;
 		token_draw_count = 0;
 		dmg_output = 0;
+		player_list.reset_stats(1)
+		player_list.reset_stats(2)
+		player_list.reset_stats(3)
 	}
 	
 function run_engine(){

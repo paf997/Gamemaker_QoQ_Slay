@@ -25,5 +25,18 @@ function get_player_list(){
 	return player_list
 }
 
+function reset_stats(_player){
+	if (_player - 1 < 3){//is single player
+		player_list[_player-1].red_sum = 0;
+		player_list[_player-1].green_sum = 0;
+		player_list[_player-1].yellow_sum = 0;	
+		player_list[_player-1].initiative = 0;
+	}else{ //reset all players
+		reset_stats(player_list[1])
+		reset_stats(player_list[2])
+		reset_stats(player_list[3])
+	}
+}
+
 //create_player_classes()
 show_debug_message($"Testing create classes  { get_player_list()}")
