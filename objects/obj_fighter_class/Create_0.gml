@@ -7,7 +7,8 @@ name = "Fighter"
 end_turn_phase = 1
 armour = 3;
 initiative = 0
-equipment = []
+equipment = [obj_heavy_armour,obj_long_sword,obj_shield]
+actions = []
 defense_sum = 0
 block = 3
 
@@ -62,6 +63,9 @@ function equipment_setup(){
 	_equipment = instance_create_layer(0,0, "ATBS_Scale_P1", obj_player_equipment)
 	equipment = _equipment.equipment
 	array_add(equipment,obj_heavy_armour,obj_long_sword,obj_shield)
+	for (cnt = 0; cnt < array_length(equipment);cnt++){
+		instance_create(x,y,"Player_card_layer",equipment[cnt])
+	}
 }
 
 function get_abilities(){

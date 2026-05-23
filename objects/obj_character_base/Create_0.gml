@@ -23,6 +23,7 @@ orange_sum = 0;
 black_sum = 0;
 wild_sum = 0;
 atb = 0
+red_actions = []
 
 function deal_damage(dmg){
 	if(dmg > block){
@@ -79,5 +80,20 @@ function get_random_bonus_token(amount){
 			yellow_sum += _token.token_value
 		}
 		
+	}
+}
+
+function add_colored_action(_color, _action){
+	if (_color == TokenType.Attack){
+		array_push(red_actions, _action)
+	}
+}
+
+function do_actions(_color){
+	if(_color == TokenType.Attack)
+	
+	for (cnt = 0; cnt < array_length(red_actions); cnt++){
+	
+		red_actions[cnt].do_action()
 	}
 }
