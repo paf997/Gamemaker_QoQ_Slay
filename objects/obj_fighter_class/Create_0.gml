@@ -11,6 +11,7 @@ equipment = [obj_heavy_armour,obj_long_sword,obj_shield]
 actions = []
 defense_sum = 0
 block = 3
+p_index = 1
 
 bonus_tokens = [obj_green_token2,obj_green_token1,obj_red_token2,obj_red_token1,obj_green_token1,obj_green_token1]
 
@@ -62,9 +63,10 @@ function adjust_energy(amount){
 function equipment_setup(){
 	_equipment = instance_create_layer(0,0, "ATBS_Scale_P1", obj_player_equipment)
 	equipment = _equipment.equipment
-	array_add(equipment,obj_heavy_armour,obj_long_sword,obj_shield)
 	for (cnt = 0; cnt < array_length(equipment);cnt++){
-		instance_create(x,y,"Player_card_layer",equipment[cnt])
+		_ability = instance_create(x,y,"Player_card_layer",equipment[cnt])
+		_ability.player = players[p_index]
+		array_add(equipment,_ability)
 	}
 }
 

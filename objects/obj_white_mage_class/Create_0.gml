@@ -58,11 +58,6 @@ function adjust_energy(amount){
 	energy += amount
 }
 
-function equipment_setup(){
-	_equipment = instance_create_layer(0,0, "ATBS_Scale_P1", obj_player_equipment)
-	equipment = _equipment.equipment
-	array_add(equipment,obj_heavy_armour,obj_long_sword,obj_shield)
-}
 
 function get_abilities(){
 	for (item = array_length(equipment); item > 0; item--){

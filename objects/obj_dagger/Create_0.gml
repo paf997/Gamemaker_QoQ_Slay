@@ -14,7 +14,10 @@ function check_power_type(a,b){
 	if (a == b) return true
 }
 
-function attack_auto(power,power_lv, power_type){
+function attack_auto(
+	power = player.red_sum,
+	power_lv = 0, 
+	power_type = TokenType.Attack){
 	if(check_power_type("attack", power_type)){
 	}else{
 		return "incorrect type";
@@ -30,6 +33,7 @@ function attack_auto(power,power_lv, power_type){
 		power * dmg + dmg + trigger_bonus : power * dmg + trigger_bonus;
 		power_lv--
 	}
+	player.dmg = dmg*power
 	return (dmg * power)
 }
 
@@ -66,3 +70,8 @@ function get_damage(r_power, g_power, _level = 1){
 	return dmg_sum
 
 }
+
+function do_actions(){
+	attack_auto()
+}
+

@@ -24,6 +24,9 @@ black_sum = 0;
 wild_sum = 0;
 atb = 0
 red_actions = []
+players_list  = instance_find(obj_player_list,0)
+player = -1
+actions = []
 
 function deal_damage(dmg){
 	if(dmg > block){
@@ -95,5 +98,16 @@ function do_actions(_color){
 	for (cnt = 0; cnt < array_length(red_actions); cnt++){
 	
 		red_actions[cnt].do_action()
+	}
+}
+
+function equipment_setup(){
+	players  = player_list.player_list
+	_equipment = instance_create_layer(0,0, "ATBS_Scale_P1", obj_player_equipment)
+	equipment = _equipment.equipment
+	for (cnt = 0; cnt < array_length(equipment);cnt++){
+		_ability = instance_create(x,y,"Player_card_layer",equipment[cnt])
+		_ability.player = players[p_index]
+		array_add(equipment,_ability)
 	}
 }

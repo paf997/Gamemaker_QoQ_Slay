@@ -1,6 +1,6 @@
 player = -1;
 type = equipment_type.weapon
-name = ["Long Sword","attack_auto","block_conditional"]
+name = ["Base","BAse","Base"]
 abilities = [TokenType.Attack,TokenType.Attack,TokenType.Defense]
 dmg = 2;
 bonus_dmg = 1
@@ -60,8 +60,13 @@ function block_passive(power, power_lv, power_type){
 	return 0
 }
 
-function do_action(_index = 1){
-	_player = players[_index-1]
-	attack_auto(_player.red_sum,2,TokenType.Attack)
+function do_actions(){
+
+}
+
+function do_auto_actions(){//start of battle
+}
+
+function do_passive_actions(){//once token drawn or immediate actions
 }
 

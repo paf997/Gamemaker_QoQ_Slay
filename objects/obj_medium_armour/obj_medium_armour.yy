@@ -11,7 +11,10 @@
     "name":"Equipment",
     "path":"folders/Objects/Equipment.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_dagger",
+    "path":"objects/obj_dagger/obj_dagger.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

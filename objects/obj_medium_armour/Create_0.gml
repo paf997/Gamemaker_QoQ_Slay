@@ -13,7 +13,10 @@ function check_power_type(a,b){
 	if (a == b) return true
 }
 
-function block_auto(power, power_lv, power_type){
+function block_auto(
+	power = player.green_sum, 
+	power_lv = 0, 
+	power_type = TokenType.Defense){
 	if(check_power_type("defense", power_type)){
 	}else{
 		return "incorrect type";
@@ -22,7 +25,10 @@ function block_auto(power, power_lv, power_type){
 	return auto_block;
 }
 
-function block_passive(power, power_lv, power_type){
+function block_passive	(
+	power = player.green_sum, 
+	power_lv = 0, 
+	power_type = TokenType.Defense){
 	if(check_power_type("defense", power_type)){
 	}else{
 		return "incorrect type";
@@ -44,4 +50,12 @@ function get_ability_description(index = 0){
 	ability_description[0] = $"+{name[index]}{block + trigger_bonus}/green"
 	}
 	return ability_description[0]
+}
+
+function do_auto_actions(){
+	player.block = player.armour
+}
+
+function do_passive_actions(){
+	block_passive()
 }
