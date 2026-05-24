@@ -12,9 +12,6 @@ p3_atb = 0
 initiative_icon = instance_find(obj_fighter_icon,0);
 initiative_track = instance_find(obj_initiative_track, 0)
 _player_controller = instance_find(obj_rush_btn_controllor,0)
-_player = instance_find(obj_fighter_class,0)
-_player2 = instance_find(obj_rogue_class,0)
-_player3 = instance_find(obj_white_mage_class,0)
 initiative_icon.initiative = 0;
 stop_draw_max = 5
 init_bonus = -2;
@@ -37,6 +34,10 @@ token_draw_count = 0;
 dmg_output = 0;
 is_turn_end = false;
 has_busted = false;
+player_list = instance_find(obj_player_list,0)
+_player = 0
+_player2 = 0
+_player3 = 0
 
 player_starting_tokens = [];
 
@@ -125,7 +126,6 @@ defense_sum = 0;
 magic_sum = 0;
 aux_sum = 0;
 energy_gain = 0;
-player_list = instance_find(obj_player_list,0)
 energy = 0
 
 function getDamage(){

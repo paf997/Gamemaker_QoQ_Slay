@@ -27,6 +27,11 @@ red_actions = []
 players_list  = instance_find(obj_player_list,0)
 player = -1
 actions = []
+equipment = []
+
+//show_debug_message($"Where is player list{players_list.current_player_black_sum}")
+
+//equipment_setup()
 
 function deal_damage(dmg){
 	if(dmg > block){
@@ -71,6 +76,7 @@ function get_initiative(){
 }
 
 function get_random_bonus_token(amount){
+	player = players_list.player_list
 	for(cnt = amount; cnt > 0; cnt --){
 		_index = bonus_tokens[random(array_length(bonus_tokens)-1)]
 		_token = instance_create_layer(x,y, "Instances_1", _index)
@@ -82,6 +88,10 @@ function get_random_bonus_token(amount){
 		}else{
 			yellow_sum += _token.token_value
 		}
+		//show_debug_message($"something {players.equipment}")
+		players_list.activate_actions(2,player[0])
+		players_list.activate_actions(2,player[1])
+		players_list.activate_actions(2,player[2])
 		
 	}
 }
@@ -102,12 +112,14 @@ function do_actions(_color){
 }
 
 function equipment_setup(){
-	players  = player_list.player_list
-	_equipment = instance_create_layer(0,0, "ATBS_Scale_P1", obj_player_equipment)
+	players  = players_list.player_list
+	show_debug_message($"Where is player list{players_list.player_list}")
+	_equipment = instance_create_layer(0,0, "ATB_Scale_P1", obj_player_equipment)
 	equipment = _equipment.equipment
 	for (cnt = 0; cnt < array_length(equipment);cnt++){
 		_ability = instance_create(x,y,"Player_card_layer",equipment[cnt])
-		_ability.player = players[p_index]
+		_ability.player = players[p_index-1]
+		show_debug_message($"the player = {_ability.player}")
 		array_add(equipment,_ability)
 	}
 }

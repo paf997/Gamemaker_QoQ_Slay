@@ -10,6 +10,7 @@ initiative = 1
 equipment = []
 defense_sum = 0
 block = 2
+p_index = 2
 
 bonus_tokens = [obj_red_token2,obj_red_token1,obj_red_token2,obj_red_token1,obj_red_token1,obj_green_token1]
 

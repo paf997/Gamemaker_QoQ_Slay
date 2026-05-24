@@ -64,8 +64,6 @@ function update_player_index(_part){
 	}else{
 
 	}
-	
-	
 	//show_debug_message(string(participants[0].initiative))
 	array_sort(participants,function(a,b){
 		return a.initiative - b.initiative;
@@ -129,6 +127,7 @@ function atb_phase_complete(){
 		participant.reset_block();
 		if(participant.name != "fighter" || participant.name != "Rogue" || participant.name != "White Mage"){
 			array_push(next_round_particants,participant)
+			players.activate_actions(2,participant)
 			//show_debug_message("Adding " + string(next_round_particants))
 			is_finished = true//participant.do_actions()
 			if(is_finished){

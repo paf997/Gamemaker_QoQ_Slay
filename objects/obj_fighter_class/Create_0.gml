@@ -22,6 +22,7 @@ current_player_black_sum = 0;
 current_player_yellow_sum = 0;
 current_player_wild_sum = 0;
 
+
 function deal_damage(dmg){
 	_hp = hp
 	if(dmg >= block){
@@ -61,11 +62,11 @@ function adjust_energy(amount){
 }
 
 function equipment_setup(){
-	_equipment = instance_create_layer(0,0, "ATBS_Scale_P1", obj_player_equipment)
+	_equipment = instance_create_layer(0,0, "ATB_Scale_P1", obj_player_equipment)
 	equipment = _equipment.equipment
 	for (cnt = 0; cnt < array_length(equipment);cnt++){
 		_ability = instance_create(x,y,"Player_card_layer",equipment[cnt])
-		_ability.player = players[p_index]
+		_ability.player = players[p_index-1]
 		array_add(equipment,_ability)
 	}
 }
