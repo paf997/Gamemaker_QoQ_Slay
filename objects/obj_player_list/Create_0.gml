@@ -1,4 +1,4 @@
-class_list = [obj_fighter_class,obj_rogue_class,obj_fighter_class]
+class_list = [obj_fighter_class,obj_rogue_class,obj_white_mage_class]
 player_list = []
 bag = instance_find(obj_token_bag_P1,0)
 current_player_token_sum = 0;
@@ -46,11 +46,12 @@ function reset_stats(_player){
 show_debug_message($"Testing create classes  { get_player_list()}")
 
 function activate_actions(_type , _player ){
-	
+	show_debug_message($"{array_length(player_list[0].equipment)} ")
 	for(cnt = 0; cnt < array_length(_player.equipment); cnt++){
 		if(_type == 1){
 			_player.equipment[cnt].do_auto_actions()
 		}else if(_type == 2){
+			show_debug_message($"{_player} ")
 			_player.equipment[cnt].do_passive_actions()
 		}else if(_type == 3){
 			_player.equipment[cnt].do_actions()

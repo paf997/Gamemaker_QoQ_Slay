@@ -8,6 +8,7 @@ end_turn_phase = 1
 armour = 3;
 initiative = 0
 equipment = [obj_heavy_armour,obj_long_sword,obj_shield]
+show_debug_message($"fighter quip: {array_length(equipment)} ---!!!!")
 actions = []
 defense_sum = 0
 block = 3
@@ -61,15 +62,7 @@ function adjust_energy(amount){
 	energy += amount
 }
 
-function equipment_setup(){
-	_equipment = instance_create_layer(0,0, "ATB_Scale_P1", obj_player_equipment)
-	equipment = _equipment.equipment
-	for (cnt = 0; cnt < array_length(equipment);cnt++){
-		_ability = instance_create(x,y,"Player_card_layer",equipment[cnt])
-		_ability.player = players[p_index-1]
-		array_add(equipment,_ability)
-	}
-}
+
 
 function get_abilities(){
 	for (item = array_length(equipment); item > 0; item--){

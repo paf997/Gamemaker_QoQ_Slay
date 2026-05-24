@@ -121,11 +121,11 @@ function update_initiatives(_player){
 }
 
 function adjustment_individual_initiative(){
-	show_debug_message($"plyaer list length ===== {array_length(player_list.player_list)}")
+	//show_debug_message($"plyaer list length ===== {array_length(player_list.player_list)}")
 	for (cnt = 0; cnt <array_length(player_list.player_list); cnt ++){
 		 _temp = player_list.player_list[cnt]
 		 _temp.initiative = initiative_icon.initiative + _temp.red_sum + _temp.green_sum + _temp.yellow_sum
-		 show_debug_message($"cnt {_temp.name}{cnt} == {initiative_icon.initiative} + {_temp.green_sum} +  {_temp.red_sum} +  {_temp.yellow_sum} = atb {_temp.initiative}")
+		 //show_debug_message($"cnt {_temp.name}{cnt} == {initiative_icon.initiative} + {_temp.green_sum} +  {_temp.red_sum} +  {_temp.yellow_sum} = atb {_temp.initiative}")
 		 update_initiatives(_temp)
 	}
 }

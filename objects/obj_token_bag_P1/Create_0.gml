@@ -50,7 +50,7 @@ player_bag_token_arr = [];
 for (var i = 0; i < 4 ; i++){
 	new_instance = instance_create_layer(0, 0,  "Instances_1", obj_white_token);
 	array_push(player_bag_token_arr, new_instance);
-	show_debug_message("Newly created instance ID: " + string(new_instance));
+	//show_debug_message("Newly created instance ID: " + string(new_instance));
 }
 
 new_instance = instance_create_layer(0, 0,"Instances_1",  obj_white_token2);

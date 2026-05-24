@@ -58,7 +58,7 @@ function find_initiative(initiative){
 
 function update_player_index(_part){
 	check_for_fighter = array_contains(participants, _part)
-	show_debug_message($"Update_player:  {_part} :  {check_for_fighter}")
+	//show_debug_message($"Update_player:  {_part} :  {check_for_fighter}")
 	if(!check_for_fighter){
 		array_push(participants,_part )
 	}else{

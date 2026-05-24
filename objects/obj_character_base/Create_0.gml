@@ -88,7 +88,7 @@ function get_random_bonus_token(amount){
 		}else{
 			yellow_sum += _token.token_value
 		}
-		//show_debug_message($"something {players.equipment}")
+		show_debug_message($"passive Actions")
 		players_list.activate_actions(2,player[0])
 		players_list.activate_actions(2,player[1])
 		players_list.activate_actions(2,player[2])
@@ -117,9 +117,10 @@ function equipment_setup(){
 	_equipment = instance_create_layer(0,0, "ATB_Scale_P1", obj_player_equipment)
 	equipment = _equipment.equipment
 	for (cnt = 0; cnt < array_length(equipment);cnt++){
+		show_debug_message($"equipment len: {array_length(actions)} ---!!!!")
 		_ability = instance_create(x,y,"Player_card_layer",equipment[cnt])
 		_ability.player = players[p_index-1]
-		show_debug_message($"the player = {_ability.player}")
-		array_add(equipment,_ability)
+		//show_debug_message($"the player = {_ability.player}")
+		array_add(actions,_ability)
 	}
 }

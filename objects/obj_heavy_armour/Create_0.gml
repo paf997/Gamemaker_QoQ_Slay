@@ -35,6 +35,8 @@ function block_passive(
 	
 	auto_block += (power % 2 == 1) ? 
 	(power * block) + (trigger_bonus * power) : (power * block);
+	player.block = auto_block
+	show_debug_message($"Heavy armour {player.block}")
 }
 function get_ability_description(index = 0){
 	green_power = instance_find(obj_fighter_class, 0)
