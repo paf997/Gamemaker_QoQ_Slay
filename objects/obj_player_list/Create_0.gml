@@ -13,11 +13,12 @@ create_player_classes()
 
 function create_player_classes(){
 	n = array_length(class_list)
-	while(n > 0){
-		_player = instance_create_layer(x,y,"Instances_1", class_list[n-1])
-		n--
+	cnt = 0
+	while(cnt < n){
+		_player = instance_create_layer(x,y,"Instances_1", class_list[cnt])
+		cnt++
 		array_push(player_list, _player)
-		show_debug_message($"in PL : {player_list}")
+		show_debug_message($"in PL : {player_list}. Player equipments {_player.equipment[0]}")
 		
 		_player.equipment_setup()
 	}
@@ -46,15 +47,18 @@ function reset_stats(_player){
 show_debug_message($"Testing create classes  { get_player_list()}")
 
 function activate_actions(_type , _player ){
-	show_debug_message($"{array_length(player_list[0].equipment)} ")
-	for(cnt = 0; cnt < array_length(_player.equipment); cnt++){
+	show_debug_message($"player: {_player.name} {array_length(_player.actions)} ")
+	for(cnt = 0; cnt < array_length(_player.actions); cnt++){
 		if(_type == 1){
-			_player.equipment[cnt].do_auto_actions()
+			//player_list[_player]
+			_player.actions[cnt].do_auto_actions()
 		}else if(_type == 2){
-			show_debug_message($"{_player} ")
-			_player.equipment[cnt].do_passive_actions()
+			show_debug_message($"{_player.name} ")
+			//player_list[_player]
+			_player.actions[cnt].do_passive_actions()
 		}else if(_type == 3){
-			_player.equipment[cnt].do_actions()
+			//player_list[_player]
+			_player.actions[cnt].do_actions()
 		}else{}
 	}
 	

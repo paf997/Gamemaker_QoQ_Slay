@@ -1,3 +1,4 @@
+event_inherited()
 type = equipment_type.armour
 name = ["Light Armour","aBck","bck"]
 abilities = [TokenType.Defense,TokenType.Defense,TokenType.Defense]
@@ -24,7 +25,7 @@ function block_auto(power, power_lv, power_type){
 
 function block_passive(
 	power = player.green_sum, 
-	power_lv = 0,
+	power_lv = 1,
 	power_type = TokenType.Defense){
 	if(check_power_type("defense", power_type)){
 	}else{
@@ -59,5 +60,6 @@ function do_auto_actions(){//start of battle
 }
 
 function do_passive_actions(){//once token drawn or immediate actions
+	show_debug_message($"Passive block ")
 	block_passive()
 }

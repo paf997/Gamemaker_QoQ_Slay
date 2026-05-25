@@ -113,14 +113,15 @@ function do_actions(_color){
 
 function equipment_setup(){
 	players  = players_list.player_list
-	show_debug_message($"Where is player list{players_list.player_list}")
+	show_debug_message($"equip set up {array_length(equipment)}")
 	_equipment = instance_create_layer(0,0, "ATB_Scale_P1", obj_player_equipment)
-	equipment = _equipment.equipment
+	//equipment = _equipment.equipment
 	for (cnt = 0; cnt < array_length(equipment);cnt++){
-		show_debug_message($"equipment len: {array_length(actions)} ---!!!!")
-		_ability = instance_create(x,y,"Player_card_layer",equipment[cnt])
+		//show_debug_message($"equipment len: {array_length(actions)} ---!!!!")
+		_ability = instance_create_layer(x,y,"Player_card_layer",equipment[cnt])
+		//show_debug_message($"players{array_length(players)}")
 		_ability.player = players[p_index-1]
-		//show_debug_message($"the player = {_ability.player}")
-		array_add(actions,_ability)
+		show_debug_message($"the player = {_ability.name}")
+		array_push(actions,_ability)
 	}
 }

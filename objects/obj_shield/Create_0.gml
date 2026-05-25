@@ -1,3 +1,4 @@
+event_inherited()
 type = equipment_type.armour
 power_type = [TokenType.Defense,TokenType.Attack]
 name = ["Shield","block_passive"]

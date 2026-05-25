@@ -1,3 +1,4 @@
+event_inherited()
 player = -1;
 type = equipment_type.weapon
 name = ["Long Sword","attack_auto","block_conditional"]
@@ -67,7 +68,7 @@ function block_passive(power, power_lv, power_type){
 	return 0
 }
 
-function do_action(_index = 1){
+function do_actions(){
 	_player = players[_index-1]
 	attack_auto(_player.red_sum,2,TokenType.Attack)
 	block_conditional()
@@ -75,6 +76,8 @@ function do_action(_index = 1){
 
 
 function do_auto_actions(){
+}
+function do_passive_actions(){
 }
 
 

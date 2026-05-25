@@ -1,3 +1,5 @@
+
+event_inherited()
 type = equipment_type.armour
 name = ["Heavy Armour","aBck","bck"]
 abilities = [TokenType.Defense,TokenType.Defense,TokenType.Defense]
@@ -20,7 +22,7 @@ function block_auto(){
 
 function block_passive(
 	power = player.green_sum,
-	power_lv = 0, 
+	power_lv = 1, 
 	power_type = TokenType.Defense)
 	{
 		if(check_power_type("defense", power_type)){

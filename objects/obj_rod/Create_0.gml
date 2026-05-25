@@ -1,3 +1,4 @@
+event_inherited()
 type = equipment_type.weapon
 name = ["Rod","attack_auto"]
 abilities = [TokenType.Attack,TokenType.Attack]
