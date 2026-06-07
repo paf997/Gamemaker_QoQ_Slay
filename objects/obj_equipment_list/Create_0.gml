@@ -16,7 +16,7 @@ current_player_wild_sum = 0;
 
 player_1 = instance_find(obj_fighter_class,0)
 player_2 = instance_find(obj_rogue_class,0)
-player_3 = instance_find(obj_rogue_class,0)
+player_3 = instance_find(obj_white_mage_class,0)
 
 y_offset = 48
 offset_count = 0
@@ -56,6 +56,8 @@ long_sword = instance_create_layer(x,y, "Instances_1", obj_long_sword)
 heavy_armour = instance_create_layer(x,y, "Instances_1", obj_heavy_armour)
 dagger = instance_create_layer(x,y,"Instances_1",obj_dagger)
 medium_armour = instance_create_layer(x,y, "Instances_1", obj_medium_armour)
+rod = instance_create_layer(x,y, "Instances_1", obj_rod)
+light_armour = instance_create_layer(x,y, "Instances_1", obj_light_armour)
 
 
 set_up_player_starting_equipment("fighter")
@@ -64,7 +66,7 @@ offset_count = 0
 set_up_player_starting_equipment("rogue")
 column_index++
 offset_count = 0
-set_up_player_starting_equipment("fighter")
+set_up_player_starting_equipment("white mage")
 
 
 
@@ -73,8 +75,10 @@ function set_up_player_starting_equipment(player_class){
 
 	if(player_class == "fighter"){
 		array_push(equipment,shield,long_sword,heavy_armour)
-	}else{
+	}else if(player_class == "rogue"){
 		array_push(equipment,dagger,medium_armour)
+	}else{
+		array_push(equipment,rod,light_armour)
 	}
 	
 	equipment_length = array_length(equipment)

@@ -85,6 +85,8 @@ function get_random_bonus_token(amount){
 			red_sum += _token.token_value
 		}else if(_token.token_type == TokenType.Defense){
 			green_sum += _token.token_value
+			green_abilities()
+			
 		}else{
 			yellow_sum += _token.token_value
 		}
@@ -123,5 +125,11 @@ function equipment_setup(){
 		_ability.player = players[p_index-1]
 		show_debug_message($"the player = {_ability.name}")
 		array_push(actions,_ability)
+	}
+}
+
+function green_abilities(){
+	for (cnt = 0; cnt < array_length(actions); cnt ++){
+		show_debug_message($"green abilites:: {array_length(actions)}")
 	}
 }

@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Script1",
+  "%Name":"scr_main",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Script1",
+  "name":"scr_main",
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"FFxQoQ",
+    "path":"FFxQoQ.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

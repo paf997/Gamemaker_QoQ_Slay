@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_white_mage",
+    "path":"sprites/spr_white_mage/spr_white_mage.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
