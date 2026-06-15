@@ -83,7 +83,7 @@ function set_up_player_starting_equipment(player_class){
 	
 	equipment_length = array_length(equipment)
 	for (item = equipment_length; item > 0; item --){
-		show_debug_message($"equipment length {item}")
+		//show_debug_message($"equipment length {item}")
 		get_equipment_abilities(equipment[item-1])
 	}
 }
@@ -92,7 +92,7 @@ function set_up_player_starting_equipment(player_class){
 function get_equipment_abilities(equipment){
 	ability_length = array_length(equipment.abilities)
 	for (_item = ability_length; _item > 1; _item --){
-		show_debug_message($"abillity length {_item}")
+		//show_debug_message($"abillity length {_item}")
 		_new_ability_ui =  create_equipemnt_abilities_ui(equipment,_item-1)
 		array_push(player_equipment_abilities,_new_ability_ui)
 	}

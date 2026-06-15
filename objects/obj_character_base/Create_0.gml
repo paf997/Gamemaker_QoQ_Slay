@@ -33,6 +33,8 @@ equipment = []
 
 //equipment_setup()
 
+
+
 function deal_damage(dmg){
 	if(dmg > block){
 		adjust_hp(dmg)
@@ -56,7 +58,7 @@ function adjust_block(amount){
 	if(amount == 0){
 		block = 0
 	}else{
-		block -= amount
+		block = amount
 		if(block < 0){
 			block = 0
 		}
@@ -77,10 +79,11 @@ function get_initiative(){
 
 function get_random_bonus_token(amount){
 	player = players_list.player_list
+	show_debug_message($"base char amoutn : {amount}")
 	for(cnt = amount; cnt > 0; cnt --){
 		_index = bonus_tokens[random(array_length(bonus_tokens)-1)]
 		_token = instance_create_layer(x,y, "Instances_1", _index)
-		//show_message($"token {_token.token_value} ")
+		show_debug_message($"token {_token.token_value} ")
 		if(_token.token_type == TokenType.Attack){
 			red_sum += _token.token_value
 		}else if(_token.token_type == TokenType.Defense){
@@ -131,10 +134,12 @@ function equipment_setup(){
 function green_abilities(){
 	for (cnt = 0; cnt < array_length(actions); cnt ++){
 		var _ability = actions[cnt];
-		show_debug_message($"green abilites::: {_ability}")
 		for (cnt_2 = 0; cnt_2 < array_length(_ability.abilities); cnt_2++){
-			if(_ability.abilities[cnt_2] == TokenType.Defense){}
-			show_debug_message($"green Sub abilites::::: Yes")
+			//show_debug_message($"green abilites::: {_ability}")
+			if(_ability.abilities[cnt_2] == TokenType.Defense){
+			//show_debug_message($"green abilites::: {_ability.abilities[cnt_2]}")
+			}
+				
 		}
 		
 	}

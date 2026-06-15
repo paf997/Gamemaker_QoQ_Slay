@@ -47,13 +47,13 @@ function reset_stats(_player){
 //show_debug_message($"Testing create classes  { get_player_list()}")
 
 function activate_actions(_type , _player ){
-	show_debug_message($" Player List : player: {_player.name} {array_length(_player.actions)} ")
+	//show_debug_message($" Player List : player: {_player.name} {array_length(_player.actions)} ")
 	for(cnt = 0; cnt < array_length(_player.actions); cnt++){
 		if(_type == 1){
 			//player_list[_player]
 			_player.actions[cnt].do_auto_actions()
 		}else if(_type == 2){
-			show_debug_message($" Player List {_player.name} ")
+			//show_debug_message($" Player List {_player.name} ")
 			//player_list[_player]
 			_player.actions[cnt].do_passive_actions()
 		}else if(_type == 3){

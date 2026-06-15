@@ -25,7 +25,7 @@ function block_passive(
 	power_lv = 1, 
 	power_type = TokenType.Defense)
 	{
-		if(check_power_type("defense", power_type)){
+		if(check_power_type(TokenType.Defense, power_type)){
 		}else{
 			return "incorrect type";
 		}

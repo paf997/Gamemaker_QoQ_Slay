@@ -27,8 +27,9 @@ function block_passive(
 	power = player.green_sum, 
 	power_lv = 1,
 	power_type = TokenType.Defense){
-	if(check_power_type("defense", power_type)){
+	if(check_power_type(TokenType.Defense, power_type)){
 	}else{
+		//show_debug_message("passive block check")
 		return "incorrect type";
 	}
 	
@@ -41,7 +42,7 @@ function block_passive(
 	
 	auto_block += (power % 2 == 1) ? 
 	(power * block) + (trigger_bonus * power) : (power * block);
-	player.block = auto_block
+	player.adjust_block(auto_block) 
 	show_debug_message($"block pass light armour,  auto block = {player.block} block: {player.name}")
 }
 function get_ability_description(index = 0){

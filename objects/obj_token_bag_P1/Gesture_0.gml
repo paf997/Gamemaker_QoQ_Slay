@@ -53,6 +53,7 @@ function draw_token_and_add_to_initiative_track(){
 					wild_sum += current_token.token_value;
 					player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Fighter){
+					show_debug_message("main bag: fighter token ")
 					player1_class_tokens += current_token.token_value;
 					global.player_1.get_random_bonus_token(2)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
