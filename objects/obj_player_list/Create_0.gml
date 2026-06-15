@@ -22,9 +22,9 @@ function create_player_classes(){
 		
 		_player.equipment_setup()
 	}
-	bag._player = player_list[0]
-	bag._player2 = player_list[1]
-	bag._player3 = player_list[2]
+	global.player_1 = player_list[0]
+	global.player_2 = player_list[1]
+	global.player_3 = player_list[2]
 }
 function get_player_list(){
 	return player_list
@@ -44,16 +44,16 @@ function reset_stats(_player){
 }
 
 //create_player_classes()
-show_debug_message($"Testing create classes  { get_player_list()}")
+//show_debug_message($"Testing create classes  { get_player_list()}")
 
 function activate_actions(_type , _player ){
-	show_debug_message($"player: {_player.name} {array_length(_player.actions)} ")
+	show_debug_message($" Player List : player: {_player.name} {array_length(_player.actions)} ")
 	for(cnt = 0; cnt < array_length(_player.actions); cnt++){
 		if(_type == 1){
 			//player_list[_player]
 			_player.actions[cnt].do_auto_actions()
 		}else if(_type == 2){
-			show_debug_message($"{_player.name} ")
+			show_debug_message($" Player List {_player.name} ")
 			//player_list[_player]
 			_player.actions[cnt].do_passive_actions()
 		}else if(_type == 3){

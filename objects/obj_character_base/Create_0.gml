@@ -123,13 +123,19 @@ function equipment_setup(){
 		_ability = instance_create_layer(x,y,"Player_card_layer",equipment[cnt])
 		//show_debug_message($"players{array_length(players)}")
 		_ability.player = players[p_index-1]
-		show_debug_message($"the player = {_ability.name}")
+		show_debug_message($"equi set up: the player = {_ability.name}")
 		array_push(actions,_ability)
 	}
 }
 
 function green_abilities(){
 	for (cnt = 0; cnt < array_length(actions); cnt ++){
-		show_debug_message($"green abilites:: {array_length(actions)}")
+		var _ability = actions[cnt];
+		show_debug_message($"green abilites::: {_ability}")
+		for (cnt_2 = 0; cnt_2 < array_length(_ability.abilities); cnt_2++){
+			if(_ability.abilities[cnt_2] == TokenType.Defense){}
+			show_debug_message($"green Sub abilites::::: Yes")
+		}
+		
 	}
 }

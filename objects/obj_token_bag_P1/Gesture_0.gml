@@ -54,24 +54,24 @@ function draw_token_and_add_to_initiative_track(){
 					player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Fighter){
 					player1_class_tokens += current_token.token_value;
-					_player.get_random_bonus_token(2)
+					global.player_1.get_random_bonus_token(2)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Rogue){
 					player2_class_tokens += current_token.token_value;
-					_player2.get_random_bonus_token(3)
+					global.player_2.get_random_bonus_token(3)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.WMage){
 					player3_class_tokens += current_token.token_value;
-					_player3.get_random_bonus_token(2)
+					global.player_3.get_random_bonus_token(2)
 					
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Aux){
 					player1_class_tokens += current_token.token_value;
-					_player.get_random_bonus_token(2)
+					global.player_1.get_random_bonus_token(2)
 					player2_class_tokens += current_token.token_value;
-					_player2.get_random_bonus_token(3)
+					global.player_2.get_random_bonus_token(3)
 					player3_class_tokens += current_token.token_value;
-					_player3.get_random_bonus_token(2)
+					global.player_3.get_random_bonus_token(2)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Bust){
 					bust_sum += current_token.token_value;

@@ -15,7 +15,7 @@ _player_controller = instance_find(obj_rush_btn_controllor,0)
 initiative_icon.initiative = 0;
 stop_draw_max = 5
 init_bonus = -2;
-current_player_token_sum = 0;
+current_token_sum = 0;
 current_player_red_sum = 0;
 current_player_green_sum = 0;
 current_player_black_sum = 0;
@@ -35,9 +35,9 @@ dmg_output = 0;
 is_turn_end = false;
 has_busted = false;
 player_list = instance_find(obj_player_list,0)
-_player = 0
-_player2 = 0
-_player3 = 0
+global.player_1 = 0;
+global.player_2 = 0;
+global.player_3 = 0;
 
 player_starting_tokens = [];
 
@@ -106,18 +106,6 @@ for (var i = 0; i < num_instances; ++i) {
 }
 
 atb_index = -1;
-
-enum TokenType {
-	Attack,
-	Defense,
-	Magic,
-	Wild,
-	Aux,
-	Bust,
-	Fighter,
-	WMage,
-	Rogue
-}
 
 wild_sum = 0;
 bust_sum = 0;

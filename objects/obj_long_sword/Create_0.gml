@@ -52,7 +52,7 @@ function block_conditional(
 }
 
 function get_ability_description(index = 0){
-	if(index == 1){
+	if(index == 0){
 		ability_description[0] = $"+{block} / 1 green"
 	}else{
 		ability_description[0] = $"+{dmg} / 2 red"

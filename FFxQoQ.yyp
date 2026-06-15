@@ -43,7 +43,6 @@
   "name":"FFxQoQ",
   "resources":[
     {"id":{"name":"f_pixel","path":"fonts/f_pixel/f_pixel.yy",},},
-    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
     {"id":{"name":"obj_ability_heal","path":"objects/obj_ability_heal/obj_ability_heal.yy",},},
     {"id":{"name":"obj_ability","path":"objects/obj_ability/obj_ability.yy",},},
@@ -107,7 +106,6 @@
     {"id":{"name":"obj_yellow_token1","path":"objects/obj_yellow_token1/obj_yellow_token1.yy",},},
     {"id":{"name":"obj_yellow_token2","path":"objects/obj_yellow_token2/obj_yellow_token2.yy",},},
     {"id":{"name":"obj_yellow_token3","path":"objects/obj_yellow_token3/obj_yellow_token3.yy",},},
-    {"id":{"name":"ps_test","path":"particles/ps_test/ps_test.yy",},},
     {"id":{"name":"rm_first_test","path":"rooms/rm_first_test/rm_first_test.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"scr_main","path":"scripts/scr_main/scr_main.yy",},},
