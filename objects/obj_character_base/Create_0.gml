@@ -79,24 +79,27 @@ function get_initiative(){
 
 function get_random_bonus_token(amount){
 	player = players_list.player_list
-	show_debug_message($"base char amoutn : {amount}")
+	//show_debug_message($"base char amount : {amount} player {player}")
 	for(cnt = amount; cnt > 0; cnt --){
 		_index = bonus_tokens[random(array_length(bonus_tokens)-1)]
 		_token = instance_create_layer(x,y, "Instances_1", _index)
-		show_debug_message($"token {_token.token_value} ")
+		show_debug_message($"token {_token.token_value} color:{_token.token_type_as_string} ")
 		if(_token.token_type == TokenType.Attack){
 			red_sum += _token.token_value
 		}else if(_token.token_type == TokenType.Defense){
 			green_sum += _token.token_value
 			green_abilities()
+			//activate_p_actions()
+		}else if(_token.token_type == TokenType.Agility){
+			blue_sum += _token.token_value
 			
 		}else{
 			yellow_sum += _token.token_value
 		}
-		show_debug_message($"passive Actions")
+		/*show_debug_message($"passive Actions")
 		players_list.activate_actions(2,player[0])
 		players_list.activate_actions(2,player[1])
-		players_list.activate_actions(2,player[2])
+		players_list.activate_actions(2,player[2])*/
 		
 	}
 }
@@ -129,18 +132,37 @@ function equipment_setup(){
 		show_debug_message($"equi set up: the player = {_ability.name}")
 		array_push(actions,_ability)
 	}
+	
+	
 }
 
 function green_abilities(){
 	for (cnt = 0; cnt < array_length(actions); cnt ++){
 		var _ability = actions[cnt];
+		show_debug_message($"green abilites::: {_ability.name}")
 		for (cnt_2 = 0; cnt_2 < array_length(_ability.abilities); cnt_2++){
-			//show_debug_message($"green abilites::: {_ability}")
 			if(_ability.abilities[cnt_2] == TokenType.Defense){
-			//show_debug_message($"green abilites::: {_ability.abilities[cnt_2]}")
-			}
-				
+			show_debug_message($"Is green")
+			}	
 		}
-		
 	}
+}
+
+function activate_p_actions(){
+	for(cnt = 0; cnt < array_length(actions); cnt++){
+			actions[cnt].do_passive_actions()
+
+	}
+}
+
+function adjust_energy(amount){
+	if (amount >  energy) {
+		show_debug_message("Not enough energy")
+	}else{
+		energy += amount
+	}
+}
+
+function calculate_energy(initiative_amount){
+	energy = get_initiative()/10
 }

@@ -3,7 +3,7 @@ function scr_main(){
 }
 
 enum TokenType {
-	Attack,Defense,Magic,Wild,Aux,Bust,Fighter,WMage,Rogue
+	Attack,Defense,Magic,Wild,Aux,Bust,Fighter,WMage,Rogue,Agility
 }
 
 global.player_list = [];

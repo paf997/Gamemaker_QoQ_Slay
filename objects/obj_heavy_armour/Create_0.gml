@@ -4,12 +4,14 @@ type = equipment_type.armour
 name = ["Heavy Armour","aBck","bck"]
 abilities = [TokenType.Defense,TokenType.Defense,TokenType.Defense]
 auto_type = [TokenType.Defense]
-auto_trigger = 2
+auto_trigger = 1
 trigger_bonus = 1
-block = 2
+block = 0
 auto_block = 3
 power_lv = 0
 ability_description = [""]
+test_cnt = 0
+passive_block = 0
 
 function check_power_type(a,b){
 	if (a == b) return true
@@ -21,6 +23,7 @@ function block_auto(){
 }
 
 function block_passive(
+
 	power = player.green_sum,
 	power_lv = 1, 
 	power_type = TokenType.Defense)
@@ -30,15 +33,16 @@ function block_passive(
 			return "incorrect type";
 		}
 	
-	auto_block = 0;
-	if(power < auto_trigger){
+	passive_block = 0;
+	/*if(power < auto_trigger){
+		show_debug_message($"not enough green power")
 		return block * power
+		
+	}*/
+	if(passive_block < 5){
+		passive_block = power;
 	}
-	
-	auto_block += (power % 2 == 1) ? 
-	(power * block) + (trigger_bonus * power) : (power * block);
-	player.block = auto_block
-	show_debug_message($"Heavy armour {player.block}")
+	return passive_block
 }
 function get_ability_description(index = 0){
 	green_power = instance_find(obj_fighter_class, 0)

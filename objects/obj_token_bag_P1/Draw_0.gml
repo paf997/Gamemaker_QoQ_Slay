@@ -17,6 +17,6 @@ draw_text(x+2, y-3, "Power:" + string(atb_index+1)
 	draw_text(x,y + 200, "Button Test");
 }*/
 
-draw_text(x+128, y + 128, $" Player 1 red {global.player_1.red_sum} green {global.player_1.green_sum} yellow {global.player_1.yellow_sum} atb{global.player_1.initiative} block:{global.player_1.block} dmg:{global.player_1.dmg}")
-draw_text(x+128, y + 160, $" Player 2 red {global.player_2.red_sum} green {global.player_2.green_sum} yellow {global.player_2.yellow_sum} atb{global.player_2.initiative} block:{global.player_2.block} dmg:{global.player_2.dmg}")
-draw_text(x+128, y + 192, $" Player 3 red {global.player_3.red_sum} green {global.player_3.green_sum} yellow {global.player_3.yellow_sum} atb{global.player_3.initiative} block:{global.player_3.block} dmg:{global.player_3.dmg}")
+draw_text(x+12, y + 264, $" P1 red {global.player_1.red_sum} green {global.player_1.green_sum} yellow {global.player_1.yellow_sum} atb{global.player_1.initiative} block:{global.player_1.block} dmg:{global.player_1.dmg} energy:{floor(global.player_1.energy)}")
+draw_text(x+276, y + 232, $" P2 red {global.player_2.red_sum} green {global.player_2.green_sum} blue {global.player_2.blue_sum} atb{global.player_2.initiative} block:{global.player_2.block} dmg:{global.player_2.dmg} energy:{floor(global.player_2.energy)}")
+draw_text(x+536, y + 264, $" P3 red {global.player_3.red_sum} green {global.player_3.green_sum} yellow {global.player_3.yellow_sum} atb{global.player_3.initiative} block:{global.player_3.block} dmg:{global.player_3.dmg} energy:{floor(global.player_3.energy)}")

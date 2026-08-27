@@ -1,5 +1,5 @@
 event_inherited()
-hp = 8;
+hp = 12;
 image_index = c_red
 is_dead = false;
 rounds_completed  = 0;
@@ -12,7 +12,27 @@ defense_sum = 0
 block = 1
 p_index = 3
 
-bonus_tokens = [obj_green_token1,obj_green_token1,obj_red_token1,obj_yellow_token2,obj_yellow_token2,obj_yellow_token1]
+bonus_tokens = [
+	obj_green_token1,
+	obj_green_token1,	
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_yellow_token1,
+	obj_yellow_token1,
+	obj_yellow_token1,
+	obj_yellow_token1,
+	obj_red_token1,
+	obj_red_token1,
+	obj_red_token1,
+	obj_yellow_token2,
+	obj_yellow_token2,
+	obj_yellow_token2,
+	obj_wild_token1,]
 
 current_player_token_sum = 0;
 current_player_red_sum = 0;

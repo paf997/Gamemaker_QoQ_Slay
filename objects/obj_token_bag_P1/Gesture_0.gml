@@ -5,7 +5,7 @@ if(!isChosen){
 
 
 if(token_draw_count == 0){
-	while(bust_sum < stop_draw_max && bust_sum < 7){
+	while(bust_sum <  6/* stop_draw_max && bust_sum < 7*/){
 		draw_token_and_add_to_initiative_track()
 	}
 }else{
@@ -58,21 +58,24 @@ function draw_token_and_add_to_initiative_track(){
 					global.player_1.get_random_bonus_token(2)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Rogue){
+					show_debug_message("main bag: Rogue token ")
 					player2_class_tokens += current_token.token_value;
-					global.player_2.get_random_bonus_token(3)
+					global.player_2.get_random_bonus_token(2)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.WMage){
+					show_debug_message("main bag: Mage token ")
 					player3_class_tokens += current_token.token_value;
 					global.player_3.get_random_bonus_token(2)
 					
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Aux){
+					show_debug_message("All!! Main Bag")
 					player1_class_tokens += current_token.token_value;
-					global.player_1.get_random_bonus_token(2)
+					global.player_1.get_random_bonus_token(1)
 					player2_class_tokens += current_token.token_value;
-					global.player_2.get_random_bonus_token(3)
+					global.player_2.get_random_bonus_token(1)
 					player3_class_tokens += current_token.token_value;
-					global.player_3.get_random_bonus_token(2)
+					global.player_3.get_random_bonus_token()
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Bust){
 					bust_sum += current_token.token_value;
@@ -125,9 +128,12 @@ function adjustment_individual_initiative(){
 	//show_debug_message($"plyaer list length ===== {array_length(player_list.player_list)}")
 	for (cnt = 0; cnt <array_length(player_list.player_list); cnt ++){
 		 _temp = player_list.player_list[cnt]
-		 _temp.initiative = initiative_icon.initiative + _temp.red_sum + _temp.green_sum + _temp.yellow_sum
+		 _temp.initiative = initiative_icon.initiative + _temp.red_sum + 
+		 _temp.green_sum + _temp.yellow_sum + (2*_temp.blue_sum) + _temp.wild_sum
+		 _temp.calculate_energy()
 		 //show_debug_message($"cnt {_temp.name}{cnt} == {initiative_icon.initiative} + {_temp.green_sum} +  {_temp.red_sum} +  {_temp.yellow_sum} = atb {_temp.initiative}")
 		 update_initiatives(_temp)
+		 
 	}
 }
 

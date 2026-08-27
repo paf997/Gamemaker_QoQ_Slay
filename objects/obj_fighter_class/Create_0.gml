@@ -1,5 +1,5 @@
 event_inherited()
-hp = 12;
+hp = 18;
 image_index = c_red
 is_dead = false;
 rounds_completed  = 0;
@@ -8,13 +8,34 @@ end_turn_phase = 1
 armour = 3;
 initiative = 0
 equipment = [obj_heavy_armour,obj_long_sword,obj_shield]
-show_debug_message($"fighter quip: {array_length(equipment)} ---!!!!")
+//show_debug_message($"fighter equip: {array_length(equipment)} ---!!!!")
 actions = []
 defense_sum = 0
 block = 3
 p_index = 1
 
-bonus_tokens = [obj_green_token2,obj_green_token1,obj_red_token2,obj_red_token1,obj_green_token1,obj_green_token1]
+bonus_tokens = [
+	obj_green_token1,
+	obj_green_token1,	
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_green_token1,
+	obj_red_token1,
+	obj_red_token1,
+	obj_red_token1,
+	obj_red_token1,
+	obj_red_token1,
+	obj_red_token1,
+	obj_red_token1,
+	obj_green_token2,
+	obj_green_token2,
+	obj_green_token2,
+	obj_wild_token1,
+]
 
 current_player_token_sum = 0;
 current_player_red_sum = 0;

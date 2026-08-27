@@ -1,9 +1,9 @@
 event_inherited()
-hp = 10;
-att = 2;
-dmg = 2;
+hp = 7;
+att = 1;
+dmg = 6;
 target =  -1
-initiative = 8;
+initiative = 11;
 image_index = c_red
 is_dead = false;
 rounds_completed = 0

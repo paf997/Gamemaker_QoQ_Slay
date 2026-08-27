@@ -63,3 +63,13 @@ function activate_actions(_type , _player ){
 	}
 	
 }
+
+function activate_p_actions(){
+	//show_debug_message($" Player List : player: {_player.name} {array_length(_player.actions)} ")
+	for(cnt = 0; cnt < array_length(actions); cnt++){
+			//show_debug_message($" Player List {_player.name} ")
+			//player_list[_player]
+			actions[cnt].do_passive_actions()
+
+	}
+}
