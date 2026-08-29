@@ -11,7 +11,8 @@ name = "base name"
 end_turn_phase = 1
 actions = [0]
 armour = 2
-block = armour
+auto_block = armour
+block = 0
 energy = 0
 bonus_tokens = []
 red_sum = 0;
@@ -28,6 +29,7 @@ players_list  = instance_find(obj_player_list,0)
 player = -1
 actions = []
 equipment = []
+passive_block = 0;
 
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
@@ -96,10 +98,10 @@ function get_random_bonus_token(amount){
 		}else{
 			yellow_sum += _token.token_value
 		}
-		/*show_debug_message($"passive Actions")
+		show_debug_message($"passive Actions")
 		players_list.activate_actions(2,player[0])
 		players_list.activate_actions(2,player[1])
-		players_list.activate_actions(2,player[2])*/
+		players_list.activate_actions(2,player[2])
 		
 	}
 }
@@ -150,6 +152,7 @@ function green_abilities(){
 
 function activate_p_actions(){
 	for(cnt = 0; cnt < array_length(actions); cnt++){
+			show_debug_message($"p action {actions[cnt].name}")
 			actions[cnt].do_passive_actions()
 
 	}

@@ -28,13 +28,13 @@ function block_passive(
 	power = player.green_sum, 
 	power_lv = 0,
 	power_type = TokenType.Defense){
-	if(check_power_type("defense", power_type)){
+	/*if(check_power_type("defense", power_type)){
 	}else{
 		return "incorrect type";
-	}
+	}*/
 	
-	player.block = (power * block)
-	return (power * block)
+	//player.block = (power * block)
+	//return (power * block)
 }
 
 function get_ability_description(index = 0){

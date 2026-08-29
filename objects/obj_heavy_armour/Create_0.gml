@@ -28,21 +28,25 @@ function block_passive(
 	power_lv = 1, 
 	power_type = TokenType.Defense)
 	{
-		if(check_power_type(TokenType.Defense, power_type)){
+		/*if(check_power_type(TokenType.Defense, power_type)){
 		}else{
 			return "incorrect type";
-		}
+		}*/
 	
-	passive_block = 0;
-	/*if(power < auto_trigger){
+	/*passive_block = 0;
+	if(power < auto_trigger){
 		show_debug_message($"not enough green power")
 		return block * power
 		
 	}*/
-	if(passive_block < 5){
-		passive_block = power;
+	
+	passive_block = power
+	if(passive_block > 5){
+		passive_block = 5
 	}
-	return passive_block
+	player.passive_block = passive_block;
+	
+	//show_debug_message($"block pass heavy armour,  passive block = {player.passive_block} block: {player.name}")
 }
 function get_ability_description(index = 0){
 	green_power = instance_find(obj_fighter_class, 0)

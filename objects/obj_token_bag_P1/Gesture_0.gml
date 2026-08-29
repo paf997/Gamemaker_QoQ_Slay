@@ -130,7 +130,7 @@ function adjustment_individual_initiative(){
 		 _temp = player_list.player_list[cnt]
 		 _temp.initiative = initiative_icon.initiative + _temp.red_sum + 
 		 _temp.green_sum + _temp.yellow_sum + (2*_temp.blue_sum) + _temp.wild_sum
-		 _temp.calculate_energy()
+		 _temp.calculate_energy(_temp.initiative)
 		 //show_debug_message($"cnt {_temp.name}{cnt} == {initiative_icon.initiative} + {_temp.green_sum} +  {_temp.red_sum} +  {_temp.yellow_sum} = atb {_temp.initiative}")
 		 update_initiatives(_temp)
 		 

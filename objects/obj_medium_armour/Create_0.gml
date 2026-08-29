@@ -5,8 +5,8 @@ abilities = [TokenType.Defense,TokenType.Defense,TokenType.Defense]
 auto_type = [TokenType.Defense]
 auto_trigger = 2
 trigger_bonus = 1
-block = 1
-auto_block = 1
+block = 0
+auto_block = 2
 power_lv = 0
 ability_description = [""]
 
@@ -30,18 +30,19 @@ function block_passive	(
 	power = player.green_sum, 
 	power_lv = 0, 
 	power_type = TokenType.Defense){
-	if(check_power_type("defense", power_type)){
+	/*if(check_power_type("defense", power_type)){
 	}else{
 		return "incorrect type";
 	}
 	
-	auto_block = 0;
+	/*auto_block = 0;
 	if(power < auto_trigger){
 		return block * power
-	}
-	
-	auto_block += (power % 2 == 1) ? 
-	(power * block) + (trigger_bonus * power) : (power * block);
+	}*/
+
+	player.passive_block = floor(power/2);
+	//? (power * block) + (trigger_bonus * power) : (power * block);
+	//show_debug_message($"block pass medium armour,  passive block = {player.passive_block} block: {player.name}")
 }
 function get_ability_description(index = 0){
 	green_power = instance_find(obj_rogue_class, 0)

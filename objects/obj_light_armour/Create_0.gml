@@ -33,17 +33,17 @@ function block_passive(
 		return "incorrect type";
 	}
 	
-	auto_block = 0;
-	if(power < auto_trigger){
+	//auto_block = 0;
+	/*if(power < auto_trigger){
 		player.block = block * power
 		return block * power
 		
-	}
+	}*/
 	
-	auto_block += (power % 2 == 1) ? 
-	(power * block) + (trigger_bonus * power) : (power * block);
-	player.adjust_block(auto_block) 
-	show_debug_message($"block pass light armour,  auto block = {player.block} block: {player.name}")
+	player.passive_block = floor(power/2)
+	/*(power % 2 == 1) ? (power * block) + (trigger_bonus * power) : (power * block);*/
+	//player.adjust_block(auto_block) 
+	//($"block pass light armour,  passive block = {player.passive_block} block: {player.name}")
 }
 function get_ability_description(index = 0){
 	green_power = instance_find(obj_white_mage_class, 0)
@@ -62,6 +62,6 @@ function do_auto_actions(){//start of battle
 }
 
 function do_passive_actions(){//once token drawn or immediate actions
-	show_debug_message($"Passive block. Light armour ")
 	block_passive()
+	show_debug_message($"Passive block. Light armour")
 }
