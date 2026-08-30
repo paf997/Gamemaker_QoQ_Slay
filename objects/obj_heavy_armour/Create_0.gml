@@ -19,7 +19,7 @@ function check_power_type(a,b){
 
 function block_auto(){
 	
-	player.block += auto_block;
+	global.player_1.auto_block = auto_block
 }
 
 function block_passive(
@@ -44,9 +44,9 @@ function block_passive(
 	if(passive_block > 5){
 		passive_block = 5
 	}
-	player.passive_block = passive_block;
+	global.player_1.passive_block = passive_block;
 	
-	//show_debug_message($"block pass heavy armour,  passive block = {player.passive_block} block: {player.name}")
+	show_debug_message($"block pass heavy armour,  passive block = {player.passive_block} block: {player.name}")
 }
 function get_ability_description(index = 0){
 	green_power = instance_find(obj_fighter_class, 0)

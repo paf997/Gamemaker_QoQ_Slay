@@ -1,4 +1,4 @@
-class_list = [obj_fighter_class,obj_rogue_class,obj_fighter_class]
+class_list = [obj_fighter_class,obj_rogue_class,obj_white_mage_class]
 player_list = []
 
 current_player_token_sum = 0;

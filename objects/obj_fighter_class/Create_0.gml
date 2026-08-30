@@ -13,6 +13,8 @@ actions = []
 defense_sum = 0
 block = 3
 p_index = 1
+passive_block = 0
+
 
 bonus_tokens = [
 	obj_green_token1,

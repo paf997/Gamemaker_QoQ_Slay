@@ -7,6 +7,7 @@ current_player_green_sum = 0;
 current_player_black_sum = 0;
 current_player_yellow_sum = 0;
 current_player_wild_sum = 0;
+columns = [0,300,600]
 
 create_player_classes()
 
@@ -15,7 +16,7 @@ function create_player_classes(){
 	n = array_length(class_list)
 	cnt = 0
 	while(cnt < n){
-		_player = instance_create_layer(x,y,"Instances_1", class_list[cnt])
+		_player = instance_create_layer(x + columns[cnt],y,"Instances_1", class_list[cnt])
 		cnt++
 		array_push(player_list, _player)
 		show_debug_message($"in PL : {player_list}. Player equipments {_player.equipment[0]}")

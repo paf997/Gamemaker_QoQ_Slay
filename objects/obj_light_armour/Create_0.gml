@@ -63,5 +63,5 @@ function do_auto_actions(){//start of battle
 
 function do_passive_actions(){//once token drawn or immediate actions
 	block_passive()
-	show_debug_message($"Passive block. Light armour")
+	//show_debug_message($"Passive block. Light armour")
 }
