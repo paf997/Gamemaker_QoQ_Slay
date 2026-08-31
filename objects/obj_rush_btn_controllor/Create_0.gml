@@ -7,8 +7,8 @@ end_turn_phase = 1
 buttons = ["6", "1", "X"]
 isFirst = true;
 button_spacing = 40;
-for (n = 0; n < array_length(buttons); n++){
-	button = instance_create_layer(x + button_spacing + (button_spacing * n), y + button_spacing, "InitiativeTrack", obj_button_rush )
+for (n = 2; n < array_length(buttons); n++){//todo change n back to "0" for multi-player. Also, remove comment bwlow to fix spacing
+	button = instance_create_layer(x + button_spacing /*+ (button_spacing  * n)*/, y + button_spacing, "InitiativeTrack", obj_button_rush )
 	button.button_name = buttons[n];
 }
 

@@ -98,7 +98,7 @@ function do_participant_actions(){
 
 function remove_particiapant_from_initiative_track(){
 	array_pop(initiatives)
-	show_debug_message($"Pop!!  {initiatives}")
+	show_debug_message($"Pop!!  {initiatives} active Turn Index {active_turn_index}")
 	initiatives_as_string = initiatives
 	/*if(popped_participant.hp > 0){
 		while(popped_participant.end_turn_phase ==1){

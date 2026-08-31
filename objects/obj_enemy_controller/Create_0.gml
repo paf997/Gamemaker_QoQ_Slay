@@ -26,6 +26,7 @@ initiative_track.set_initiatial_initiatve()
 function target_enemy(enemy = default_enemy){
 	chosen_enemy = enemies[enemy]
 	while(chosen_enemy.is_dead == true && default_enemy < array_length(enemies)){
+		show_debug_message($"target_enemy{array_length(enemies)}")
 		default_enemy++
 		chosen_enemy = enemies[default_enemy]
 	}
