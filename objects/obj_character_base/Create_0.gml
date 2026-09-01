@@ -90,7 +90,8 @@ function get_random_bonus_token(amount){
 			red_sum += _token.token_value
 		}else if(_token.token_type == TokenType.Defense){
 			green_sum += _token.token_value
-			green_abilities()
+			show_debug_message($"green sum {green_sum} amount: {amount} cnt: {cnt} ")
+			//green_abilities()  //TODO: reinstate later. This was creating a large green sum for the fighter
 			//activate_p_actions()
 		}else if(_token.token_type == TokenType.Agility){
 			blue_sum += _token.token_value
@@ -98,7 +99,7 @@ function get_random_bonus_token(amount){
 		}else{
 			yellow_sum += _token.token_value
 		}
-		show_debug_message($"passive Actions")
+		//show_debug_message($"passive Actions")
 		players_list.activate_actions(2,player[0])
 		players_list.activate_actions(2,player[1])
 		players_list.activate_actions(2,player[2])
@@ -123,7 +124,7 @@ function do_actions(_color){
 
 function equipment_setup(){
 	players  = players_list.player_list
-	show_debug_message($"equip set up {array_length(equipment)}")
+	//show_debug_message($"equip set up {array_length(equipment)}")
 	_equipment = instance_create_layer(0,0, "ATB_Scale_P1", obj_player_equipment)
 	//equipment = _equipment.equipment
 	for (cnt = 0; cnt < array_length(equipment);cnt++){
@@ -131,7 +132,7 @@ function equipment_setup(){
 		_ability = instance_create_layer(x,y,"Player_card_layer",equipment[cnt])
 		//show_debug_message($"players{array_length(players)}")
 		_ability.player = players[p_index-1]
-		show_debug_message($"equi set up: the player = {_ability.name}")
+		//show_debug_message($"equi set up: the player = {_ability.name}")
 		array_push(actions,_ability)
 	}
 	
@@ -141,10 +142,10 @@ function equipment_setup(){
 function green_abilities(){
 	for (cnt = 0; cnt < array_length(actions); cnt ++){
 		var _ability = actions[cnt];
-		show_debug_message($"green abilites::: {_ability.name}")
+		//show_debug_message($"green abilites::: {_ability.name}")
 		for (cnt_2 = 0; cnt_2 < array_length(_ability.abilities); cnt_2++){
 			if(_ability.abilities[cnt_2] == TokenType.Defense){
-			show_debug_message($"Is green")
+			//show_debug_message($"Is green")
 			}	
 		}
 	}

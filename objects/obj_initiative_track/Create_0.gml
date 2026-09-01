@@ -142,6 +142,7 @@ function atb_phase_complete(){
 	}else{
 		show_message("Next Round")
 		set_initiatial_initiatve()
+		//show_debug_message("after set_initiative is called")
 		_player_bag = instance_find(obj_token_bag_P1,0)
 		_player_bag.reset_battle_stats()
 		_player_bag.atb_speed = player_btn_controller.base_speed

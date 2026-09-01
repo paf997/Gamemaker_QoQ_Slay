@@ -56,6 +56,7 @@ function draw_token_and_add_to_initiative_track(){
 					show_debug_message("main bag: fighter token ")
 					player1_class_tokens += current_token.token_value;
 					global.player_1.get_random_bonus_token(2)
+					show_debug_message($"fighter green sum:{global.player_1.green_sum}")
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Rogue){
 					show_debug_message("main bag: Rogue token ")
@@ -75,7 +76,7 @@ function draw_token_and_add_to_initiative_track(){
 					player2_class_tokens += current_token.token_value;
 					global.player_2.get_random_bonus_token(1)
 					player3_class_tokens += current_token.token_value;
-					global.player_3.get_random_bonus_token()
+					global.player_3.get_random_bonus_token(1)
 					//player_list.player_list[0].current_player_red_sum = wild_sum
 				}else if(current_token.token_type = TokenType.Bust){
 					bust_sum += current_token.token_value;

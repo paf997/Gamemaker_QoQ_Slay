@@ -24,7 +24,7 @@ function block_auto(){
 
 function block_passive(
 
-	power = player.green_sum,
+	power = global.player_1.green_sum,
 	power_lv = 1, 
 	power_type = TokenType.Defense)
 	{
@@ -46,7 +46,7 @@ function block_passive(
 	}
 	global.player_1.passive_block = passive_block;
 	
-	show_debug_message($"block pass heavy armour,  passive block = {player.passive_block} block: {player.name}")
+	//show_debug_message($"block pass heavy armour,  passive block = {player.passive_block} block: {player.name}")
 }
 function get_ability_description(index = 0){
 	green_power = instance_find(obj_fighter_class, 0)

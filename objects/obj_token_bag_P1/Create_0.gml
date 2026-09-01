@@ -157,8 +157,8 @@ function reset_battle_stats(){
 	
 function run_engine(){
 	enemies = instance_find(obj_enemy_controller,0)
-	target = enemies.target_enemy()
-	target.adjust_hp(dmg_output)
+	//target = enemies.target_enemy() // TODO; reimplement these later. targeting broken after 1st rnd
+	//target.adjust_hp(dmg_output)
 }
 
 
