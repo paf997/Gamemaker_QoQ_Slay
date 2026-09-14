@@ -122,7 +122,7 @@ function atb_phase_complete(){
 	active_turn_index = array_length(participants)-1
 	participant = remove_particiapant_from_initiative_track()
 	//participant_as_string =  string(participant)
-	if(active_turn_index > -1 && _display.is_action_complete == true/*&& participant.rounds_completed < round_count*/){
+	if(active_turn_index > -1 && _display.is_action_complete == false/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
 		participant.reset_block();
 		if(participant.name != "fighter" || participant.name != "Rogue" || participant.name != "White Mage"){
