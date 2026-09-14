@@ -135,7 +135,7 @@ function atb_phase_complete(){
 				_display.is_action_complete = false
 				_fighter = instance_find(obj_fighter_class,0)
 				player_btn_controller.end_turn_phase--
-				show_debug_message(" before next round ATB")
+				//show_debug_message(" before next round ATB")
 				_fighter.end_turn_phase--
 				//atb_phase_complete()
 			}else{}
