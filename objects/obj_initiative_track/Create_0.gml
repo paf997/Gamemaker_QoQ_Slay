@@ -117,8 +117,8 @@ function add_to_initiative(){
 }
 
 function atb_phase_complete(){
+	show_debug_message("atb function complete")
 	_display = instance_find(obj_battle_turn_display,0)
-	//show_debug_message("atb function complete")
 	active_turn_index = array_length(participants)-1
 	participant = remove_particiapant_from_initiative_track()
 	//participant_as_string =  string(participant)
@@ -135,6 +135,7 @@ function atb_phase_complete(){
 				_display.is_action_complete = false
 				_fighter = instance_find(obj_fighter_class,0)
 				player_btn_controller.end_turn_phase--
+				show_debug_message(" before next round ATB")
 				_fighter.end_turn_phase--
 				//atb_phase_complete()
 			}else{}
@@ -142,9 +143,10 @@ function atb_phase_complete(){
 	}else{
 		show_message("Next Round")
 		set_initiatial_initiatve()
-		//show_debug_message("after set_initiative is called")
+		show_debug_message("after set_initiative is called")
 		_player_bag = instance_find(obj_token_bag_P1,0)
 		_player_bag.reset_battle_stats()
+		show_debug_message("after reset battle stats")
 		_player_bag.atb_speed = player_btn_controller.base_speed
 	}
 }

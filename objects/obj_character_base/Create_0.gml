@@ -118,7 +118,7 @@ function do_actions(_color){
 	
 	for (cnt = 0; cnt < array_length(red_actions); cnt++){
 	
-		red_actions[cnt].do_action()
+		//red_actions[cnt].do_action() //TODO - disabled for issues related to initiative Track
 	}
 }
 

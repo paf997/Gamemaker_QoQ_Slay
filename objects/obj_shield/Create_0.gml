@@ -15,7 +15,9 @@ function check_power_type(a,b){
 	if (a == b) return true
 }
 
-function block_auto(power, power_lv, power_type){
+function block_auto(power = global.player_3, 
+	power_lv = 1, 
+	power_type = TokenType.Defense ){
 	if(check_power_type("defense", power_type)){
 	}else{
 		return "incorrect type";

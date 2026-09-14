@@ -16,7 +16,7 @@ function check_power_type(a,b){
 }
 
 function attack_auto(
-	power = player.red_sum + player.yellow_sum,
+	power = global.player_3.red_sum + player.yellow_sum,
 	power_lv = 0,
 	power_type = TokenType.Attack){
 	if(check_power_type("attack", power_type)){

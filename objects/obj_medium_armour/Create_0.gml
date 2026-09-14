@@ -15,7 +15,7 @@ function check_power_type(a,b){
 }
 
 function block_auto(
-	power = player.green_sum, 
+	power = global.player_2.green_sum, 
 	power_lv = 1, 
 	power_type = TokenType.Defense){
 	if(check_power_type("defense", power_type)){

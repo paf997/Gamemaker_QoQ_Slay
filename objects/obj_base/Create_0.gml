@@ -1,6 +1,6 @@
 player = -1;
 type = equipment_type.weapon
-name = ["Base","BAse","Base"]
+name = ["Base","Base","Base"]
 abilities = [TokenType.Attack,TokenType.Attack,TokenType.Defense]
 dmg = 2;
 bonus_dmg = 1

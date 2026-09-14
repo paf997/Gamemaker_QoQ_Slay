@@ -94,7 +94,7 @@ function draw_token_and_add_to_initiative_track(){
 		//atb_speed = (bust_sum < 8) ?  1 : 0;// use to switch to 1 draw
 		//show_message("Button Clicked!" + string(atb_phase));
 		//show_message("att sum == " + string(attack_sum));
-		dmg_output = getDamage();
+		//dmg_output = getDamage();
 		if(bust_sum > 7)	{
 			show_debug_message("Busted!!!!")
 			has_busted = true

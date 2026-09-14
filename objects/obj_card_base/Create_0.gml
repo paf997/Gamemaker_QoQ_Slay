@@ -28,7 +28,7 @@ function calculate_card_costr(){
 }
 
 function get_targets(){
-	target = enemies.default_enemy()
+	//target = enemies.default_enemy() //TODO - trying to locate bug
 }
 
 
