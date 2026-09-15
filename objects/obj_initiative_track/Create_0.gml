@@ -149,5 +149,15 @@ function atb_phase_complete(){
 		show_debug_message("after reset battle stats")
 		_player_bag.atb_speed = player_btn_controller.base_speed
 	}
+	
+}
+
+function advance_initiative_track(){
+	
+	if(get_main_display_state() == MainDisplayBtnState.Initiative){
+		_display = instance_find(obj_battle_turn_display,0)
+		active_turn_index = array_length(participants)-1
+		participant = remove_particiapant_from_initiative_track()
+	}
 }
 

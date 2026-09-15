@@ -35,7 +35,7 @@ function button_pressed(button_pressed){
 			//show_debug_message("end turn  " + string(button_pressed))
 			//show_debug_message("end turn  " + string(player_1.atb_speed))
 			//initiative_track.update_initiatives()
-			show_debug_message("player btn contrroller")
+			//show_debug_message("player btn contrroller")
 			inititaive_track.atb_phase_complete()
 			end_turn_phase--
 			fighter.end_turn_phase--
