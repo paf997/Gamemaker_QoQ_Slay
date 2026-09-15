@@ -161,6 +161,21 @@ function run_engine(){
 	//target.adjust_hp(dmg_output)
 }
 
+function check_battle_phase(){
+	_current_phase = global.get_main_display_state()
+	if(_current_phase == MainDisplayBtnState.DrawTokenPhase){
+		///
+	}else if(_current_phase == MainDisplayBtnState.Bust){
+		////
+		global.advance_battle_phase(2)
+		show_debug_message($"Battle Phase:{_current_phase}")
+	}else if (_current_phase == MainDisplayBtnState.DrawTokenPhase){
+		show_debug_log($" Battle Phase: {_current_phase}")
+	}else{
+		show_debug_log($" Battle Phase: {_current_phase}")
+	}
+}
+
 
 
 

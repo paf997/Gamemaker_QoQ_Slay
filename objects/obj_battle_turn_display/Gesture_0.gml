@@ -1,6 +1,6 @@
 
-_messege = string(is_action_complete)
-show_debug_message($"Tap  + {is_action_complete}")
+_messege = global.get_main_display_state()
+show_debug_message($"Tap. Action Complete {is_action_complete}. Phase {_messege}")
 if(!is_action_complete){
 	show_debug_message("is_action_complete function")
 	initiative_track.atb_phase_complete()

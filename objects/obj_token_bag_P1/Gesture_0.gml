@@ -97,6 +97,7 @@ function draw_token_and_add_to_initiative_track(){
 		//dmg_output = getDamage();
 		if(bust_sum > 7)	{
 			show_debug_message("Busted!!!!")
+			global.advance_battle_phase()
 			has_busted = true
 			is_turn_end = true;
 		}else{
@@ -137,6 +138,8 @@ function adjustment_individual_initiative(){
 		 
 	}
 }
+
+
 
 /*if keyboard_check_pressed(ord("Z") && (atb_end_actions != atb_phase) && (!is_finished_actions)){
 	atb_end_actions++;

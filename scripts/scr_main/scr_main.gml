@@ -25,13 +25,15 @@ main_battle_phases = [MainDisplayBtnState.DrawTokenPhase, MainDisplayBtnState.Bu
 	
 current_battle_phase = 0
 
-function get_main_display_state(){
-	return main_battle_phases[current_battle_phase];
+get_main_display_state = function (){
+	_current_phase = main_battle_phases[current_battle_phase];
+	return _current_phase;
 }
 
-function advance_battle_phase(){
-	if(current_battle_phase < array_length(MainDisplayBtnState)){
-		current_battle_phase++
+advance_battle_phase = function (_amount = 1){
+	current_battle_phase = current_battle_phase + _amount
+	if(current_battle_phase + _amount < array_length(main_battle_phases)){
+		current_battle_phase = current_battle_phase + _amount
 	}else{
 		current_battle_phase = 0
 	}

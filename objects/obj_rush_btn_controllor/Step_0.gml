@@ -40,6 +40,7 @@ function button_pressed(button_pressed){
 			end_turn_phase--
 			fighter.end_turn_phase--
 			player_1.reset_battle_stats()
+			global.advance_battle_phase(2)
 		}else{
 			/*
 			player_1.reset_battle_stats()
