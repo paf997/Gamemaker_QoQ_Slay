@@ -6,6 +6,7 @@ enum TokenType {
 	Attack,Defense,Magic,Wild,Aux,Bust,Fighter,WMage,Rogue,Agility
 }
 
+global.number_of_players = 3;
 
 global.player_list = [];
 //global.player_1 = null;
@@ -31,12 +32,17 @@ get_main_display_state = function (){
 }
 
 advance_battle_phase = function (_amount = 1){
-	current_battle_phase = current_battle_phase + _amount
+
 	if(current_battle_phase + _amount < array_length(main_battle_phases)){
 		current_battle_phase = current_battle_phase + _amount
 	}else{
 		current_battle_phase = 0
 	}
+	show_message($"Main: phase {current_battle_phase} amount:{_amount}")
+}
+
+get_battle_participant = function (){
+	
 }
 
 function end_battle_round(){

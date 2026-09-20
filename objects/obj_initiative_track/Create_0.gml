@@ -1,4 +1,4 @@
-n_participants = 3;
+n_participants = global.number_of_players;
 init_list = ds_list_create();
 enemy_p1 = 8;
 ds_list_add(init_list, enemy_p1);
@@ -117,14 +117,14 @@ function add_to_initiative(){
 }
 
 function atb_phase_complete(){
-	show_debug_message("atb function complete")
+	//show_debug_message("atb function complete")
 	_display = instance_find(obj_battle_turn_display,0)
 	active_turn_index = array_length(participants)-1
 	participant = remove_particiapant_from_initiative_track()
 	//participant_as_string =  string(participant)
 	if(active_turn_index > -1 && _display.is_action_complete == false/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
-		participant.reset_block();
+		//TODO: readd later --- participant.reset_block();
 		if(participant.name != "fighter" || participant.name != "Rogue" || participant.name != "White Mage"){
 			array_push(next_round_particants,participant)
 			//?players.activate_actions(2,participant)
