@@ -8,7 +8,7 @@ if (_messege == MainDisplayBtnState.Bust){
 }else if (_messege == MainDisplayBtnState.EndDrawTokenPhase){
 	show_message($"Ending Turn {global.get_main_display_state() }")
 }else if (_messege == MainDisplayBtnState.DrawTokenPhase) {
-	show_message($"Please draw tokens or end turn")
+	show_message($"Please draw tokens or end turn {global.get_main_display_state()}")
 }else{
 	//show_debug_message("is_action_complete function")
 	initiative_track.atb_phase_complete()

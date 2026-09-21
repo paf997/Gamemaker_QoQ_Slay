@@ -19,7 +19,7 @@ if(global.get_main_display_state() == MainDisplayBtnState.DrawTokenPhase){
 			draw_token_and_add_to_initiative_track()
 		}else{
 			show_message("Busted. Please end Turn")
-			//reset_battle_stats();
+			reset_battle_stats();
 			}	
 		
 		}

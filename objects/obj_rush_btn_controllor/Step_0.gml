@@ -27,13 +27,13 @@ function button_pressed(button_pressed){
 		inititaive_track = instance_find(obj_initiative_track,0)
 		
 		if(global.get_main_display_state() == MainDisplayBtnState.Initiative){	
-			show_message("Please Finish Current Phase")
+			show_message($"Please Finish Current Phase {global.get_main_display_state()}")
 		}else if(global.get_main_display_state() == MainDisplayBtnState.EndRound){
-			show_message("Please Advance to end Round")
+			show_message($"Please Finish Current Phase {global.get_main_display_state()}")
 		}else if(global.get_main_display_state() == MainDisplayBtnState.Bust){
 				global.advance_battle_phase(2)
-				show_message("On to initiative phase")
-		}else if(end_turn_phase == 1){ //the 1st part
+				show_message($"Please Finish Current Phase {global.get_main_display_state()}")
+		}else if(global.get_main_display_state() == MainDisplayBtnState.DrawTokenPhase){ //the 1st part
 			show_debug_message(string(player_1.initiative_icon.initiative))
 			fighter = instance_find(obj_fighter_class,0)
 			end_turn_phase++
@@ -50,6 +50,7 @@ function button_pressed(button_pressed){
 			player_1.reset_battle_stats()
 			global.advance_battle_phase(3)
 		}else{
+			show_message("Marco...")
 			/*
 			player_1.reset_battle_stats()
 			//inititaive_track.atb_phase_complete()
