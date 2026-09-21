@@ -25,7 +25,15 @@ function button_pressed(button_pressed){
 		}
 	}else{
 		inititaive_track = instance_find(obj_initiative_track,0)
-		if(end_turn_phase == 1){ //the 1st part
+		
+		if(global.get_main_display_state() == MainDisplayBtnState.Initiative){	
+			show_message("Please Finish Current Phase")
+		}else if(global.get_main_display_state() == MainDisplayBtnState.EndRound){
+			show_message("Please Advance to end Round")
+		}else if(global.get_main_display_state() == MainDisplayBtnState.Bust){
+				global.advance_battle_phase(2)
+				show_message("On to initiative phase")
+		}else if(end_turn_phase == 1){ //the 1st part
 			show_debug_message(string(player_1.initiative_icon.initiative))
 			fighter = instance_find(obj_fighter_class,0)
 			end_turn_phase++
@@ -40,7 +48,7 @@ function button_pressed(button_pressed){
 			end_turn_phase--
 			fighter.end_turn_phase--
 			player_1.reset_battle_stats()
-			global.advance_battle_phase(2)
+			global.advance_battle_phase(3)
 		}else{
 			/*
 			player_1.reset_battle_stats()

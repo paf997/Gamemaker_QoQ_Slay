@@ -23,6 +23,8 @@ if(global.get_main_display_state() == MainDisplayBtnState.DrawTokenPhase){
 			}	
 		
 		}
+}else{
+	show_message("Please move to phase")
 }
 
 

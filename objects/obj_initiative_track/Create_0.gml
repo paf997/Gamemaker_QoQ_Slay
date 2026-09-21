@@ -142,6 +142,7 @@ function atb_phase_complete(){
 			}else{}
 		}else{}
 	}else{
+		global.advance_battle_phase(2)
 		show_message("Next Round")
 		set_initiatial_initiatve()
 		show_debug_message("after set_initiative is called")
@@ -160,7 +161,7 @@ function advance_initiative_track(participant, active_turn_index, _display){
 	}else if(get_active_turn_index() < 0 && get_main_display_state() == MainDisplayBtnState.Initiative){
 		global.advance_battle_phase()
 	}else{
-		show_message($"{global.get_main_display_state()}")
+		show_message($"Phase: {global.get_main_display_state()}. Next Particapant")
 	}
 	
 }
