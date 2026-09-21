@@ -33,7 +33,8 @@ function button_pressed(button_pressed){
 		}else if(global.get_main_display_state() == MainDisplayBtnState.Bust){
 				global.advance_battle_phase(2)
 				show_message($"Please Finish Current Phase {global.get_main_display_state()}")
-		}else if(global.get_main_display_state() == MainDisplayBtnState.DrawTokenPhase){ //the 1st part
+		}else if(global.get_main_display_state() == MainDisplayBtnState.DrawTokenPhase
+		&& player_1.token_draw_count > 0){ //the 1st part
 			show_debug_message(string(player_1.initiative_icon.initiative))
 			fighter = instance_find(obj_fighter_class,0)
 			end_turn_phase++
