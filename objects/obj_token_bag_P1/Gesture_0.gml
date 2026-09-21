@@ -4,22 +4,26 @@ if(!isChosen){
 }
 
 
-if(token_draw_count == 0){
-	while(bust_sum <  6/* stop_draw_max && bust_sum < 7*/){
-		draw_token_and_add_to_initiative_track()
-	}
-}else{
-	if(atb_speed == -99){
-		is_turn_end = true;
-		reset_battle_stats();
-	}else if(bust_sum < 8){
-		draw_token_and_add_to_initiative_track()
+if(global.get_main_display_state() == MainDisplayBtnState.DrawTokenPhase){
+	
+	if(token_draw_count == 0 ){
+		while(bust_sum <  6/* stop_draw_max && bust_sum < 7*/){
+			draw_token_and_add_to_initiative_track()
+		}
+
 	}else{
-		show_message("Busted. Please end Turn")
-		//reset_battle_stats();
-		}	
+		if(atb_speed == -99){
+			is_turn_end = true;
+			reset_battle_stats();
+		}else if(bust_sum < 8){
+			draw_token_and_add_to_initiative_track()
+		}else{
+			show_message("Busted. Please end Turn")
+			//reset_battle_stats();
+			}	
 		
-	}
+		}
+}
 
 
 function draw_token_and_add_to_initiative_track(){

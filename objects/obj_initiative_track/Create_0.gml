@@ -122,6 +122,7 @@ function atb_phase_complete(){
 	active_turn_index = array_length(participants)-1
 	participant = remove_particiapant_from_initiative_track()
 	//participant_as_string =  string(participant)
+	advance_initiative_track(participant, active_turn_index, _display)
 	if(active_turn_index > -1 && _display.is_action_complete == false/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
 		//TODO: readd later --- participant.reset_block();
@@ -152,12 +153,19 @@ function atb_phase_complete(){
 	
 }
 
-function advance_initiative_track(){
+function advance_initiative_track(participant, active_turn_index, _display){
 	
-	if(get_main_display_state() == MainDisplayBtnState.Initiative){
-		_display = instance_find(obj_battle_turn_display,0)
-		active_turn_index = array_length(participants)-1
-		participant = remove_particiapant_from_initiative_track()
+	if(get_active_turn_index() < 0){
+		show_message("End Round")
+	}else if(get_active_turn_index() < 0 && get_main_display_state() == MainDisplayBtnState.Initiative){
+		global.advance_battle_phase()
+	}else{
+		show_message($"{global.get_main_display_state()}")
 	}
+	
+}
+
+function get_active_turn_index(){
+	return active_turn_index;
 }
 
