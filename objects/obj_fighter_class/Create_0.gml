@@ -39,6 +39,8 @@ bonus_tokens = [
 	obj_wild_token1,
 ]
 
+ability_cards = [obj_ability_power_attack]
+
 current_player_token_sum = 0;
 current_player_red_sum = 0;
 current_player_green_sum = 0;
@@ -108,3 +110,4 @@ function get_current_block(){
 		}
 	}
 }
+

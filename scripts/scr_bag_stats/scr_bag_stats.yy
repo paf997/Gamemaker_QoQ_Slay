@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_bag_stats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_bag_stats",
+  "parent":{
+    "name":"FFxQoQ",
+    "path":"FFxQoQ.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

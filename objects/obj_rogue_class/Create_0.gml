@@ -12,6 +12,8 @@ defense_sum = 0
 block = 2
 p_index = 2
 
+ability_cards = [obj_ability_power_attack]
+
 bonus_tokens = [
 	obj_green_token1,
 	obj_green_token1,	

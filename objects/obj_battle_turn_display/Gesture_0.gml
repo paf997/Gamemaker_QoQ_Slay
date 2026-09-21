@@ -6,7 +6,7 @@ if (_messege == MainDisplayBtnState.Bust){
 	show_message($"Message: {end_turn_message_for_display}")
 	//is_action_complete = !is_action_complete
 }else if (_messege == MainDisplayBtnState.EndDrawTokenPhase){
-	show_message($"Ending Turn {global.get_main_display_state() }")
+	show_message($"Ending Turn {global.get_main_display_state()}")
 }else if (_messege == MainDisplayBtnState.DrawTokenPhase) {
 	show_message($"Please draw tokens or end turn {global.get_main_display_state()}")
 }else{

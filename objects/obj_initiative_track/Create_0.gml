@@ -128,6 +128,7 @@ function atb_phase_complete(){
 		//TODO: readd later --- participant.reset_block();
 		if(participant.name != "fighter" || participant.name != "Rogue" || participant.name != "White Mage"){
 			array_push(next_round_particants,participant)
+			participant.get_card_display()
 			//?players.activate_actions(2,participant)
 			//show_debug_message("Adding " + string(next_round_particants))
 			is_finished = true//participant.do_actions()

@@ -30,7 +30,8 @@ player = -1
 actions = []
 equipment = []
 passive_block = 0;
-
+ability_cards = [obj_card_power_attack]
+card_display = instance_create_layer(x,y,"Instances_1",obj_player_card_display )
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
 //equipment_setup()
@@ -169,4 +170,16 @@ function adjust_energy(amount){
 
 function calculate_energy(initiative_amount){
 	energy = get_initiative()/10
+}
+
+function get_abilitty_cards(){
+	return ability_cards
+}
+
+function get_card_display(){
+
+	show_message("get card display")
+	for(cnt = 0;cnt <  array_length(ability_cards); cnt++ ){
+		_ability = instance_create_layer(card_display.x, card_display.y, "Instances_1",ability_cards[cnt])
+	}
 }

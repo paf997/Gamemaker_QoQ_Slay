@@ -1,5 +1,5 @@
-player_card_name = "Defend";
-card_types = ["defend"]
+player_card_name = "Power Attack";
+card_types = ["attack"]
 card_red_cost = 1;
 text_offset_x = 28;
 text_offset_y = 50;
