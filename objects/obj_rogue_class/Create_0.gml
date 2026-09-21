@@ -12,7 +12,7 @@ defense_sum = 0
 block = 2
 p_index = 2
 
-ability_cards = [obj_ability_power_attack]
+ability_cards = [obj_card_power_attack]
 
 bonus_tokens = [
 	obj_green_token1,
@@ -102,5 +102,13 @@ function get_current_block(){
 			defense_sum += equipment[n].get_block_passive(current_player_green_sum, 0, "defensive")
 			
 		}
+	}
+}
+
+function get_card_display(){
+
+	show_message("get card display")
+	for(cnt = 0;cnt <  array_length(ability_cards); cnt++ ){
+		_ability = instance_create_layer(card_display.x, card_display.y, "Instances_1",ability_cards[cnt])
 	}
 }

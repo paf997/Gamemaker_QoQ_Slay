@@ -16,6 +16,9 @@ global.player_list = [];
 global.class_list = [obj_fighter_class,obj_rogue_class,obj_white_mage_class]
 //global.main_bag = instance_create_layer(x,y,"Instances_1", obj_player_list)
 
+global.player_card_display_x = 64
+global.player_card_display_y = 184
+
 enum MainDisplayBtnState {
 	DrawTokenPhase, Bust, EndDrawTokenPhase, Initiative, EndRound
 }

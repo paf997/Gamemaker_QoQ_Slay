@@ -22,6 +22,7 @@ function create_player_classes(){
 		show_debug_message($"in PL : {player_list}. Player equipments {_player.equipment[0]}")
 		
 		_player.equipment_setup()
+		_player.set_up_card_display()
 	}
 	global.player_1 = player_list[0]
 	global.player_2 = player_list[1]
