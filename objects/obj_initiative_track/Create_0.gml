@@ -122,31 +122,45 @@ function atb_phase_complete(){
 	active_turn_index = array_length(participants)-1
 	participant = remove_particiapant_from_initiative_track()
 	//participant_as_string =  string(participant)
+	len = array_length(next_round_particants)
+	if (len > 0){
+		_previous_participant = next_round_particants[len-1]
+		if(_previous_participant.name == "Fighter" || _previous_participant.name == "Rogue" || previous_participant.name == "White Mage"){
+			_card_display = _previous_participant.get_card_display()
+			_card_display.toggle_active()
+		}else{}
+	}else{}
+	
 	advance_initiative_track(participant, active_turn_index, _display)
 	if(active_turn_index > -1 && _display.is_action_complete == false/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
 		//TODO: readd later --- participant.reset_block();
-		if(participant.name != "fighter" || participant.name != "Rogue" || participant.name != "White Mage"){
+		if(participant.name == "Fighter" || participant.name == "Rogue" || participant.name == "White Mage"){
+
 			array_push(next_round_particants,participant)
-			//_card_display = participant.get_card_display()
-			
+			//show_message($"{participant.name}'s turn")
+			_card_display = participant.get_card_display()
+			_card_display.toggle_active()
 			//_card_display.toggle_active()
 			//?players.activate_actions(2,participant)
 			//show_debug_message("Adding " + string(next_round_particants))
 			is_finished = true//participant.do_actions()
 			if(is_finished){
+				
 				//show_debug_message("finished ATB !!! *** !!!!")
 				_display.is_action_complete = false
 				_fighter = instance_find(obj_fighter_class,0)
 				player_btn_controller.end_turn_phase--
 				//show_debug_message(" before next round ATB")
 				_fighter.end_turn_phase--
-				//_card_display.toggle_active()
 				//atb_phase_complete()
 			}else{}
-		}else{}
+		}else{
+			
+		}
 	}else{
 		global.advance_battle_phase(2)
+		_card_display.toggle_active()
 		show_message("Next Round")
 		set_initiatial_initiatve()
 		show_debug_message("after set_initiative is called")

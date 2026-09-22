@@ -105,10 +105,3 @@ function get_current_block(){
 	}
 }
 
-function get_card_display(){
-
-	show_message("get card display")
-	for(cnt = 0;cnt <  array_length(ability_cards); cnt++ ){
-		_ability = instance_create_layer(card_display.x, card_display.y, "Instances_1",ability_cards[cnt])
-	}
-}
