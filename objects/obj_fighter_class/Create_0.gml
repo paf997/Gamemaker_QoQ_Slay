@@ -39,7 +39,7 @@ bonus_tokens = [
 	obj_wild_token1,
 ]
 
-ability_cards = [obj_card_power_attack]
+ability_cards = [obj_card_power_attack, obj_card_shield_bash, obj_card_attack_charge]
 
 current_player_token_sum = 0;
 current_player_red_sum = 0;

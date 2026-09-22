@@ -1,4 +1,4 @@
-player_card_name = "Shield Bash";
+player_card_name = "Power Attack";
 card_types = ["attack"]
 card_red_cost = 1;
 text_offset_x = 28;

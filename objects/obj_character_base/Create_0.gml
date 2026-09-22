@@ -34,6 +34,7 @@ ability_cards = []
 card_start_x = 64
 card_start_y = -160
 next_card = 160
+card_display = 0
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
 //equipment_setup()
@@ -170,7 +171,7 @@ function adjust_energy(amount){
 	}
 }
 
-function calculate_energy(initiative_amount){
+function calculate_energy(initiative_amount){ 
 	energy = get_initiative()/10
 }
 
@@ -182,8 +183,9 @@ function get_card_display(){
 
 	show_message("get card display")
 	for(cnt = 0;cnt <  array_length(ability_cards); cnt++ ){
-		_ability = instance_create_layer(card_display.x, card_display.y, "Instances_1",ability_cards[cnt])
+		_ability = instance_create_layer(card_display.x +(global.player_card_spacing * cnt), card_display.y, "Instances_1",ability_cards[cnt])
 	}
+	return card_display;
 }
 
 function set_up_card_display(){

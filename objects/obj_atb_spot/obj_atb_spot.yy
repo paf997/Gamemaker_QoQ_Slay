@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_damage_bludgeon",
-    "path":"sprites/spr_damage_bludgeon/spr_damage_bludgeon.yy",
+    "name":"spr_black_token",
+    "path":"sprites/spr_black_token/spr_black_token.yy",
   },
   "spriteMaskId":null,
   "visible":true,
