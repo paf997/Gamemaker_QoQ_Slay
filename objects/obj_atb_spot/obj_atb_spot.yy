@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite18",
-    "path":"sprites/Sprite18/Sprite18.yy",
+    "name":"spr_damage_bludgeon",
+    "path":"sprites/spr_damage_bludgeon/spr_damage_bludgeon.yy",
   },
   "spriteMaskId":null,
   "visible":true,
