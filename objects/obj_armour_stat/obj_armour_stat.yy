@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_yellow_token1",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_armour_stat",
+  "eventList":[],
   "managed":true,
-  "name":"obj_yellow_token1",
+  "name":"obj_armour_stat",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tokens",
-    "path":"folders/Objects/Tokens.yy",
+    "name":"Sprite Icons",
+    "path":"folders/Objects/Sprite Icons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_yellow_blank",
-    "path":"sprites/spr_yellow_blank/spr_yellow_blank.yy",
+    "name":"spr_armour_stat",
+    "path":"sprites/spr_armour_stat/spr_armour_stat.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_yellow_token1",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_hp_heart",
+  "eventList":[],
   "managed":true,
-  "name":"obj_yellow_token1",
+  "name":"obj_hp_heart",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tokens",
-    "path":"folders/Objects/Tokens.yy",
+    "name":"Sprite Icons",
+    "path":"folders/Objects/Sprite Icons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_yellow_blank",
-    "path":"sprites/spr_yellow_blank/spr_yellow_blank.yy",
+    "name":"spr_hp_heart",
+    "path":"sprites/spr_hp_heart/spr_hp_heart.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

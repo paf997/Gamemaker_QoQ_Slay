@@ -37,6 +37,7 @@ next_card = 160
 card_display = -1
 is_active = false;
 stats = -1
+token_icons = -1
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
 //equipment_setup()
@@ -215,6 +216,21 @@ function display_stats_setup(){
 		yellow: yellow_sum,
 		armour: armour,
 		hp:hp,
+		hp_icon: instance_create_layer(global.player_card_display_x, global.display_stats, "Instances_1", obj_hp_heart),
+		defense_icon: instance_create_layer(global.player_card_display_x + global.display_stats_spacing, global.display_stats, "Instances_1", obj_defense_stat),
+		armour_icon: instance_create_layer(global.player_card_display_x + global.display_stats_spacing * 2, global.display_stats, "Instances_1", obj_armour_stat),
+		is_active: false,
+		toggle_active: function(){
+			is_active = !is_active
+		}
+	}
+}
+
+function display_tokens_setup(){
+	token_icons = {
+		red_icon: instance_create_layer(global.player_card_display_x, global.display_stats_spacing + 288, "Instances_1", obj_red_icon),
+		green_icon: instance_create_layer(global.player_card_display_x + global.display_stats_spacing, global.display_stats_spacing + 288,  "Instances_1", obj_green_icon),
+		yellow_icon: instance_create_layer(global.player_card_display_x + global.display_stats_spacing * 2, global.display_stats_spacing + 288, "Instances_1", obj_yellow_icon),
 		is_active: false,
 		toggle_active: function(){
 			is_active = !is_active
@@ -231,4 +247,8 @@ function activate_displays(){
 	if(card_display != -1){
 		card_display.toggle_active();
 	}
+	if(token_icons != -1){
+		token_icons.toggle_active()
+	}
+	
 }
