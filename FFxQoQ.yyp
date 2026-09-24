@@ -61,6 +61,7 @@
     {"id":{"name":"obj_card_base_warrior","path":"objects/obj_card_base_warrior/obj_card_base_warrior.yy",},},
     {"id":{"name":"obj_card_base","path":"objects/obj_card_base/obj_card_base.yy",},},
     {"id":{"name":"obj_card_defend","path":"objects/obj_card_defend/obj_card_defend.yy",},},
+    {"id":{"name":"obj_card_goblin_1","path":"objects/obj_card_goblin_1/obj_card_goblin_1.yy",},},
     {"id":{"name":"obj_card_power_attack","path":"objects/obj_card_power_attack/obj_card_power_attack.yy",},},
     {"id":{"name":"obj_card_shield_bash","path":"objects/obj_card_shield_bash/obj_card_shield_bash.yy",},},
     {"id":{"name":"obj_character_base","path":"objects/obj_character_base/obj_character_base.yy",},},

@@ -13,6 +13,9 @@ for(n = 0; n < 3; n++){
 	show_debug_message("In enemy controller" + string(n))
 	enemy = instance_create_layer(x + (n * enemy_spacing),y,"InitiativeTrack", obj_enemy)
 	enemy_sprite = instance_find(spr_enemy_button,n);
+	enemy.set_up_card_display()
+	card_display = enemy.card_display
+	//show_message($"card display {card_display}")
 	array_push(enemy_sprites,enemy_sprite)
 	array_push(enemies,enemy)
 }

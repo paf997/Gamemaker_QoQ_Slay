@@ -13,6 +13,8 @@ actions = [0]
 actions_list = ["attck","defend "]
 armour = 2
 display = instance_find(obj_battle_turn_display,0)
+ability_cards = [obj_card_goblin_1]
+
 
 function enemy_attack(){
 	_temp_msg = "";

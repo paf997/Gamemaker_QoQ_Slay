@@ -34,7 +34,8 @@ ability_cards = []
 card_start_x = 64
 card_start_y = -160
 next_card = 160
-card_display = 0
+card_display = -1
+is_active = false;
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
 //equipment_setup()
@@ -175,20 +176,33 @@ function calculate_energy(initiative_amount){
 	energy = get_initiative()/10
 }
 
-function get_ability_cards(){
+/*function get_ability_cards(){
 	return ability_cards
-}
+}*/
 
-function get_card_display(){
 
-	show_message("get card display")
-	for(cnt = 0;cnt <  array_length(ability_cards); cnt++ ){
-		_ability = instance_create_layer(card_display.x +(global.player_card_spacing * cnt), card_display.y, "Instances_1",ability_cards[cnt])
-	}
-	return card_display;
-}
 
 function set_up_card_display(){
-	show_debug_message($"setting up display.Ability count {array_length(ability_cards)}")
-	card_display = instance_create_layer(global.player_card_display_x,global.player_card_display_y,"Instances_1",obj_player_card_display )
+
+	_display = instance_create_layer(global.player_card_display_x,global.player_card_display_y,"Instances_1",obj_player_card_display )
+	_cards = []
+	for(cnt = 0;cnt <  array_length(ability_cards); cnt++ ){
+		_card = instance_create_layer(_display.x +(global.player_card_spacing * cnt), _display.y, "Instances_1",ability_cards[cnt])
+		_card.visible = false
+		array_push(_cards,_card)
+	}
+	
+	card_display = {
+		display: _display,
+		cards: _cards,
+		is_active: false,
+		toggle_active: function(){ 
+			is_active = !is_active
+			array_foreach(cards, function(inst) {
+			inst.visible = is_active;
+			});
+		}
+	}
+	//show_debug_message($"setting up display.Ability count {array_length(ability_cards)} Display {card_display}")
+	//return card_display
 }

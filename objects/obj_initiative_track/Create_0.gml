@@ -8,6 +8,9 @@ round_count = 1;
 finished_player_count = 0;
 start_round_count = 2
 _player = instance_find(obj_fighter_class,0)
+participant = -1
+previous_participant = -1
+len = 5
 
 players = instance_find(obj_player_list,0)
 
@@ -120,17 +123,24 @@ function atb_phase_complete(){
 	//show_debug_message("atb function complete")
 	_display = instance_find(obj_battle_turn_display,0)
 	active_turn_index = array_length(participants)-1
-	participant = remove_particiapant_from_initiative_track()
-	//participant_as_string =  string(participant)
-	len = array_length(next_round_particants)
-	if (len > 0){
-		_previous_participant = next_round_particants[len-1]
-		if(_previous_participant.name == "Fighter" || _previous_participant.name == "Rogue" || previous_participant.name == "White Mage"){
-			_card_display = _previous_participant.get_card_display()
-			_card_display.toggle_active()
-		}else{}
-	}else{}
+	if(previous_participant == -1){
+		show_message($"previous part {previous_participant}")
+		participant = remove_particiapant_from_initiative_track()
+		show_message($" part {participant.name}")
+		previous_participant++
+	}else if(previous_participant < 5){
+		participant.card_display.toggle_active()
+		show_message($"previous part {previous_participant}")
+		participant = remove_particiapant_from_initiative_track()
+		show_message($" part {participant.name}")
+		previous_participant ++
+	}else{
+		previous_participant = -1
+		participant.card_display.toggle_active()
+	}
 	
+	participant_as_string =  string(participant)
+
 	advance_initiative_track(participant, active_turn_index, _display)
 	if(active_turn_index > -1 && _display.is_action_complete == false/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
@@ -139,8 +149,9 @@ function atb_phase_complete(){
 
 			array_push(next_round_particants,participant)
 			//show_message($"{participant.name}'s turn")
-			_card_display = participant.get_card_display()
+			_card_display = participant.card_display
 			_card_display.toggle_active()
+			//_card_display.toggle_active()
 			//_card_display.toggle_active()
 			//?players.activate_actions(2,participant)
 			//show_debug_message("Adding " + string(next_round_particants))
@@ -148,19 +159,23 @@ function atb_phase_complete(){
 			if(is_finished){
 				
 				//show_debug_message("finished ATB !!! *** !!!!")
-				_display.is_action_complete = false
+				//_display.is_action_complete = false
 				_fighter = instance_find(obj_fighter_class,0)
 				player_btn_controller.end_turn_phase--
 				//show_debug_message(" before next round ATB")
 				_fighter.end_turn_phase--
+				//_card_display.toggle_active()
 				//atb_phase_complete()
 			}else{}
 		}else{
-			
+			array_push(next_round_particants,participant)
+			//show_message($"{participant.name}'s turn")
+			_card_display = participant.card_display
+			_card_display.toggle_active()
 		}
 	}else{
 		global.advance_battle_phase(2)
-		_card_display.toggle_active()
+		//_card_display.toggle_active()
 		show_message("Next Round")
 		set_initiatial_initiatve()
 		show_debug_message("after set_initiative is called")
@@ -168,6 +183,7 @@ function atb_phase_complete(){
 		_player_bag.reset_battle_stats()
 		show_debug_message("after reset battle stats")
 		_player_bag.atb_speed = player_btn_controller.base_speed
+		//previous_particapant.card_display.toggle_active()
 	}
 	
 }
