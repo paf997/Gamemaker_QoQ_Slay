@@ -19,6 +19,8 @@ global.class_list = [obj_fighter_class,obj_rogue_class,obj_white_mage_class]
 global.player_card_display_x = 64
 global.player_card_display_y = 184
 global.player_card_spacing = 96
+global.display_stats = global.player_card_display_y + 96
+global.display_stats_spacing = 64
 
 enum MainDisplayBtnState {
 	DrawTokenPhase, Bust, EndDrawTokenPhase, Initiative, EndRound

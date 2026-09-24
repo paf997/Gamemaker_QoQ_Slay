@@ -23,6 +23,7 @@ function create_player_classes(){
 		
 		_player.equipment_setup()
 		_player.set_up_card_display()
+		_player.display_stats_setup()
 	}
 	global.player_1 = player_list[0]
 	global.player_2 = player_list[1]

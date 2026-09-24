@@ -129,14 +129,16 @@ function atb_phase_complete(){
 		show_message($" part {participant.name}")
 		previous_participant++
 	}else if(previous_participant < 5){
-		participant.card_display.toggle_active()
+		participant.activate_displays()
+		//participant.stats.toggle_active()
 		show_message($"previous part {previous_participant}")
 		participant = remove_particiapant_from_initiative_track()
 		show_message($" part {participant.name}")
 		previous_participant ++
 	}else{
 		previous_participant = -1
-		participant.card_display.toggle_active()
+		participant.activate_displays()
+		//participant.stats.toggle_active()
 	}
 	
 	participant_as_string =  string(participant)
@@ -149,8 +151,8 @@ function atb_phase_complete(){
 
 			array_push(next_round_particants,participant)
 			//show_message($"{participant.name}'s turn")
-			_card_display = participant.card_display
-			_card_display.toggle_active()
+			
+			participant.activate_displays()
 			//_card_display.toggle_active()
 			//_card_display.toggle_active()
 			//?players.activate_actions(2,participant)
@@ -170,8 +172,7 @@ function atb_phase_complete(){
 		}else{
 			array_push(next_round_particants,participant)
 			//show_message($"{participant.name}'s turn")
-			_card_display = participant.card_display
-			_card_display.toggle_active()
+			participant.activate_displays()
 		}
 	}else{
 		global.advance_battle_phase(2)

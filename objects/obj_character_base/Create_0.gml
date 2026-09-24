@@ -36,6 +36,7 @@ card_start_y = -160
 next_card = 160
 card_display = -1
 is_active = false;
+stats = -1
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
 //equipment_setup()
@@ -205,4 +206,29 @@ function set_up_card_display(){
 	}
 	//show_debug_message($"setting up display.Ability count {array_length(ability_cards)} Display {card_display}")
 	//return card_display
+}
+
+function display_stats_setup(){
+	stats = {
+		red: red_sum,
+		green: green_sum,
+		yellow: yellow_sum,
+		armour: armour,
+		hp:hp,
+		is_active: false,
+		toggle_active: function(){
+			is_active = !is_active
+		}
+	}
+}
+
+function activate_displays(){
+	
+	if(stats != -1){
+		stats.toggle_active();
+	}
+	
+	if(card_display != -1){
+		card_display.toggle_active();
+	}
 }

@@ -1,3 +1,5 @@
 draw_self()
-draw_text(x, y + 64, $"HP: {hp} \nA-Block: {auto_block} \nP-block:{passive_block} \nAttack(s){dmg}\n Red(s){red_sum}")
+if(stats != -1 && stats.is_active){
+	draw_text(global.player_card_display_x, global.display_stats, $"HP: {stats.hp} \nRed(s){stats.red} \nArmour{stats.armour}")
 //draw_text(x , y - 176, $"Abilites {get_abilitty_cards()}  ")
+}

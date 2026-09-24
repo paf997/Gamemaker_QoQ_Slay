@@ -137,7 +137,6 @@ function create_equipemnt_abilities_ui(equipment,index = 0){
 				power_color = c_grey
 			}else{}	
 				
-	
 	ability_text = equipment.get_ability_description(index)
 	new_ability_ui = instance_create_layer(player_columns[column_index],300+ y_offset * offset_count,"Instances_1", obj_defense_abilities)
 	new_ability_ui.set_ui_color(ui_colors)
