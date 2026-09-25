@@ -9,7 +9,10 @@
     "name":"Sprite Icons",
     "path":"folders/Objects/Sprite Icons.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_base_icon",
+    "path":"objects/obj_base_icon/obj_base_icon.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

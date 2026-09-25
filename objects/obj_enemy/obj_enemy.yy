@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_button",
-    "path":"sprites/spr_enemy_button/spr_enemy_button.yy",
+    "name":"spr_green_goblin",
+    "path":"sprites/spr_green_goblin/spr_green_goblin.yy",
   },
   "spriteMaskId":null,
   "visible":true,

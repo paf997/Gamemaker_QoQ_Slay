@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hp_heart",
+  "%Name":"obj_base_icon",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_hp_heart",
+  "name":"obj_base_icon",
   "overriddenProperties":[],
   "parent":{
     "name":"Sprite Icons",
     "path":"folders/Objects/Sprite Icons.yy",
   },
-  "parentObjectId":{
-    "name":"obj_base_icon",
-    "path":"objects/obj_base_icon/obj_base_icon.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hp_heart",
-    "path":"sprites/spr_hp_heart/spr_hp_heart.yy",
+    "name":"spr_draw_btn_icon",
+    "path":"sprites/spr_draw_btn_icon/spr_draw_btn_icon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

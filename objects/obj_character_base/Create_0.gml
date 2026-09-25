@@ -238,6 +238,26 @@ function display_tokens_setup(){
 	}
 }
 
+function display_action_setup(_actions){
+	
+	_action_icons = []
+	_icon_spacing  = 16
+	for (cnt = 0; cnt < array_length(_actions); cnt++){
+		_action = instance_create_layer(x +  (_icon_spacing * cnt), y + _icon_spacing, "Instances_1", _actions[cnt])
+		_action.icon_value = _actions[cnt].value
+		array_push(_action_icons, _action)
+	}
+	
+		action_icons_display = {
+			toggle_active: function(){ 
+			is_active = !is_active
+			array_foreach(cards, function(inst) {
+			inst.visible = is_active;
+			});
+		}
+	}
+}
+
 function activate_displays(){
 	
 	if(stats != -1){

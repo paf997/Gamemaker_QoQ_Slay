@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_defense_stat",
+  "%Name":"obj_display_action_creator",
   "eventList":[],
   "managed":true,
-  "name":"obj_defense_stat",
+  "name":"obj_display_action_creator",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprite Icons",
-    "path":"folders/Objects/Sprite Icons.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_base_icon",
-    "path":"objects/obj_base_icon/obj_base_icon.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_defense_stat",
-    "path":"sprites/spr_defense_stat/spr_defense_stat.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

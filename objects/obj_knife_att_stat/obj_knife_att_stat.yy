@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hp_heart",
+  "%Name":"obj_knife_att_stat",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_hp_heart",
+  "name":"obj_knife_att_stat",
   "overriddenProperties":[],
   "parent":{
     "name":"Sprite Icons",
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hp_heart",
-    "path":"sprites/spr_hp_heart/spr_hp_heart.yy",
+    "name":"spr_knife_icon",
+    "path":"sprites/spr_knife_icon/spr_knife_icon.yy",
   },
   "spriteMaskId":null,
   "visible":true,
