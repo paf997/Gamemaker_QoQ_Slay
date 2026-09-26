@@ -10,8 +10,8 @@
   "name":"obj_draw_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Displays",
+    "path":"folders/Objects/Displays.yy",
   },
   "parentObjectId":null,
   "persistent":false,

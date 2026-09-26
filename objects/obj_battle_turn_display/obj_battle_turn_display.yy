@@ -10,8 +10,8 @@
   "name":"obj_battle_turn_display",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Displays",
+    "path":"folders/Objects/Displays.yy",
   },
   "parentObjectId":null,
   "persistent":false,

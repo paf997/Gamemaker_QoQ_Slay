@@ -38,6 +38,8 @@ card_display = -1
 is_active = false;
 stats = -1
 token_icons = -1
+is_player = true;
+actions_icons = -1
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
 //equipment_setup()
@@ -238,20 +240,20 @@ function display_tokens_setup(){
 	}
 }
 
-function display_action_setup(_actions){
+function display_action_setup(){
 	
 	_action_icons = []
 	_icon_spacing  = 16
-	for (cnt = 0; cnt < array_length(_actions); cnt++){
-		_action = instance_create_layer(x +  (_icon_spacing * cnt), y + _icon_spacing, "Instances_1", _actions[cnt])
-		_action.icon_value = _actions[cnt].value
+	for (cnt = 0; cnt < array_length(ability_cards); cnt++){
+		_action = instance_create_layer(x +  (_icon_spacing * cnt), y - 64 + _icon_spacing, "Instances_1", ability_cards[cnt])
+		//_action.icon_value = _actions[cnt].value
 		array_push(_action_icons, _action)
 	}
 	
-		action_icons_display = {
+		actions_icons = {
 			toggle_active: function(){ 
 			is_active = !is_active
-			array_foreach(cards, function(inst) {
+			array_foreach(_action_icons, function(inst) {
 			inst.visible = is_active;
 			});
 		}
@@ -269,6 +271,9 @@ function activate_displays(){
 	}
 	if(token_icons != -1){
 		token_icons.toggle_active()
+	}
+	if(!is_player){
+		action_icons_display.toggle_active()
 	}
 	
 }

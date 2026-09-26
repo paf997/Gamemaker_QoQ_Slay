@@ -10,8 +10,8 @@
   "name":"obj_button_rush",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Tokens",
+    "path":"folders/Objects/Tokens.yy",
   },
   "parentObjectId":null,
   "persistent":false,

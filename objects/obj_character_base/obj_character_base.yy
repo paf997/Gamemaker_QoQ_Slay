@@ -10,8 +10,8 @@
   "name":"obj_character_base",
   "overriddenProperties":[],
   "parent":{
-    "name":"Classes",
-    "path":"folders/Objects/Classes.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

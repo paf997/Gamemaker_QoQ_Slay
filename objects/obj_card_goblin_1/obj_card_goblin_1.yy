@@ -10,8 +10,8 @@
   "name":"obj_card_goblin_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"PlayerCards",
-    "path":"folders/Objects/PlayerCards.yy",
+    "name":"EnemyCards",
+    "path":"folders/Objects/EnemyCards.yy",
   },
   "parentObjectId":{
     "name":"obj_card_base",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_card_base",
-    "path":"sprites/spr_card_base/spr_card_base.yy",
+    "name":"spr_knife_icon",
+    "path":"sprites/spr_knife_icon/spr_knife_icon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

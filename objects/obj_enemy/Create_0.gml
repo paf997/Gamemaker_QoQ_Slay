@@ -15,6 +15,10 @@ armour = 2
 display = instance_find(obj_battle_turn_display,0)
 ability_cards = [obj_card_goblin_1]
 
+//cards = instance_find(obj_display_action_creator,0)
+card_creator = instance_create_layer(x, y, "Enemy_Actions", obj_display_action_creator)
+
+get_current_action()
 
 function enemy_attack(){
 	_temp_msg = "";
@@ -56,4 +60,9 @@ function enemy_defend(){
 	armour = 4
 	actions[0] = 1
 }
+
+function get_current_action(){
+	//_new_action = card_creator.create_action(spr_knife_icon, 7)
+}
+	
 

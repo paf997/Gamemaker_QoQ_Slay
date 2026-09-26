@@ -10,8 +10,8 @@
   "name":"obj_draw_btn_controllor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Controllors",
+    "path":"folders/Objects/Controllors.yy",
   },
   "parentObjectId":null,
   "persistent":false,

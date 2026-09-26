@@ -147,7 +147,7 @@ function atb_phase_complete(){
 	if(active_turn_index > -1 && _display.is_action_complete == false/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
 		//TODO: readd later --- participant.reset_block();
-		if(participant.name == "Fighter" || participant.name == "Rogue" || participant.name == "White Mage"){
+		if(participant.is_player){
 
 			array_push(next_round_particants,participant)
 			//show_message($"{participant.name}'s turn")
@@ -172,6 +172,7 @@ function atb_phase_complete(){
 		}else{
 			array_push(next_round_particants,participant)
 			//show_message($"{participant.name}'s turn")
+			//participant.display_action_setup(ability_cards)
 			participant.activate_displays()
 		}
 	}else{
