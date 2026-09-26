@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_fighter_token1",
+  "%Name":"obj_enemy_action_icon_base",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":13,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_fighter_token1",
+  "name":"obj_enemy_action_icon_base",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprite Icons",
-    "path":"folders/Objects/Sprite Icons.yy",
+    "name":"EnemyCards",
+    "path":"folders/Objects/EnemyCards.yy",
   },
-  "parentObjectId":{
-    "name":"obj_parent_token",
-    "path":"objects/obj_parent_token/obj_parent_token.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,13 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_green_blank",
-    "path":"sprites/spr_green_blank/spr_green_blank.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "tags":[
-    "StartingToken",
-  ],
-  "visible":false,
+  "visible":true,
 }

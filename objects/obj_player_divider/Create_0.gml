@@ -12,7 +12,7 @@ function create_columns(){
 	for(column = 1; column <= n_columns; column++){
 		//array_push(columns,column_width*column)
 		player_equipment_list.player_columns[column-1] = columns[column-1]
-		show_debug_message(string(columns))
+		//show_debug_message(string(columns))
 	}
 }
 

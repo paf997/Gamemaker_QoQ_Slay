@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_red_icon",
+  "%Name":"obj_initiative_icon",
   "eventList":[],
   "managed":true,
-  "name":"obj_red_icon",
+  "name":"obj_initiative_icon",
   "overriddenProperties":[],
   "parent":{
     "name":"Sprite Icons",
     "path":"folders/Objects/Sprite Icons.yy",
   },
   "parentObjectId":{
-    "name":"obj_token_icon_base",
-    "path":"objects/obj_token_icon_base/obj_token_icon_base.yy",
+    "name":"obj_base_icon",
+    "path":"objects/obj_base_icon/obj_base_icon.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,12 +31,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_red_blank",
-    "path":"sprites/spr_red_blank/spr_red_blank.yy",
+    "name":"spr_initiative_icon",
+    "path":"sprites/spr_initiative_icon/spr_initiative_icon.yy",
   },
-  "spriteMaskId":null,
-  "tags":[
-    "StartingToken",
-  ],
+  "spriteMaskId":{
+    "name":"spr_initiative_icon",
+    "path":"sprites/spr_initiative_icon/spr_initiative_icon.yy",
+  },
   "visible":true,
 }

@@ -21,6 +21,8 @@ global.player_card_display_y = 184
 global.player_card_spacing = 96
 global.display_stats = global.player_card_display_y + 96
 global.display_stats_spacing = 64
+global.icon_value_spacing = -8
+global.icon_spacing = 48
 
 enum MainDisplayBtnState {
 	DrawTokenPhase, Bust, EndDrawTokenPhase, Initiative, EndRound

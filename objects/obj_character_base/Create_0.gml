@@ -218,9 +218,9 @@ function display_stats_setup(){
 		yellow: yellow_sum,
 		armour: armour,
 		hp:hp,
-		hp_icon: instance_create_layer(global.player_card_display_x, global.display_stats, "Instances_1", obj_hp_heart),
-		defense_icon: instance_create_layer(global.player_card_display_x + global.display_stats_spacing, global.display_stats, "Instances_1", obj_defense_stat),
-		armour_icon: instance_create_layer(global.player_card_display_x + global.display_stats_spacing * 2, global.display_stats, "Instances_1", obj_armour_stat),
+		hp_icon: instance_create_layer(x + global.icon_spacing * 3, y + global.icon_spacing + 16, "Instances_1", obj_hp_heart),
+		defense_icon: instance_create_layer(x + global.icon_spacing * 4, y + global.icon_spacing + 16, "Instances_1", obj_defense_stat),
+		armour_icon: instance_create_layer(x + global.icon_spacing * 5, y + global.icon_spacing + 16, "Instances_1", obj_armour_stat),
 		is_active: false,
 		toggle_active: function(){
 			is_active = !is_active
@@ -230,22 +230,24 @@ function display_stats_setup(){
 
 function display_tokens_setup(){
 	token_icons = {
-		red_icon: instance_create_layer(global.player_card_display_x, global.display_stats_spacing + 288, "Instances_1", obj_red_icon),
-		green_icon: instance_create_layer(global.player_card_display_x + global.display_stats_spacing, global.display_stats_spacing + 288,  "Instances_1", obj_green_icon),
-		yellow_icon: instance_create_layer(global.player_card_display_x + global.display_stats_spacing * 2, global.display_stats_spacing + 288, "Instances_1", obj_yellow_icon),
+		red_icon: instance_create_layer(x + global.icon_spacing * 3, y + global.icon_spacing, "Instances_1", obj_red_icon),
+		green_icon: instance_create_layer(x + global.icon_spacing * 4, y + global.icon_spacing,  "Instances_1", obj_green_icon),
+		yellow_icon: instance_create_layer(x + global.icon_spacing * 5, y + global.icon_spacing,  "Instances_1", obj_yellow_icon),
 		is_active: false,
 		toggle_active: function(){
 			is_active = !is_active
 		}
 	}
+	token_icons.red_icon.icon_value = red_sum
+	token_icons.green_icon.icon_value = green_sum
+	token_icons.yellow_icon.icon_value = yellow_sum
 }
 
 function display_action_setup(){
 	
 	_action_icons = []
-	_icon_spacing  = 32
 	for (cnt = 0; cnt < array_length(ability_cards); cnt++){
-		_action = instance_create_layer((x - 16) +  (_icon_spacing * cnt), y - 64 + _icon_spacing, "Instances_1", ability_cards[cnt])
+		_action = instance_create_layer((x - 48) +  (global.icon_spacing * cnt), y - 88 + global.icon_spacing, "Instances_1", ability_cards[cnt])
 		//_action.icon_value = _actions[cnt].value
 		array_push(_action_icons, _action)
 	}

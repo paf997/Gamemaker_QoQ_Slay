@@ -14,8 +14,8 @@
     "path":"folders/Objects/EnemyCards.yy",
   },
   "parentObjectId":{
-    "name":"obj_card_base",
-    "path":"objects/obj_card_base/obj_card_base.yy",
+    "name":"obj_enemy_action_icon_base",
+    "path":"objects/obj_enemy_action_icon_base/obj_enemy_action_icon_base.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

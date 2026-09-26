@@ -1,5 +1,5 @@
 enemies = [];
-enemy_spacing = 112;//64 bit + 12 padding
+enemy_spacing = 196;//64 bit + 12 padding
 enemy_sprites = []
 x_offset = 6
 y_offset = 12

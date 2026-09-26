@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
   "%Name":"obj_green_icon",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_green_icon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tokens",
-    "path":"folders/Objects/Tokens.yy",
+    "name":"Sprite Icons",
+    "path":"folders/Objects/Sprite Icons.yy",
   },
   "parentObjectId":{
-    "name":"obj_parent_token",
-    "path":"objects/obj_parent_token/obj_parent_token.yy",
+    "name":"obj_token_icon_base",
+    "path":"objects/obj_token_icon_base/obj_token_icon_base.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

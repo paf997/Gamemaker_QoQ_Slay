@@ -6,10 +6,13 @@
   "name":"obj_yellow_icon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tokens",
-    "path":"folders/Objects/Tokens.yy",
+    "name":"Sprite Icons",
+    "path":"folders/Objects/Sprite Icons.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_token_icon_base",
+    "path":"objects/obj_token_icon_base/obj_token_icon_base.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
