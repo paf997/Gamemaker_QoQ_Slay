@@ -243,9 +243,9 @@ function display_tokens_setup(){
 function display_action_setup(){
 	
 	_action_icons = []
-	_icon_spacing  = 16
+	_icon_spacing  = 32
 	for (cnt = 0; cnt < array_length(ability_cards); cnt++){
-		_action = instance_create_layer(x +  (_icon_spacing * cnt), y - 64 + _icon_spacing, "Instances_1", ability_cards[cnt])
+		_action = instance_create_layer((x - 16) +  (_icon_spacing * cnt), y - 64 + _icon_spacing, "Instances_1", ability_cards[cnt])
 		//_action.icon_value = _actions[cnt].value
 		array_push(_action_icons, _action)
 	}

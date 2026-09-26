@@ -13,7 +13,7 @@ actions = [0]
 actions_list = ["attck","defend "]
 armour = 2
 display = instance_find(obj_battle_turn_display,0)
-ability_cards = [obj_card_goblin_1]
+ability_cards = [obj_card_goblin_1, obj_card_goblin_armour, obj_card_goblin_defense]
 
 //cards = instance_find(obj_display_action_creator,0)
 card_creator = instance_create_layer(x, y, "Enemy_Actions", obj_display_action_creator)
