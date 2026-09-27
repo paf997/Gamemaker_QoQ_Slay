@@ -40,6 +40,7 @@ stats = -1
 token_icons = -1
 is_player = true;
 actions_icons = -1
+current_card = -1;
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
 //equipment_setup()
@@ -186,9 +187,9 @@ function calculate_energy(initiative_amount){
 
 
 
-function set_up_card_display(){
+function set_up_card_display(_display_x = global.player_card_display_x, _display_y = global.player_card_display_y){
 
-	_display = instance_create_layer(global.player_card_display_x,global.player_card_display_y,"Instances_1",obj_player_card_display )
+	_display = instance_create_layer(_display_x,_display_y,"Instances_1",obj_player_card_display )
 	_cards = []
 	for(cnt = 0;cnt <  array_length(ability_cards); cnt++ ){
 		_card = instance_create_layer(_display.x +(global.player_card_spacing * cnt), _display.y, "Instances_1",ability_cards[cnt])
@@ -213,14 +214,12 @@ function set_up_card_display(){
 
 function display_stats_setup(){
 	stats = {
-		red: red_sum,
-		green: green_sum,
-		yellow: yellow_sum,
 		armour: armour,
 		hp:hp,
-		hp_icon: instance_create_layer(x + global.icon_spacing * 3, y + global.icon_spacing + 16, "Instances_1", obj_hp_heart),
-		defense_icon: instance_create_layer(x + global.icon_spacing * 4, y + global.icon_spacing + 16, "Instances_1", obj_defense_stat),
-		armour_icon: instance_create_layer(x + global.icon_spacing * 5, y + global.icon_spacing + 16, "Instances_1", obj_armour_stat),
+		hp_icon: instance_create_layer(x + 8 + (global.icon_spacing * -1), y + global.icon_spacing + global.icon_spacing, "Instances_1", obj_hp_heart),
+		defense_icon: instance_create_layer(x + 8 , y + global.icon_spacing + global.icon_spacing, "Instances_1", obj_defense_stat),
+		armour_icon: instance_create_layer(x + 8 + (global.icon_spacing ), y + global.icon_spacing + global.icon_spacing, "Instances_1", obj_armour_stat),
+		initiative: instance_create_layer(x + 8+ (global.icon_spacing * 2), y + global.icon_spacing + global.icon_spacing,  "Instances_1", obj_initiative_icon),
 		is_active: false,
 		toggle_active: function(){
 			is_active = !is_active

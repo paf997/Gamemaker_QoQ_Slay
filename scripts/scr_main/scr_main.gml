@@ -17,12 +17,12 @@ global.class_list = [obj_fighter_class,obj_rogue_class,obj_white_mage_class]
 //global.main_bag = instance_create_layer(x,y,"Instances_1", obj_player_list)
 
 global.player_card_display_x = 64
-global.player_card_display_y = 184
+global.player_card_display_y = 304
 global.player_card_spacing = 96
 global.display_stats = global.player_card_display_y + 96
 global.display_stats_spacing = 64
 global.icon_value_spacing = -8
-global.icon_spacing = 48
+global.icon_spacing = 40
 
 enum MainDisplayBtnState {
 	DrawTokenPhase, Bust, EndDrawTokenPhase, Initiative, EndRound
