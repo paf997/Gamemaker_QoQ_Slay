@@ -11,7 +11,6 @@ _player = instance_find(obj_fighter_class,0)
 participant = -1
 previous_participant = -1
 len = 5
-
 players = instance_find(obj_player_list,0)
 
 check_for_fighter = 0
