@@ -6,13 +6,13 @@ end_turn_phase = 1
 
 
 btn_display_close = -1
-buttons = [btn_display_close]
+buttons = [obj_btn_display_close, obj_btn_display_confirm, obj_btn_display_next]
 isFirst = true;
 button_spacing = 40;
-for (n = 0; n < array_length(buttons); n++){//todo change n back to "0" for multi-player. Also, remove comment bwlow to fix spacing
-	button = instance_create_layer(x + button_spacing /*+ (button_spacing  * n)*/, y + button_spacing, "InitiativeTrack", obj_btn_display_close )
+for (n = 2; n < array_length(buttons); n++){//todo change n back to "0" for multi-player. Also, remove comment bwlow to fix spacing
+	button = instance_create_layer(x + (button_spacing  * n), y + button_spacing, "InitiativeTrack", buttons[n] )
 	//button.button_name = buttons[n];
-	btn_display_close = button
+	//btn_display_close = button
 }
 
 player_1_buttons = [buttons[0]]

@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_btn_display_close",
+  "%Name":"obj_btn_display_confirm",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_btn_display_close",
+  "name":"obj_btn_display_confirm",
   "overriddenProperties":[],
   "parent":{
     "name":"Sprite Icons",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_btn_close_display",
-    "path":"sprites/spr_btn_close_display/spr_btn_close_display.yy",
+    "name":"spr_btn_confirm",
+    "path":"sprites/spr_btn_confirm/spr_btn_confirm.yy",
   },
   "spriteMaskId":null,
   "visible":true,
