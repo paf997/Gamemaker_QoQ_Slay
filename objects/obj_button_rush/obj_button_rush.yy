@@ -10,8 +10,8 @@
   "name":"obj_button_rush",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sprite Icons",
-    "path":"folders/Objects/Sprite Icons.yy",
+    "name":"Controllors",
+    "path":"folders/Objects/Controllors.yy",
   },
   "parentObjectId":null,
   "persistent":false,

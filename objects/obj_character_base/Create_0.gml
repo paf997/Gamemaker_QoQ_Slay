@@ -246,7 +246,7 @@ function display_action_setup(){
 	
 	_action_icons = []
 	for (cnt = 0; cnt < array_length(ability_cards); cnt++){
-		_action = instance_create_layer((x - 48) +  (global.icon_spacing * cnt), y - 88 + global.icon_spacing, "Instances_1", ability_cards[cnt])
+		_action = instance_create_layer((x + 84) +  (global.icon_spacing * cnt), y - 44 + global.icon_spacing, "Instances_1", ability_cards[cnt])
 		//_action.icon_value = _actions[cnt].value
 		array_push(_action_icons, _action)
 	}

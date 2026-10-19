@@ -9,14 +9,14 @@ function button_pressed(button_pressed){
 	}else{}
 	
 
-	if(button_pressed == buttons[0]){
+	if(button_pressed == o_buttons[0]){
 		//show_debug_message("ATB_spd = " + button_pressed.button_name)
 		if(player_1.has_busted == "false"){
 			player_1.atb_speed = base_speed;
 		}else{
 			show_message("Busted. Please End Turn")
 		}
-	}else if(button_pressed == buttons[1]){
+	}else if(button_pressed == o_buttons[1]){
 		//show_debug_message("ATB speed = " + string(button_pressed.button_name))
 		if(player_1.has_busted == "false"){
 			player_1.atb_speed = base_speed;
