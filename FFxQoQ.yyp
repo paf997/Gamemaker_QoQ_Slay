@@ -201,6 +201,7 @@
     {"id":{"name":"spr_ui_back","path":"sprites/spr_ui_back/spr_ui_back.yy",},},
     {"id":{"name":"spr_ui_box_1","path":"sprites/spr_ui_box_1/spr_ui_box_1.yy",},},
     {"id":{"name":"spr_ui_box_2","path":"sprites/spr_ui_box_2/spr_ui_box_2.yy",},},
+    {"id":{"name":"spr_ui_box_3","path":"sprites/spr_ui_box_3/spr_ui_box_3.yy",},},
     {"id":{"name":"spr_ui_box","path":"sprites/spr_ui_box/spr_ui_box.yy",},},
     {"id":{"name":"spr_ui_button","path":"sprites/spr_ui_button/spr_ui_button.yy",},},
     {"id":{"name":"spr_ui_check","path":"sprites/spr_ui_check/spr_ui_check.yy",},},
