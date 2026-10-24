@@ -29,7 +29,7 @@
     "guideColour":[4294902015,4294902015,4294902015,4294902015,],
     "highlightColour":1728023040,
     "highlightStyle":0,
-    "left":17,
+    "left":16,
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
     "right":18,
