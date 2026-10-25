@@ -18,5 +18,8 @@ show_debug_message($"Gui test {_token_track} ")
 for (var i = 0; i < 20; i++) { //<<< 20 is a guess
 	var _child = flexpanel_node_get_child(_token_track, 0);
 	show_debug_message($"Gui test {_child}")
+	//var _element_data = _child.layerElements[0];
+	if(_child.layerElements > 0){
+	}
 }   
 
