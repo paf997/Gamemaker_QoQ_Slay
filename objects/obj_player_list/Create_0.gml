@@ -23,8 +23,8 @@ function create_player_classes(){
 		
 		_player.equipment_setup()
 		_player.set_up_card_display()
-		_player.display_stats_setup()
-		_player.display_tokens_setup()
+		//_player.display_stats_setup() - moved to GUI?
+		//_player.display_tokens_setup() - moved to GUI?
 	}
 	global.player_1 = player_list[0]
 	global.player_2 = player_list[1]

@@ -14,8 +14,8 @@ for(n = 0; n < 3; n++){
 	enemy = instance_create_layer(x + (n * enemy_spacing),y,"InitiativeTrack", obj_enemy)
 	enemy_sprite = instance_find(spr_enemy_button,n);
 	enemy.set_up_card_display(enemy.x,enemy.y - 40)
-	enemy.display_stats_setup()
-	enemy.display_action_setup()
+	//enemy.display_stats_setup() - moved to GUI?
+	//enemy.display_action_setup() - moved to GUI?
 	card_display = enemy.card_display
 	//show_message($"card display {card_display}")
 	array_push(enemy_sprites,enemy_sprite)
