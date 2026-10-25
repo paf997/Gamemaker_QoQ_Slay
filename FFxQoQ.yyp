@@ -133,6 +133,7 @@
     {"id":{"name":"obj_test_box","path":"objects/obj_test_box/obj_test_box.yy",},},
     {"id":{"name":"obj_token_bag_P1","path":"objects/obj_token_bag_P1/obj_token_bag_P1.yy",},},
     {"id":{"name":"obj_token_bag_P2","path":"objects/obj_token_bag_P2/obj_token_bag_P2.yy",},},
+    {"id":{"name":"obj_token_gui_controller","path":"objects/obj_token_gui_controller/obj_token_gui_controller.yy",},},
     {"id":{"name":"obj_token_icon_base","path":"objects/obj_token_icon_base/obj_token_icon_base.yy",},},
     {"id":{"name":"obj_white_mage_class","path":"objects/obj_white_mage_class/obj_white_mage_class.yy",},},
     {"id":{"name":"obj_white_token","path":"objects/obj_white_token/obj_white_token.yy",},},
