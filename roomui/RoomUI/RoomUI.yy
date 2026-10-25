@@ -3,7 +3,7 @@
   "%Name":"RoomUI",
   "children":[
     {"$GMRUILayer":"v1","%Name":"UILayer_1","alignItems":2,"children":[
-        {"$GMRFlexPanel":"","%Name":"FlexPanel_1","alignItems":1,"alignSelf":1,"children":[
+        {"$GMRFlexPanel":"","%Name":"Main_Panel_R1","alignItems":1,"alignSelf":1,"children":[
             {"$GMRFlexPanel":"","%Name":"Row1","alignItems":1,"children":[
                 {"$GMRFlexPanel":"","%Name":"Test_Button","alignItems":2,"children":[
                     {"$GMRSpriteGraphic":"v1","%Name":"graphic_273613E3","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_273613E3","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_ui_icon3","path":"sprites/spr_ui_icon3/spr_ui_icon3.yy",},"x":0.0,"y":0.0,},
@@ -128,8 +128,8 @@
                   ],"flexDirection":0,"height":{"unit":3,"value":96.0,},"justifyContent":1,"name":"Character_Panel","nodeColour":4282964722,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":96.0,},},
               ],"flexDirection":2,"gapColumn":9.0,"height":{"unit":3,"value":100.0,},"justifyContent":3,"name":"Row2","nodeColour":4285417714,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":100.0,},},
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_3C112419","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_3C112419","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_ui_box_3","path":"sprites/spr_ui_box_3/spr_ui_box_3.yy",},"x":0.0,"y":0.0,},
-          ],"flexDirection":0,"gapRow":8.0,"height":{"unit":3,"value":50.0,},"justifyContent":3,"minWidth":{"unit":1,"value":960.0,},"name":"FlexPanel_1","nodeColour":4294068322,"paddingBottom":{"unit":1,"value":16.0,},"paddingLeft":{"unit":1,"value":16.0,},"paddingRight":{"unit":1,"value":16.0,},"paddingTop":{"unit":1,"value":16.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":90.0,},},
-        {"$GMRFlexPanel":"","%Name":"FlexPanel_2","alignItems":2,"alignSelf":4,"children":[
+          ],"flexDirection":0,"gapRow":8.0,"height":{"unit":3,"value":50.0,},"justifyContent":3,"minWidth":{"unit":1,"value":960.0,},"name":"Main_Panel_R1","nodeColour":4294068322,"paddingBottom":{"unit":1,"value":16.0,},"paddingLeft":{"unit":1,"value":16.0,},"paddingRight":{"unit":1,"value":16.0,},"paddingTop":{"unit":1,"value":16.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":90.0,},},
+        {"$GMRFlexPanel":"","%Name":"Main_Panel_R2","alignItems":2,"alignSelf":4,"children":[
             {"$GMRFlexPanel":"","%Name":"FlexPanel_3","alignItems":1,"alignSelf":4,"children":[
                 {"$GMRFlexPanel":"","%Name":"Player_Power_GUI","alignItems":2,"alignSelf":1,"children":[
                     {"$GMRFlexPanel":"","%Name":"Power_GUI","alignItems":2,"children":[
@@ -242,7 +242,7 @@
                     {"$GMRSpriteGraphic":"v1","%Name":"graphic_56616243","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_56616243","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_ui_box_3","path":"sprites/spr_ui_box_3/spr_ui_box_3.yy",},"x":0.0,"y":0.0,},
                   ],"flexDirection":2,"height":{"unit":3,"value":14.0,},"justifyContent":5,"maxWidth":{"unit":1,"value":250.0,},"minHeight":{"unit":1,"value":70.0,},"minWidth":{"unit":1,"value":250.0,},"name":"Player_Stats_GUI","nodeColour":4294068392,"positionLeft":{"unit":0,"value":2.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":31.0,},},
               ],"flexDirection":2,"height":{"unit":3,"value":16.0,},"justifyContent":3,"name":"FlexPanel_3","nodeColour":4282935538,"positionLeft":{"unit":2,"value":2.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":90.0,},},
-          ],"flexDirection":0,"gapRow":6.0,"height":{"unit":3,"value":100.0,},"justifyContent":1,"name":"FlexPanel_2","nodeColour":4282970841,"positionLeft":{"unit":2,"value":0.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":100.0,},},
+          ],"flexDirection":0,"gapRow":6.0,"height":{"unit":3,"value":100.0,},"justifyContent":1,"name":"Main_Panel_R2","nodeColour":4282970841,"positionLeft":{"unit":2,"value":0.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":100.0,},},
       ],"flexDirection":0,"gapRow":5.0,"gridX":32,"gridY":32,"justifyContent":3,"name":"UILayer_1","nodeColour":4289808626,"paddingBottom":{"unit":1,"value":8.0,},"paddingLeft":{"unit":1,"value":8.0,},"paddingRight":{"unit":1,"value":8.0,},"paddingTop":{"unit":1,"value":8.0,},"resourceType":"GMRUILayer","resourceVersion":"2.0",},
   ],
   "locked":false,
