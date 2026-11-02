@@ -39,6 +39,7 @@ function draw_token_and_add_to_initiative_track(){
 			var current_atb = atb_arr[atb_index];
 			current_token.x  = current_atb.x;
 			current_token.y  = current_atb.y+4;
+			//token_spr = object_get_sprite(current_token)
 	
 			if(current_token.token_type = TokenType.Attack){
 					attack_sum += current_token.token_value;
@@ -89,7 +90,7 @@ function draw_token_and_add_to_initiative_track(){
 			initiative_icon.initiative = atb_index + /*init_bonus +1 */ 1;
 			adjustment_individual_initiative()
 			initiative_icon.phase = atb_phase;
-			//main_gui.set_gui_tokens()
+			main_gui.set_gui_tokens(current_token.sprite_index, atb_index)
 	
 		//atb_phase++;
 		//energy--;
