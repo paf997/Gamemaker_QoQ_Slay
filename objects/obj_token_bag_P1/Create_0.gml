@@ -176,6 +176,7 @@ function check_battle_phase(){
 	}
 }
 
+main_gui = instance_find(obj_token_gui_controller,0)
 
 
 

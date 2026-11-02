@@ -1,25 +1,27 @@
-var _ui_layer = layer_get_flexpanel_node("UILayer_1");
+ ui_layer = layer_get_flexpanel_node("UILayer_1");
 
-var _node = flexpanel_node_get_child(_ui_layer, "Token"); 
+ track_node = flexpanel_node_get_child(ui_layer, "Token_Track"); 
 //show_debug_message($"Gui test {_ui_layer} children {_child_count}")
-var _main_gui_panel = flexpanel_node_get_child(_ui_layer, 0);
+ //_main_gui_panel = flexpanel_node_get_child(_ui_layer, 0);
 
-/*child_count = flexpanel_node_get_num_children(_main_gui_panel);
-show_debug_message($"Gui test {_main_gui_panel} children {_child_count}")
-*/
+token_node = flexpanel_node_get_child(ui_layer, "Token"); 
+token_struct = flexpanel_node_get_struct(token_node)
 
-var _row_1 = flexpanel_node_get_child(_main_gui_panel, 0);
-show_debug_message($"Gui test {_main_gui_panel} ")
-var _token_track = flexpanel_node_get_child(_row_1, 3);
-var _child_count = flexpanel_node_get_num_children(_token_track);
+token_spr = token_struct.layerElements[0].elementId;
+layer_sprite_change(token_spr,spr_blue_token1)
 
-show_debug_message($"Gui test {_token_track} ")
-
-for (var i = 0; i < 20; i++) { //<<< 20 is a guess
+token_list  = [spr_white_token1,spr_white_token2, spr_white_token3, 
+	spr_red_token1, spr_red_token2, spr_red_token3,
+	spr_green_token1, spr_green_token2, spr_green_token3,
+	spr_blue_token1, spr_blue_token2, spr_blue_token3,
+	spr_wmage_token, spr_rogue_token, spr_fighter_token]
+/*for (var i = 0; i < 20; i++) { //<<< 20 is a guess
 	var _child = flexpanel_node_get_child(_token_track, 0);
 	show_debug_message($"Gui test {_child}")
 	//var _element_data = _child.layerElements[0];
 	if(_child.layerElements > 0){
 	}
-}   
+}   /*
+
+
 

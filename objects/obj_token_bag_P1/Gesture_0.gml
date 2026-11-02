@@ -94,6 +94,7 @@ function draw_token_and_add_to_initiative_track(){
 			initiative_icon.initiative = atb_index + /*init_bonus +1 */ 1;
 			adjustment_individual_initiative()
 			initiative_icon.phase = atb_phase;
+			main_gui.set_gui_tokens(current_token)
 	
 		//atb_phase++;
 		//energy--;
