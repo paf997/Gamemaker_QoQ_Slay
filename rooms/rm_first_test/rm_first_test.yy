@@ -103,8 +103,10 @@
     {"name":"inst_2EBCD1C4","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_2AA3862A","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_4C551F8B","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_11504D65","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_1D2F4404","path":"rooms/rm_first_test/rm_first_test.yy",},
+    {"name":"inst_5C592B7B","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_58BD43B6","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_6FDABF71","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

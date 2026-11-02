@@ -1,16 +1,12 @@
-if(!isChosen){
-	isChosen = true;
-	var other_player = instance_find(obj_token_bag_P2, 0);
-}
 
 
+function main_bag_btn(){
 if(global.get_main_display_state() == MainDisplayBtnState.DrawTokenPhase){
 	
 	if(token_draw_count == 0 ){
 		while(bust_sum <  6/* stop_draw_max && bust_sum < 7*/){
 			draw_token_and_add_to_initiative_track()
 		}
-
 	}else{
 		if(atb_speed == -99){
 			is_turn_end = true;
@@ -20,20 +16,19 @@ if(global.get_main_display_state() == MainDisplayBtnState.DrawTokenPhase){
 		}else{
 			show_message("Busted. Please end Turn")
 			reset_battle_stats();
-			}	
-		
+			}		
 		}
 }else{
 	show_message("Please move to phase")
 }
 
+}
 
 function draw_token_and_add_to_initiative_track(){
 
 	//is_finished_actions = -is_finished_actions;
 	//show_message("Button Clicked!" + string(atb_speed));
 			token_draw_count++;
-
 			var random_index = irandom(array_length(player_bag_token_arr)-1);
 			var current_token = player_bag_token_arr[random_index];
 			array_delete(player_bag_token_arr,random_index,1);
@@ -94,7 +89,7 @@ function draw_token_and_add_to_initiative_track(){
 			initiative_icon.initiative = atb_index + /*init_bonus +1 */ 1;
 			adjustment_individual_initiative()
 			initiative_icon.phase = atb_phase;
-			main_gui.set_gui_tokens(current_token)
+			//main_gui.set_gui_tokens()
 	
 		//atb_phase++;
 		//energy--;
@@ -145,10 +140,3 @@ function adjustment_individual_initiative(){
 		 
 	}
 }
-
-
-
-/*if keyboard_check_pressed(ord("Z") && (atb_end_actions != atb_phase) && (!is_finished_actions)){
-	atb_end_actions++;
-	is_finished_actions = true;
-}*/

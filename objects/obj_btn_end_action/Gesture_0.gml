@@ -1,0 +1,1 @@
+rush_btn.button_pressed(obj_btn_display_next)
