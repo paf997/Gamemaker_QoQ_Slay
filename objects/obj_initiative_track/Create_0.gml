@@ -16,6 +16,7 @@ players = instance_find(obj_player_list,0)
 check_for_fighter = 0
 previous_initiative = 0
 player_btn_controller = instance_find(obj_rush_btn_controllor,0)
+main_gui = instance_find(obj_token_gui_controller,0)
 
 
 function add_and_sort_initiative(_particapant){
@@ -74,6 +75,8 @@ function update_player_index(_part){
 	array_sort(initiatives,true)
 	initiatives_as_string = initiatives
 	//atb_phase_complete()
+	show_debug_message($"{participants}")
+	main_gui.set_initiative_track(participants)
 }
 
 function combine_initiatives(){

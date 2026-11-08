@@ -42,6 +42,7 @@ global.player_3 = 0;
 player_starting_tokens = [];
 
 player_bag_token_arr = [];
+main_gui = instance_find(obj_token_gui_controller,0)
 
  if (!layer_exists("Instances_1")) {
 	layer_create(0, "Instances_1"); // Create layer at depth 0 if it doesn't exist
@@ -176,7 +177,7 @@ function check_battle_phase(){
 	}
 }
 
-main_gui = instance_find(obj_token_gui_controller,0)
+
 
 
 

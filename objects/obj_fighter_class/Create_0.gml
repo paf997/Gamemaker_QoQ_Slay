@@ -5,6 +5,7 @@ is_dead = false;
 rounds_completed  = 0;
 name = "Fighter"
 end_turn_phase = 1
+init_icon_spr = spr_character_base_fighter
 armour = 3;
 initiative = 0
 equipment = [obj_heavy_armour,obj_long_sword,obj_shield]
@@ -14,6 +15,7 @@ defense_sum = 0
 block = 3
 p_index = 1
 passive_block = 0
+init_icon_spr = spr_character_base_fighter
 
 
 bonus_tokens = [

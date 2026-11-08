@@ -5,12 +5,14 @@ is_dead = false;
 rounds_completed  = 0;
 name = "Rogue"
 end_turn_phase = 1
+init_icon_spr = spr_character_base_theif
 armour = 2;
 initiative = 1
 equipment = [obj_dagger,obj_medium_armour]
 defense_sum = 0
 block = 2
 p_index = 2
+init_icon_spr = spr_character_base_theif
 
 ability_cards = [obj_card_power_attack]
 

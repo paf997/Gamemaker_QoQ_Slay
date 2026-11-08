@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_bag_stats",
   "parent":{
-    "name":"FFxQoQ",
-    "path":"FFxQoQ.yyp",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

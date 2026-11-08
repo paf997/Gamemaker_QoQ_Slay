@@ -5,12 +5,14 @@ is_dead = false;
 rounds_completed  = 0;
 name = "White Mage"
 end_turn_phase = 1
+init_icon_spr = spr_character_base_cleric
 armour = 1;
 initiative = 0
 equipment = [obj_rod, obj_light_armour]
 defense_sum = 0
 block = 1
 p_index = 3
+init_icon_spr = spr_character_base_cleric
 
 ability_cards = [obj_card_power_attack]
 

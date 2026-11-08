@@ -14,6 +14,7 @@ actions_list = ["attck","defend "]
 armour = 2
 display = instance_find(obj_battle_turn_display,0)
 ability_cards = [obj_card_goblin_1]
+init_icon_spr = spr_green_goblin
 
 
 

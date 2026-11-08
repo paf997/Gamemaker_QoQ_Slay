@@ -41,6 +41,9 @@ token_icons = -1
 is_player = true;
 actions_icons = -1
 current_card = -1;
+init_icon_spr = spr_character_base_cleric
+main_gui = instance_find(obj_token_gui_controller, 0)
+
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
 //equipment_setup()
