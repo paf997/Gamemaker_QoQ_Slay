@@ -75,7 +75,7 @@ function update_player_index(_part){
 	array_sort(initiatives,true)
 	initiatives_as_string = initiatives
 	//atb_phase_complete()
-	show_debug_message($"{participants}")
+	//show_debug_message($"{participants}")
 	main_gui.set_initiative_track(participants)
 }
 

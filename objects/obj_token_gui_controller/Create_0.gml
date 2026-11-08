@@ -31,16 +31,21 @@ for (var i = 0; i < 6; i++) { //<<< 10 is a guess
 
 power_gui_node = flexpanel_node_get_child(ui_layer, "Power_GUIs"); 
 power_gui_list = []
+players_power_guis_list = []
 
-for (var i = 0; i < 6; i++) { //<<< 10 is a guess
-	var _power_gui = flexpanel_node_get_child(power_gui_node, i);
-	//show_debug_message($"Nodes? : {_child}")
-	var _sub_power_panel = flexpanel_node_get_child(power_gui_node, "Player_Power_GUI");
-	//var _power_spr = flexpanel_node_get_child(_sub_power_panel, "Power_GUI");
-	var _power_struct = flexpanel_node_get_struct(_sub_power_panel)
-	//array_push(power_gui_list,_power_struct)
-	//show_debug_message($"Token Track {array_length(token_track)} child {_child}")
-	//var _element_data = _child.layerElements[0];
+for (var i = 0; i < 3; i++) { //<<< 10 is a guess
+	show_debug_message("Set player power - main gui")
+	var _player_gui = flexpanel_node_get_child(power_gui_node, i);
+	show_debug_message($"Nodes? : {_child} cnt {i}")
+	//var _player_powers_struct = flexpanel_node_get_struct(_player_gui)
+	array_push(players_power_guis_list, _player_gui)
+	show_debug_message($"pwrs length{array_length(players_power_guis_list)}")
+	for(cnt = 0; cnt < 6; cnt ++){
+		var _player_pwr_gui = flexpanel_node_get_child(_player_gui,cnt)
+		var _power_struct = flexpanel_node_get_struct(_player_pwr_gui);
+		array_push(power_gui_list,_power_struct)
+		
+	}
 } 
 
 stat_gui_node = flexpanel_node_get_child(ui_layer, "Stat_GUIs"); 

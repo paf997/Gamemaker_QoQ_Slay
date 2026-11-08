@@ -136,9 +136,9 @@ function adjustment_individual_initiative(){
 		 _temp.initiative = initiative_icon.initiative + _temp.red_sum + 
 		 _temp.green_sum + _temp.yellow_sum + (2*_temp.blue_sum) + _temp.wild_sum
 		 _temp.calculate_energy(_temp.initiative)
-		 pwr_array = [_temp.red_sum, _temp.green_sum, _temp.blue_sum,_temp.yellow_sum, _temp.black_sum]
-		// show_debug_message($"{cnt} ??? power ??? : {pwr_array}")
-		 main_gui.set_player_power(pwr_array)
+		 pwr_array = [_temp.red_sum, _temp.green_sum, _temp.blue_sum,_temp.yellow_sum, _temp.black_sum, 0]
+		 //show_debug_message($"{cnt} ??? power ??? : {pwr_array}")
+		 main_gui.set_player_power(pwr_array,cnt)
 		 //show_debug_message($"cnt {_temp.name}{cnt} == {initiative_icon.initiative} + {_temp.green_sum} +  {_temp.red_sum} +  {_temp.yellow_sum} = atb {_temp.initiative}")
 		 update_initiatives(_temp)
 

@@ -8,16 +8,19 @@ function set_gui_tokens(token, atb_index){
 function set_initiative_track(characters){
 	//show_debug_message("set Initiative - gui controller")
 	for (cnt = array_length(characters)-1; cnt >= 0;cnt--){
-		show_debug_message($"particiapants {characters[cnt]}")
+		//show_debug_message($"particiapants {characters[cnt]}")
 		_index = initiative_track[cnt].layerElements[0].elementId
 		_icon_spr = characters[cnt].init_icon_spr
 		layer_sprite_change(_index, _icon_spr)
 	}
 }
 
-function set_player_power(pwr_array){
-	for (cnt = 0; cnt < 4; cnt ++){
-		//_index = power_gui_list[cnt].layerElements[1].elementId
-		//show_debug_message($"Stats?: {pwr_array}")
+function set_player_power(pwr_array, player){
+	//test = array_length(power_gui_list)
+	//show_debug_message($" pwr list count {test}")
+	var _current_player = players_power_guis_list[player]
+	for (cnt = 0/*(6 * player)*/; cnt < 6; cnt ++){
+		_index = power_gui_list[cnt].layerElements[0].elementId
+		layer_text_text(_index,pwr_array[cnt])
 	}
 }
