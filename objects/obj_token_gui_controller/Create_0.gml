@@ -33,35 +33,42 @@ power_gui_node = flexpanel_node_get_child(ui_layer, "Power_GUIs");
 power_gui_list = []
 players_power_guis_list = []
 
-for (var i = 0; i < 3; i++) { //<<< 10 is a guess
-	show_debug_message("Set player power - main gui")
+for (var i = 0; i < 3; i++) { 
+	//show_debug_message("Set player power - main gui")
 	var _player_gui = flexpanel_node_get_child(power_gui_node, i);
-	show_debug_message($"Nodes? : {_child} cnt {i}")
+	//show_debug_message($"Nodes? : {_child} cnt {i}")
 	//var _player_powers_struct = flexpanel_node_get_struct(_player_gui)
 	array_push(players_power_guis_list, _player_gui)
-	show_debug_message($"pwrs length{array_length(players_power_guis_list)}")
+	//show_debug_message($"pwrs length{array_length(players_power_guis_list)}")
 	for(cnt = 0; cnt < 6; cnt ++){
 		var _player_pwr_gui = flexpanel_node_get_child(_player_gui,cnt)
 		var _power_struct = flexpanel_node_get_struct(_player_pwr_gui);
 		array_push(power_gui_list,_power_struct)
-		show_debug_message($" power gui length: {array_length(power_gui_list)}")
+		//show_debug_message($" power gui length: {array_length(power_gui_list)}")
 		
 	}
 } 
 
 stat_gui_node = flexpanel_node_get_child(ui_layer, "Stat_GUIs"); 
 stat_gui_list = []
-stat_gui = flexpanel_node_get_child(stat_gui_node,"Player_Stats_GUI" );
+players_stat_guis_list = []
 
-for (var i = 0; i < 4; i++) { //<<< 10 is a guess
-	var _stat_gui = flexpanel_node_get_child(stat_gui, i);
-	//show_debug_message($"Nodes? : {_child}")
-	//var _sub_stat_panel = flexpanel_node_get_child(_stat_gui, "Stat");
-	var _stat_struct = flexpanel_node_get_struct(_stat_gui)
-	//array_push(stat_gui_list,_stat_struct)
-	//show_debug_message($"Token Track {array_length(token_track)} child {_child}")
-	//var _element_data = _child.layerElements[0];
+for (var i = 0; i < 3; i++) { 
+	show_debug_message("Set player stat - main gui")
+	var _player_gui = flexpanel_node_get_child(stat_gui_node, i);
+	show_debug_message($"Nodes? : {_child} cnt {i}")
+	//var _player_powers_struct = flexpanel_node_get_struct(_player_gui)
+	array_push(players_stat_guis_list, _player_gui)
+	show_debug_message($"stats length{array_length(players_stat_guis_list)}")
+	for(cnt = 0; cnt < 4; cnt ++){
+		var _player_stat_gui = flexpanel_node_get_child(_player_gui,cnt)
+		var _stat_struct = flexpanel_node_get_struct(_player_stat_gui);
+		array_push(stat_gui_list,_stat_struct)
+		show_debug_message($" stats gui length: {array_length(stat_gui_list)}")
+	}
 } 
+
+
 
 
 

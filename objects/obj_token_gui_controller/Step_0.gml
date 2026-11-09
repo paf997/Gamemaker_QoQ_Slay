@@ -16,9 +16,7 @@ function set_initiative_track(characters){
 }
 
 function set_player_power(pwr_array, player){
-	//test = array_length(power_gui_list)
 	//show_debug_message($" pwr list count {test}")
-	//var _current_player = players_power_guis_list[player]
 	var _index_start = global.power_types *  player
 	var _index_end = _index_start + global.power_types
 	for (cnt = _index_start; cnt < _index_end; cnt ++){
@@ -26,3 +24,14 @@ function set_player_power(pwr_array, player){
 		layer_text_text(_index,pwr_array[cnt - _index_start])
 	}
 }
+
+function set_player_stats(){
+	//show_debug_message($" player list count {global.player_list}")
+	for (cnt = 0; cnt < 3; cnt ++){
+		_index = stat_gui_list[(cnt * 4)].layerElements[0].elementId
+		layer_text_text(_index,global.player_list[cnt].hp)
+		_index = stat_gui_list[(cnt * 4) + 1].layerElements[0].elementId
+		layer_text_text(_index,global.player_list[cnt].armour)
+	}
+}
+set_player_stats()

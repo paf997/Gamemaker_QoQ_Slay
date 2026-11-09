@@ -1,5 +1,5 @@
 draw_self();
-draw_set_color(c_black);
+/*draw_set_color(c_black);
 draw_text(x+2, y-3, "Power:" + string(atb_index+1) 
 + " Attack:" + string(attack_sum)
 + " Defense:" + string(defense_sum)
