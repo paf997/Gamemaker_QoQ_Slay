@@ -44,6 +44,7 @@ for (var i = 0; i < 3; i++) { //<<< 10 is a guess
 		var _player_pwr_gui = flexpanel_node_get_child(_player_gui,cnt)
 		var _power_struct = flexpanel_node_get_struct(_player_pwr_gui);
 		array_push(power_gui_list,_power_struct)
+		show_debug_message($" power gui length: {array_length(power_gui_list)}")
 		
 	}
 } 

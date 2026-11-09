@@ -18,9 +18,11 @@ function set_initiative_track(characters){
 function set_player_power(pwr_array, player){
 	//test = array_length(power_gui_list)
 	//show_debug_message($" pwr list count {test}")
-	var _current_player = players_power_guis_list[player]
-	for (cnt = 0/*(6 * player)*/; cnt < 6; cnt ++){
+	//var _current_player = players_power_guis_list[player]
+	var _index_start = global.power_types *  player
+	var _index_end = _index_start + global.power_types
+	for (cnt = _index_start; cnt < _index_end; cnt ++){
 		_index = power_gui_list[cnt].layerElements[0].elementId
-		layer_text_text(_index,pwr_array[cnt])
+		layer_text_text(_index,pwr_array[cnt - _index_start])
 	}
 }

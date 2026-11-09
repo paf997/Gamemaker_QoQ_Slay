@@ -24,6 +24,7 @@ global.display_stats_spacing = 64
 global.icon_value_spacing = -8
 global.icon_spacing = 40
 global.display_bt_close = -1
+global.power_types = 6
 
 enum MainDisplayBtnState {
 	DrawTokenPhase, Bust, EndDrawTokenPhase, Initiative, EndRound
