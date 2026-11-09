@@ -8,7 +8,7 @@ function set_gui_tokens(token, atb_index){
 function set_initiative_track(characters){
 	//show_debug_message("set Initiative - gui controller")
 	for (cnt = array_length(characters)-1; cnt >= 0;cnt--){
-		//show_debug_message($"particiapants {characters[cnt]}")
+		show_debug_message($"particiapants {characters[cnt]}")
 		_index = initiative_track[cnt].layerElements[0].elementId
 		_icon_spr = characters[cnt].init_icon_spr
 		layer_sprite_change(_index, _icon_spr)
@@ -32,6 +32,8 @@ function set_player_stats(){
 		layer_text_text(_index,global.player_list[cnt].hp)
 		_index = stat_gui_list[(cnt * 4) + 1].layerElements[0].elementId
 		layer_text_text(_index,global.player_list[cnt].armour)
+		_index = stat_gui_list[(cnt * 4) + 2].layerElements[0].elementId
+		layer_text_text(_index,global.player_list[cnt].initiative)
 	}
 }
 set_player_stats()

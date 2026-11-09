@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_btn_next_phase",
+  "%Name":"obj_btn_end_action_1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,7 +8,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":13,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_btn_next_phase",
+  "name":"obj_btn_end_action_1",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ui_icon_draw_up",
-    "path":"sprites/spr_ui_icon_draw_up/spr_ui_icon_draw_up.yy",
+    "name":"spr_ui_icon1_1",
+    "path":"sprites/spr_ui_icon1_1/spr_ui_icon1_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
