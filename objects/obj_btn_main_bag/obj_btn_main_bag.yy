@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ui_icon1",
-    "path":"sprites/spr_ui_icon1/spr_ui_icon1.yy",
+    "name":"ui_arrow_up",
+    "path":"sprites/ui_arrow_up/ui_arrow_up.yy",
   },
   "spriteMaskId":null,
   "visible":true,

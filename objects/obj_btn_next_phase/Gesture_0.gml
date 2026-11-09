@@ -1,0 +1,1 @@
+old_display_btn.tap_old_battle_display()
