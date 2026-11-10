@@ -86,7 +86,7 @@ function set_up_player_starting_equipment(player_class){
 	
 	equipment_length = array_length(equipment)
 	for (item = equipment_length; item > 0; item --){
-		//show_debug_message($"equipment length {item}")
+		show_debug_message($"equipment length {item}")
 		get_equipment_abilities(equipment[item-1])
 	}
 }
@@ -142,6 +142,7 @@ function create_equipemnt_abilities_ui(equipment,index = 0){
 			}else{}	
 				
 	ability_text = equipment.get_ability_description(index)
+	show_debug_message($"Ability: {ability_text}")
 	new_ability_ui = instance_create_layer(player_columns[column_index],300+ y_offset * offset_count,"Instances_1", obj_defense_abilities)
 	new_ability_ui.set_ui_color(ui_colors)
 	new_ability_ui.set_ui_text(ability_text)

@@ -39,4 +39,13 @@ function set_player_stats(){
 		layer_text_text(_index,global.player_list[cnt].initiative)
 	}
 }
-set_player_stats()
+
+
+function set_card_text(){
+	var _card = cards_gui_list[0]
+	var _text = flexpanel_node_get_child(_card, "Card_Text"); 
+	var _text_struct  = flexpanel_node_get_struct(_text);
+	//show_debug_message($" text Struct?: {_text}")
+	_index = _text_struct.layerElements[0].elementId
+	//layer_text_text(_index,global.player_1.actions[1].ability_text)
+}

@@ -146,6 +146,8 @@ function atb_phase_complete(){
 	participant_as_string =  string(participant)
 
 	advance_initiative_track(participant, active_turn_index, _display)
+	main_gui.set_player_stats()
+	main_gui.set_card_text()
 	if(active_turn_index > -1 && _display.is_action_complete == false/*&& participant.rounds_completed < round_count*/){
 		show_message($"{participant.name}'s turn")
 		//TODO: readd later --- participant.reset_block();

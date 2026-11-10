@@ -68,6 +68,31 @@ for (var i = 0; i < 3; i++) {
 	}
 }
 
+player_cards_gui_node = flexpanel_node_get_child(ui_layer, "Player_Cards"); 
+cards_gui_list = []
+players_card_guis_list = []
+card_power_array = []
+
+for (var i = 0; i < 3; i++) { 
+	//show_debug_message("Set player stat - main gui")
+	var _card_gui = flexpanel_node_get_child(player_cards_gui_node, i);
+	//show_debug_message($"Nodes? : {_child} cnt {i}")
+	//var _player_powers_struct = flexpanel_node_get_struct(_player_gui)
+	array_push(cards_gui_list, _card_gui)
+	//show_debug_message($"stats length{array_length(players_stat_guis_list)}")
+	//var _name = flexpanel_node_get_child(_card_gui, "Card_Name"); 
+	
+	var _pwr_row = flexpanel_node_get_child(_card_gui, "Card_Power_Row"); 
+	for(cnt = 0; cnt < 3; cnt ++){
+		var _card_pwr_gui = flexpanel_node_get_child(_pwr_row,cnt)
+		var _card_pwr_struct = flexpanel_node_get_struct(_card_pwr_gui);
+		array_push(card_power_array,_card_pwr_struct)
+		//show_debug_message($" stats gui length: {array_length(stat_gui_list)}")
+	}
+}
+
+//set_player_stats()
+
 
 
 

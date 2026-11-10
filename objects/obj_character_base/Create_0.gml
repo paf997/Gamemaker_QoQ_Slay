@@ -43,6 +43,7 @@ actions_icons = -1
 current_card = -1;
 init_icon_spr = spr_character_base_theif
 main_gui = instance_find(obj_token_gui_controller, 0)
+inventory_gui = instance_find(obj_inventory_controller,0)
 
 //show_debug_message($"Where is player list{players_list.current_player_black_sum}")
 
