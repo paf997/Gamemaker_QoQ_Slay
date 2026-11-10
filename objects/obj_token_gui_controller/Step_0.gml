@@ -24,6 +24,7 @@ function set_player_power(pwr_array, player){
 	var _index_end = _index_start + global.power_types
 	for (cnt = _index_start; cnt < _index_end; cnt ++){
 		_index = power_gui_list[cnt].layerElements[0].elementId
+		show_debug_message($"ANd it is ....????   ::: {power_gui_list[cnt]}")
 		layer_text_text(_index,pwr_array[cnt - _index_start])
 	}
 }

@@ -1,6 +1,7 @@
 class_list = [obj_fighter_class,obj_rogue_class,obj_white_mage_class]
 player_list = []
 bag = instance_find(obj_token_bag_P1,0)
+inventory = instance_find(obj_inventory_controller,0)
 current_player_token_sum = 0;
 current_player_red_sum = 0;
 current_player_green_sum = 0;
@@ -23,10 +24,12 @@ function create_player_classes(){
 		
 		_player.equipment_setup()
 		_player.set_up_card_display()
+		_player.inventory_gui = inventory
+		//_player.inventory_gui.set_player_spr()
 		//_player.display_stats_setup() - moved to GUI?
 		//_player.display_tokens_setup() - moved to GUI?
 	}
-	
+	_player.set_inventory()
 	global.player_1 = player_list[0]
 	global.player_2 = player_list[1]
 	global.player_3 = player_list[2]

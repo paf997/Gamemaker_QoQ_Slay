@@ -26,6 +26,8 @@ global.icon_spacing = 40
 global.display_bt_close = -1
 global.power_types = 6
 
+global.inventory = instance_find(obj_inventory_controller,0)
+
 enum MainDisplayBtnState {
 	DrawTokenPhase, Bust, EndDrawTokenPhase, Initiative, EndRound
 }
