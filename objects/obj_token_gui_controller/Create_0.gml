@@ -54,17 +54,17 @@ stat_gui_list = []
 players_stat_guis_list = []
 
 for (var i = 0; i < 3; i++) { 
-	show_debug_message("Set player stat - main gui")
+	//show_debug_message("Set player stat - main gui")
 	var _player_gui = flexpanel_node_get_child(stat_gui_node, i);
-	show_debug_message($"Nodes? : {_child} cnt {i}")
+	//show_debug_message($"Nodes? : {_child} cnt {i}")
 	//var _player_powers_struct = flexpanel_node_get_struct(_player_gui)
 	array_push(players_stat_guis_list, _player_gui)
-	show_debug_message($"stats length{array_length(players_stat_guis_list)}")
+	//show_debug_message($"stats length{array_length(players_stat_guis_list)}")
 	for(cnt = 0; cnt < 4; cnt ++){
 		var _player_stat_gui = flexpanel_node_get_child(_player_gui,cnt)
 		var _stat_struct = flexpanel_node_get_struct(_player_stat_gui);
 		array_push(stat_gui_list,_stat_struct)
-		show_debug_message($" stats gui length: {array_length(stat_gui_list)}")
+		//show_debug_message($" stats gui length: {array_length(stat_gui_list)}")
 	}
 } 
 

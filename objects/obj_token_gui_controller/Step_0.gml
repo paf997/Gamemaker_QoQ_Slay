@@ -8,7 +8,7 @@ function set_gui_tokens(token, atb_index){
 function set_initiative_track(characters){
 	//show_debug_message("set Initiative - gui controller")
 	for (cnt = array_length(characters)-1; cnt >= 0;cnt--){
-		show_debug_message($"particiapants {characters[cnt].init_icon_spr}")
+		//show_debug_message($"particiapants {characters[cnt].init_icon_spr}")
 		_index = initiative_track[cnt].layerElements[0].elementId
 		_icon_spr = characters[cnt].init_icon_spr
 		layer_sprite_change(_index, _icon_spr)
