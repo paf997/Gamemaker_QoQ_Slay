@@ -15,7 +15,7 @@ defense_sum = 0
 block = 3
 p_index = 1
 passive_block = 0
-init_icon_spr = spr_character_base_cleric
+init_icon_spr = spr_character_base_fighter
 
 
 bonus_tokens = [

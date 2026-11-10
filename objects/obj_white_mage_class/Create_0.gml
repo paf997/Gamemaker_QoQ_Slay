@@ -12,7 +12,7 @@ equipment = [obj_rod, obj_light_armour]
 defense_sum = 0
 block = 1
 p_index = 3
-init_icon_spr = spr_character_base_theif
+init_icon_spr = spr_character_base_cleric
 
 ability_cards = [obj_card_power_attack]
 

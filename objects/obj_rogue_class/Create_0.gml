@@ -12,7 +12,7 @@ equipment = [obj_dagger,obj_medium_armour]
 defense_sum = 0
 block = 2
 p_index = 2
-init_icon_spr = spr_character_base_fighter
+init_icon_spr = spr_character_base_theif
 
 ability_cards = [obj_card_power_attack]
 
