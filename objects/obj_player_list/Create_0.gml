@@ -27,16 +27,11 @@ function create_player_classes(){
 		//_player.display_tokens_setup() - moved to GUI?
 	}
 	
-	/*array_push(global.player_list, global.player_1)
-	array_push(global.player_list, global.player_2)
-	array_push(global.player_list, global.player_3)
-	show_debug_message($"Player list. Player list array length: {array_length(global.player_list)}")*/
-	
 	global.player_1 = player_list[0]
 	global.player_2 = player_list[1]
 	global.player_3 = player_list[2]
 	global.player_list = player_list
-	show_debug_message($"Player list. Player list array length: {array_length(global.player_list)}")
+	//show_debug_message($"Player list. Player list array length: {array_length(global.player_list)}")
 }
 function get_player_list(){
 	return player_list
@@ -82,6 +77,5 @@ function activate_p_actions(){
 			//show_debug_message($" Player List {_player.name} ")
 			//player_list[_player]
 			actions[cnt].do_passive_actions()
-
 	}
 }

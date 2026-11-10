@@ -66,7 +66,10 @@ for (var i = 0; i < 3; i++) {
 		array_push(stat_gui_list,_stat_struct)
 		//show_debug_message($" stats gui length: {array_length(stat_gui_list)}")
 	}
-} 
+}
+
+
+
 
 
 

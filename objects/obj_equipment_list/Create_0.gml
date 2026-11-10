@@ -14,6 +14,10 @@ current_player_black_sum = 0;
 current_player_yellow_sum = 0;
 current_player_wild_sum = 0;
 
+
+main_gui = instance_find(obj_token_gui_controller,0)
+
+
 player_1 = instance_find(obj_fighter_class,0)
 player_2 = instance_find(obj_rogue_class,0)
 player_3 = instance_find(obj_white_mage_class,0)
@@ -72,7 +76,6 @@ set_up_player_starting_equipment("white mage")
 
 
 function set_up_player_starting_equipment(player_class){
-
 	if(player_class == "fighter"){
 		array_push(equipment,shield,long_sword,heavy_armour)
 	}else if(player_class == "rogue"){
@@ -95,6 +98,7 @@ function get_equipment_abilities(equipment){
 		//show_debug_message($"abillity length {_item}")
 		_new_ability_ui =  create_equipemnt_abilities_ui(equipment,_item-1)
 		array_push(player_equipment_abilities,_new_ability_ui)
+		//array_push(main_gui.card_gui_array,_new_ability_ui)
 	}
 	player_equipment_abilities = []
 }
