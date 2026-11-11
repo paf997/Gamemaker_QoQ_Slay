@@ -2,21 +2,25 @@ inventory_ui = layer_get_flexpanel_node("Inventory");
 
 main_window = flexpanel_node_get_child(inventory_ui, "Main_Window"); 
 player_info = flexpanel_node_get_child(main_window, "Player_Info"); 
+
 class_spr_panel = flexpanel_node_get_child(inventory_ui, "Character_Class_Sprite"); 
 spr_struct = flexpanel_node_get_struct(class_spr_panel);
 class_name = flexpanel_node_get_child(inventory_ui, "Class_Name"); 
 name_struct = flexpanel_node_get_struct(class_name);
-show_debug_message($"Node Panel xxx ????: {class_spr_panel}{spr_struct}")
+//show_debug_message($"Node Panel xxx ????: {class_spr_panel}{spr_struct}")
+
 _spr = spr_struct.layerElements[0].elementId
 _name = name_struct.layerElements[0].elementId
 
-function set_player_spr(spr){
-	layer_sprite_change(_spr,spr)
+row = flexpanel_node_get_child(inventory_ui, "Row_1"); 
+item_structs_array = []
+for (cnt = 0; cnt < 6; cnt ++){
+	var _item = flexpanel_node_get_child(row, cnt); 
+	var _item_struct = flexpanel_node_get_struct(_item)
+	array_push(item_structs_array,_item_struct)
 }
 
-function set_class_name(name){
-	layer_text_text(_name,name)
-}
+
 
 //set_player_spr()
 //show_debug_message($"Gui test {_ui_layer} children {_child_count}")

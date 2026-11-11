@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ui_excalabur",
-    "path":"sprites/spr_ui_excalabur/spr_ui_excalabur.yy",
+    "name":"spr_ui_swor",
+    "path":"sprites/spr_ui_swor/spr_ui_swor.yy",
   },
   "spriteMaskId":null,
   "visible":true,

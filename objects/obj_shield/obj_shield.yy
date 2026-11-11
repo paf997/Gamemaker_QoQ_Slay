@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_shield",
+    "path":"sprites/spr_shield/spr_shield.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
