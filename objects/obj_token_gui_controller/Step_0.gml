@@ -24,7 +24,7 @@ function set_player_power(pwr_array, player){
 	var _index_end = _index_start + global.power_types
 	for (cnt = _index_start; cnt < _index_end; cnt ++){
 		_index = power_gui_list[cnt].layerElements[0].elementId
-		show_debug_message($"ANd it is ....????   ::: {power_gui_list[cnt]}")
+		//show_debug_message($"ANd it is ....????   ::: {power_gui_list[cnt]}")
 		layer_text_text(_index,pwr_array[cnt - _index_start])
 	}
 }
@@ -44,9 +44,56 @@ function set_player_stats(){
 
 function set_card_text(){
 	var _card = cards_gui_list[0]
+	var _pwr_costs = flexpanel_node_get_child(_card, "Card_Power_Row"); 
+	var _name = flexpanel_node_get_child(_card, "Card_Name"); 
 	var _text = flexpanel_node_get_child(_card, "Card_Text"); 
+	var _text_2 = flexpanel_node_get_child(_card,3)
+	//show_debug_message($" CArd info: {global.player_1.equipment[0].name[0]}")
+	
 	var _text_struct  = flexpanel_node_get_struct(_text);
-	//show_debug_message($" text Struct?: {_text}")
+	var _text_struct_2 = flexpanel_node_get_struct(_text_2);
+	var _name_struct = flexpanel_node_get_struct(_name);
+	var _equipment_len = array_length(global.player_list[0].equipment[0].name)
+	var _abilities_len = array_length(global.player_list[0].equipment[0].abilities)
+	
+	for (cnt = 0; cnt < _equipment_len; cnt ++){
+		
+	}
+	
+	var _pwr_row_ar = []
+	
+	for (cnt = 1; cnt < _abilities_len; cnt ++){
+		var _pwr_index = flexpanel_node_get_child(_pwr_costs, cnt-1);
+		var _pwr_cost = global.player_list[0].equipment[0].abilities[cnt]
+		var _pwr_cost_struct = flexpanel_node_get_struct(_pwr_index)
+		array_push(_pwr_row_ar,_pwr_cost_struct )
+		show_debug_message($"CAr Struct type: ** : {_pwr_cost_struct}")
+		var _spr = _pwr_cost_struct.layerElements[1].elementId
+		//var _txt = _pwr_cost_struct.layerElements[1].elementId	
+		layer_sprite_change(_spr, get_pwr_type(_pwr_cost))
+		//layer_text_text(_index,global.player_1.equipment[0].name[2])
+	}
+	
+	_index = _name_struct.layerElements[0].elementId
+	layer_text_text(_index,global.player_1.equipment[0].name[0])
 	_index = _text_struct.layerElements[0].elementId
-	//layer_text_text(_index,global.player_1.actions[1].ability_text)
+	layer_text_text(_index,global.player_1.equipment[0].name[1])
+	_index = _text_struct_2.layerElements[0].elementId
+	layer_text_text(_index,global.player_1.equipment[0].name[2])
+	
+	
 }
+
+function get_pwr_type(pwr){
+	var _pwr_type = 0
+	if(pwr == TokenType.Defense){
+		_pwr_type = spr_green_blank
+	}else if(pwr == TokenType.Attack){
+		_pwr_type = spr_red_blank
+	}else{
+	}
+	
+	return _pwr_type
+}
+
+
