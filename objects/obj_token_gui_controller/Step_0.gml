@@ -53,26 +53,28 @@ function set_card_text(){
 	var _text_struct  = flexpanel_node_get_struct(_text);
 	var _text_struct_2 = flexpanel_node_get_struct(_text_2);
 	var _name_struct = flexpanel_node_get_struct(_name);
-	var _equipment_len = array_length(global.player_list[0].equipment[0].name)
-	var _abilities_len = array_length(global.player_list[0].equipment[0].abilities)
-	
-	for (cnt = 0; cnt < _equipment_len; cnt ++){
-		
-	}
-	
+	var _player_equipment = get_equipment(0)
+	var _equipment_len = array_length(_player_equipment)
+	show_debug_message($"Equipment Length {_equipment_len}")
 	var _pwr_row_ar = []
-	
-	for (cnt = 1; cnt < _abilities_len; cnt ++){
-		var _pwr_index = flexpanel_node_get_child(_pwr_costs, cnt-1);
-		var _pwr_cost = global.player_list[0].equipment[0].abilities[cnt]
-		var _pwr_cost_struct = flexpanel_node_get_struct(_pwr_index)
-		array_push(_pwr_row_ar,_pwr_cost_struct )
-		show_debug_message($"CAr Struct type: ** : {_pwr_cost_struct}")
-		var _spr = _pwr_cost_struct.layerElements[1].elementId
-		//var _txt = _pwr_cost_struct.layerElements[1].elementId	
-		layer_sprite_change(_spr, get_pwr_type(_pwr_cost))
-		//layer_text_text(_index,global.player_1.equipment[0].name[2])
+	for (n = 0; n < _equipment_len; n ++){
+		var _abilities_len = array_length(global.player_list[0].equipment[n].abilities)
+		for (cnt = 1; cnt < _abilities_len; cnt ++){
+			var _pwr_index = flexpanel_node_get_child(_pwr_costs, cnt-1);
+			var _pwr_cost = global.player_list[0].equipment[n].abilities[cnt]
+			var _pwr_cost_struct = flexpanel_node_get_struct(_pwr_index)
+			array_push(_pwr_row_ar,_pwr_cost_struct )
+			//show_debug_message($"CAr Struct type: ** : {_pwr_cost_struct}")
+			var _spr = _pwr_cost_struct.layerElements[1].elementId
+			//var _txt = _pwr_cost_struct.layerElements[1].elementId	
+			layer_sprite_change(_spr, get_pwr_type(_pwr_cost))
+			//layer_text_text(_index,global.player_1.equipment[0].name[2])
+		}
 	}
+	
+	
+	
+
 	
 	_index = _name_struct.layerElements[0].elementId
 	layer_text_text(_index,global.player_1.equipment[0].name[0])
@@ -94,6 +96,11 @@ function get_pwr_type(pwr){
 	}
 	
 	return _pwr_type
+}
+
+function get_equipment(player){
+	var _player_equipment_arr = global.player_list[player].equipment
+	return _player_equipment_arr
 }
 
 
