@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ui_dagger",
+    "path":"sprites/spr_ui_dagger/spr_ui_dagger.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

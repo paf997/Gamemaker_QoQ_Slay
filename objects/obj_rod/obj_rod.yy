@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ui_rod",
+    "path":"sprites/spr_ui_rod/spr_ui_rod.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

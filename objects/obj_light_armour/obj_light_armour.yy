@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_ui_light_armour",
+    "path":"sprites/spr_ui_light_armour/spr_ui_light_armour.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

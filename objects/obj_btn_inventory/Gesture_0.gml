@@ -18,6 +18,10 @@ if(is_first){
 	inventory.set_inventory_gui(0,object_get_sprite(global.player_list[0].equipment[0]))
 	inventory.set_inventory_gui(1,object_get_sprite(global.player_list[0].equipment[1]))
 	inventory.set_inventory_gui(2,object_get_sprite(global.player_list[0].equipment[2]))
+	inventory.set_inventory_gui(6,object_get_sprite(global.player_list[1].equipment[0]))
+	inventory.set_inventory_gui(7,object_get_sprite(global.player_list[1].equipment[1]))
+	inventory.set_inventory_gui(12,object_get_sprite(global.player_list[2].equipment[0]))
+	inventory.set_inventory_gui(13,object_get_sprite(global.player_list[2].equipment[1]))
 }
 
 
