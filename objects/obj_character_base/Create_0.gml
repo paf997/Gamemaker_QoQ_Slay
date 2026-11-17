@@ -7,6 +7,7 @@ initiative_bonus = 2
 image_index = c_red
 is_dead = false;
 rounds_completed = 0
+class_name = "base name"
 name = "base name"
 end_turn_phase = 1
 actions = [0]
@@ -193,6 +194,11 @@ function set_inventory(){
 	return ability_cards
 }*/
 
+function get_card_gui(){
+	for (cnt = 0; cnt < array_length(equipment);cnt++){
+		main_gui.set_card_text(cnt)
+	}
+}
 
 
 function set_up_card_display(_display_x = global.player_card_display_x, _display_y = global.player_card_display_y){

@@ -42,8 +42,8 @@ function set_player_stats(){
 }
 
 
-function set_card_text(){
-	var _card = cards_gui_list[0]
+function set_card_text(_card_index,_player_index){
+	var _card = cards_gui_list[_card_index]
 	var _pwr_costs = flexpanel_node_get_child(_card, "Card_Power_Row"); 
 	var _name = flexpanel_node_get_child(_card, "Card_Name"); 
 	var _text = flexpanel_node_get_child(_card, "Card_Text"); 
@@ -53,7 +53,7 @@ function set_card_text(){
 	var _text_struct  = flexpanel_node_get_struct(_text);
 	var _text_struct_2 = flexpanel_node_get_struct(_text_2);
 	var _name_struct = flexpanel_node_get_struct(_name);
-	var _player_equipment = get_equipment(0)
+	var _player_equipment = get_equipment(_player_index)
 	var _equipment_len = array_length(_player_equipment)
 	show_debug_message($"Equipment Length {_equipment_len}")
 	var _pwr_row_ar = []
@@ -73,8 +73,6 @@ function set_card_text(){
 	}
 	
 	
-	
-
 	
 	_index = _name_struct.layerElements[0].elementId
 	layer_text_text(_index,global.player_1.equipment[0].name[0])

@@ -73,7 +73,7 @@ cards_gui_list = []
 players_card_guis_list = []
 card_power_array = []
 
-for (var i = 0; i < 3; i++) { 
+for (var i = 0; i < 5; i++) { 
 	//show_debug_message("Set player stat - main gui")
 	var _card_gui = flexpanel_node_get_child(player_cards_gui_node, i);
 	//show_debug_message($"Nodes? : {_child} cnt {i}")

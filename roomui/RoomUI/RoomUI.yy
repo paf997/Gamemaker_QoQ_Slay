@@ -118,7 +118,7 @@
                   ],"flexDirection":0,"gapRow":8.0,"height":{"unit":3,"value":256.0,},"justifyContent":0,"name":"Player","nodeColour":4294081608,"paddingBottom":{"unit":1,"value":32.0,},"paddingLeft":{"unit":1,"value":32.0,},"paddingRight":{"unit":1,"value":32.0,},"paddingTop":{"unit":1,"value":32.0,},"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":256.0,},},
               ],"flexDirection":2,"flexWrap":1,"height":{"unit":2,"value":100.0,},"justifyContent":1,"name":"Players","nodeColour":4282965490,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":100.0,},},
           ],"flexDirection":0,"height":{"unit":3,"value":100.0,},"justifyContent":1,"name":"Main_Window","nodeColour":4294068395,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":100.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"Inventory","nodeColour":4283123954,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"Inventory","nodeColour":4283123954,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
     {"$GMRUILayer":"v1","%Name":"UILayer_1","alignItems":2,"children":[
         {"$GMRFlexPanel":"","%Name":"Main_Panel_R1","alignItems":1,"alignSelf":1,"children":[
             {"$GMRFlexPanel":"","%Name":"Row1","alignItems":1,"children":[
